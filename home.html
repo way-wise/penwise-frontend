@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penwise - Write Smarter, Faster, and Better</title>
+    <meta name="description" content="AI-powered writing tool that helps you write smarter, faster, and better with intelligent features and seamless collaboration.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased">
+    
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 md:h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 text-2xl font-bold group">
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center transform group-hover:rotate-6 transition-transform duration-300">
+                        <svg class="w-6 h-6 md:w-7 md:h-7 text-white" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                            <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <span class="hidden sm:inline-block bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Penwise</span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-1">
+                    <a href="#features" class="nav-link px-4 py-2 font-medium text-gray-700 hover:text-gray-900 relative group">
+                        Features
+                        <span class="nav-underline absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"></span>
+                    </a>
+                    <a href="#pricing" class="nav-link px-4 py-2 font-medium text-gray-700 hover:text-gray-900 relative group">
+                        Pricing
+                        <span class="nav-underline absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"></span>
+                    </a>
+                    <a href="#about" class="nav-link px-4 py-2 font-medium text-gray-700 hover:text-gray-900 relative group">
+                        About
+                        <span class="nav-underline absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"></span>
+                    </a>
+                    <a href="#contact" class="nav-link px-4 py-2 font-medium text-gray-700 hover:text-gray-900 relative group">
+                        Contact
+                        <span class="nav-underline absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"></span>
+                    </a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <button class="px-5 py-2.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105">
+                        Log In
+                    </button>
+                    <button class="px-5 py-2.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg hover:shadow-gray-900/30 transition-all duration-300 transform hover:scale-105">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="menu-line w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
+                    <span class="menu-line w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
+                    <span class="menu-line w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 lg:hidden shadow-2xl">
+        <div class="flex flex-col h-full">
+            <!-- Mobile Menu Header -->
+            <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                <div class="flex items-center gap-2 text-xl font-bold">
+                    <div class="w-10 h-10 bg-gradient-to-br from-gray-900 to-gray-700 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                            <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <span class="bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">Penwise</span>
+                </div>
+                <button id="mobileMenuClose" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200" aria-label="Close menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Links -->
+            <nav class="flex-1 overflow-y-auto p-6">
+                <div class="flex flex-col gap-1">
+                    <a href="#features" class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200 group">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                        Features
+                    </a>
+                    <a href="#pricing" class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200 group">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                        Pricing
+                    </a>
+                    <a href="#about" class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200 group">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                        About
+                    </a>
+                    <a href="#contact" class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200 group">
+                        <span class="w-1.5 h-1.5 rounded-full bg-gray-400 group-hover:bg-gray-900 transition-colors duration-200"></span>
+                        Contact
+                    </a>
+                </div>
+            </nav>
+            
+            <!-- Mobile Menu Footer (CTA Buttons) -->
+            <div class="p-6 border-t border-gray-200 space-y-3">
+                <button class="w-full px-6 py-3.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
+                    Log In
+                </button>
+                <button class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 bg-gradient-to-b from-white to-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-center mb-6 animate-fade-in-down">
+                <span class="inline-flex items-center gap-2 px-4 py-2 bg-black text-white rounded-full text-sm font-medium">✨ AI Powered</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-center mb-6 leading-tight animate-fade-in-up">
+                Write Smarter, Faster,<br>and Better
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+                Transform your writing with AI-powered tools designed to enhance productivity,<br class="hidden md:block">
+                creativity, and collaboration. Experience the future of writing today.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+                <button class="px-8 py-4 text-lg font-semibold bg-black text-white rounded-full hover:bg-gray-800 transition shadow-lg">Get Started Free</button>
+                <button class="px-8 py-4 text-lg font-semibold border-2 border-black rounded-full hover:bg-black hover:text-white transition">Watch Demo</button>
+            </div>
+            
+            <div class="relative max-w-5xl mx-auto">
+                <div class="rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://via.placeholder.com/1200x700/1a1a1a/ffffff?text=Dashboard+Preview" alt="Dashboard Preview" class="w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div>
+                    <div class="text-5xl md:text-6xl font-black mb-2">28,647</div>
+                    <div class="text-lg text-gray-600 font-medium">Active Users</div>
+                </div>
+                <div>
+                    <div class="text-5xl md:text-6xl font-black mb-2">98%</div>
+                    <div class="text-lg text-gray-600 font-medium">Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-5xl md:text-6xl font-black mb-2">24/7</div>
+                    <div class="text-lg text-gray-600 font-medium">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tagline -->
+    <section class="py-12 bg-gray-50 text-center">
+        <h2 class="text-lg text-gray-600 font-medium uppercase tracking-wide">Everything you need to write</h2>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-24">
+            
+            <!-- Feature 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-3xl p-8 shadow-xl">
+                    <img src="https://via.placeholder.com/600x800/f5f5f5/333333?text=AI+Writing+Assistant" alt="AI Writing" class="w-full rounded-2xl">
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6">Smarter Assisted Writing: AI-Driven</h3>
+                    <p class="text-lg text-gray-600 mb-6">Our advanced AI writing assistant helps you craft compelling content with intelligent suggestions, grammar corrections, and style improvements in real-time.</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>✓ Real-time grammar and style suggestions</li>
+                        <li>✓ Context-aware content generation</li>
+                        <li>✓ Multi-language support</li>
+                        <li>✓ Tone and voice customization</li>
+                        <li>✓ Plagiarism detection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="md:order-2 bg-white rounded-3xl p-8 shadow-xl">
+                    <img src="https://via.placeholder.com/600x800/f5f5f5/333333?text=Smart+Formatting" alt="Smart Formatting" class="w-full rounded-2xl">
+                </div>
+                <div class="md:order-1">
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6">Make it neat like a sheet</h3>
+                    <p class="text-lg text-gray-600 mb-6">Experience clean, organized writing with our smart formatting tools. Keep your documents structured and professional with minimal effort.</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>✓ Auto-formatting and templates</li>
+                        <li>✓ Document organization tools</li>
+                        <li>✓ Custom styling options</li>
+                        <li>✓ Export to multiple formats</li>
+                        <li>✓ Version control and history</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-white rounded-3xl p-8 shadow-xl max-w-md mx-auto">
+                    <img src="https://via.placeholder.com/400x800/f5f5f5/333333?text=Mobile+Writing" alt="Mobile Writing" class="w-full rounded-2xl">
+                </div>
+                <div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-6">Write on - Text Management</h3>
+                    <p class="text-lg text-gray-600 mb-6">Seamlessly manage all your writing projects in one place. Access your work from anywhere, on any device, with cloud synchronization.</p>
+                    <ul class="space-y-3 text-lg">
+                        <li>✓ Cloud-based storage</li>
+                        <li>✓ Cross-device synchronization</li>
+                        <li>✓ Offline mode support</li>
+                        <li>✓ Collaborative editing</li>
+                        <li>✓ Advanced search and filters</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Made Penso Portable & ?</h2>
+            
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-3 bg-black text-white font-bold text-center">
+                    <div class="p-4">Features</div>
+                    <div class="p-4">Other Tools</div>
+                    <div class="p-4">Penwise</div>
+                </div>
+                
+                <div class="grid grid-cols-3 border-b border-gray-200">
+                    <div class="p-4 font-medium">AI Writing Assistant</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Limited</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ Advanced AI</span></div>
+                </div>
+                
+                <div class="grid grid-cols-3 border-b border-gray-200">
+                    <div class="p-4 font-medium">Cloud Sync</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Partial</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ Real-time</span></div>
+                </div>
+                
+                <div class="grid grid-cols-3 border-b border-gray-200">
+                    <div class="p-4 font-medium">Collaboration Tools</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Basic</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ Advanced</span></div>
+                </div>
+                
+                <div class="grid grid-cols-3 border-b border-gray-200">
+                    <div class="p-4 font-medium">Offline Mode</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">✗ Not Available</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ Full Support</span></div>
+                </div>
+                
+                <div class="grid grid-cols-3 border-b border-gray-200">
+                    <div class="p-4 font-medium">Custom Templates</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">Limited</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ Unlimited</span></div>
+                </div>
+                
+                <div class="grid grid-cols-3">
+                    <div class="p-4 font-medium">Export Formats</div>
+                    <div class="p-4 text-center"><span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">2-3 Formats</span></div>
+                    <div class="p-4 text-center bg-gray-50"><span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">✓ 10+ Formats</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <h2 class="text-4xl font-bold text-center mb-4">Choose Just Plan That Fits You</h2>
+            <p class="text-xl text-gray-600 text-center mb-12">Simple, transparent pricing that grows with you</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Free Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-3xl p-8 hover:shadow-2xl transition">
+                    <h3 class="text-2xl font-bold mb-4">Free</h3>
+                    <div class="flex items-start mb-2">
+                        <span class="text-2xl font-bold mt-2">$</span>
+                        <span class="text-6xl font-black">0</span>
+                        <span class="text-gray-600 mt-8">/mo</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Perfect for getting started</p>
+                    <ul class="space-y-3 mb-8">
+                        <li>✓ Up to 5 documents</li>
+                        <li>✓ Basic AI assistance</li>
+                        <li>✓ 1GB cloud storage</li>
+                        <li>✓ 3 export formats</li>
+                        <li class="text-gray-400">✗ Collaboration tools</li>
+                        <li class="text-gray-400">✗ Advanced AI features</li>
+                    </ul>
+                    <button class="w-full px-6 py-3 font-semibold border-2 border-black rounded-full hover:bg-black hover:text-white transition">Get Started</button>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-white border-2 border-black rounded-3xl p-8 relative shadow-xl hover:shadow-2xl transition">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Most Popular</div>
+                    <h3 class="text-2xl font-bold mb-4">Professional</h3>
+                    <div class="flex items-start mb-2">
+                        <span class="text-2xl font-bold mt-2">$</span>
+                        <span class="text-6xl font-black">5</span>
+                        <span class="text-gray-600 mt-8">/mo</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">For serious writers</p>
+                    <ul class="space-y-3 mb-8">
+                        <li>✓ Unlimited documents</li>
+                        <li>✓ Advanced AI assistance</li>
+                        <li>✓ 50GB cloud storage</li>
+                        <li>✓ All export formats</li>
+                        <li>✓ Collaboration tools</li>
+                        <li>✓ Custom templates</li>
+                    </ul>
+                    <button class="w-full px-6 py-3 font-semibold bg-black text-white rounded-full hover:bg-gray-800 transition">Get Started</button>
+                </div>
+                
+                <!-- Team Plan -->
+                <div class="bg-white border-2 border-gray-200 rounded-3xl p-8 hover:shadow-2xl transition">
+                    <h3 class="text-2xl font-bold mb-4">Team</h3>
+                    <div class="flex items-start mb-2">
+                        <span class="text-2xl font-bold mt-2">$</span>
+                        <span class="text-6xl font-black">7</span>
+                        <span class="text-gray-600 mt-8">/user/mo</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">Perfect for teams</p>
+                    <ul class="space-y-3 mb-8">
+                        <li>✓ Everything in Pro</li>
+                        <li>✓ Team workspace</li>
+                        <li>✓ 100GB cloud storage</li>
+                        <li>✓ Admin controls</li>
+                        <li>✓ Advanced analytics</li>
+                        <li>✓ API access</li>
+                    </ul>
+                    <button class="w-full px-6 py-3 font-semibold border-2 border-black rounded-full hover:bg-black hover:text-white transition">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-gradient-to-br from-black to-gray-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">It is simple, Predictable,<br>Pricing for EVERY BODY, Today</h2>
+            <p class="text-xl text-gray-300 mb-8">Join thousands of writers who have already transformed their writing workflow with Penwise. Start your free trial today, no credit card required.</p>
+            <button class="px-8 py-4 text-lg font-semibold bg-white text-black rounded-full hover:bg-gray-100 transition shadow-lg">Get Started Now - It's Free</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-5 gap-8 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 text-2xl font-bold mb-4">
+                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                            <path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <span>Penwise</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">Write smarter, faster, and better with AI-powered writing tools designed for modern writers.</p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">𝕏</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">f</a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition">in</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">Templates</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center pt-8 border-t border-gray-800 text-gray-500">
+                <p>&copy; 2025 Penwise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

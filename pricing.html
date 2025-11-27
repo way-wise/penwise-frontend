@@ -237,8 +237,9 @@
 											fill-rule="evenodd"
 											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
 											clip-rule="evenodd"
-										/></svg
-								></span>
+										/>
+									</svg>
+								</span>
 							</button>
 						</div>
 					</div>
@@ -247,8 +248,9 @@
 				<section id="pricing" class="z-[999] pt-5">
 					<div class="max-w-7xl mx-auto sm:px-6">
 						<!-- Pricing Cards -->
+						<!-- Pricing Cards -->
 						<div
-							class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 md:p-8 lg:p-12"
+							class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 p-4 sm:p-6 md:p-8 lg:p-12"
 						>
 							<!-- Starter Book Plan -->
 							<div
@@ -315,17 +317,24 @@
 
 							<!-- Premium Book Plan (Featured) -->
 							<div
-								class="relative bg-white text-black border border-black rounded-2xl p-4 sm:p-6 md:p-8 transform lg:scale-105"
+								class="relative bg-white text-black border border-gray-400 rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl transform lg:scale-105 mt-4 lg:mt-0"
 							>
+								<!-- Most Popular Badge -->
+								<div
+									class="absolute border border-gray-400 -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm font-semibold shadow-lg whitespace-nowrap z-10"
+								>
+									Most Popular
+								</div>
+
 								<!-- Decorative Dots -->
 								<img
 									src="./assets/image/price/elements.png"
 									alt=""
-									class="absolute top-4 right-0 w-8 h-auto sm:w-10 md:w-20 opacity-80"
+									class="absolute top-4 right-0 w-8 h-auto sm:w-10 md:w-20 opacity-80 rounded-tr-2xl"
 								/>
 
 								<!-- Plan Name -->
-								<h3 class="text-sm font-semibold text-black mb-3">
+								<h3 class="text-sm font-semibold text-black mb-3 relative z-10">
 									Premium Book
 								</h3>
 
@@ -827,7 +836,7 @@
 			<h2
 				class="text-[30px] tracking-wide text-black font-semibold text-center"
 			>
-				Why Our Pricing Makes Sense
+				Simple, Straightforward Pricing — No Hidden or Recurring Fees
 			</h2>
 			<p class="text-[16px] text-[#47566C] font-normal text-center">
 				Transparent, flexible, and built to grow with you — no confusing

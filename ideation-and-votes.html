@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Website Ideation & Votes | Penwise</title>
+		<meta
+			name="description"
+			content="Help shape penwise.ai. Share your ideas to improve our website, vote on what matters most, and watch changes land in real time."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: ["Inter", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+
+	<body class="font-sans antialiased overflow-x-hidden">
+		<!-- Navigation -->
+		<nav
+			class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-gray-100"
+		>
+			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
+				<div class="flex items-center justify-between h-18">
+					<a
+						href="./index.html"
+						class="flex items-center gap-2 text-xl font-bold text-black hover:scale-105 transition-transform duration-300"
+					>
+						<img src="./assets/image/logo.png" alt="Penwise" />
+					</a>
+
+					<div class="hidden lg:flex items-center gap-8">
+						<a
+							href="./howitworks.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							How It Works
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./pricing.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Pricing
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./why.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Why Penwise
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./blog.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Blog
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+					</div>
+
+					<div class="hidden lg:flex items-center gap-3">
+						<button
+							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900"
+						>
+							Log In
+						</button>
+					</div>
+
+					<button
+						id="mobileMenuBtn"
+						class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+					>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div
+			id="mobileMenu"
+			class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden"
+		>
+			<div class="flex flex-col h-full">
+				<div
+					class="flex items-center justify-between p-6 border-b border-gray-200"
+				>
+					<a
+						href="./index.html"
+						class="flex items-center gap-2 text-xl font-bold text-black"
+					>
+						<img src="./assets/image/logo.png" alt="Penwise" />
+					</a>
+					<button
+						id="closeMenuBtn"
+						class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 text-3xl text-gray-700"
+					>
+						&times;
+					</button>
+				</div>
+
+				<nav class="flex-1 overflow-y-auto p-6">
+					<div class="flex flex-col gap-2">
+						<a
+							href="./howitworks.html"
+							class="flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							How It Works
+						</a>
+						<a
+							href="./pricing.html"
+							class="flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Pricing
+						</a>
+						<a
+							href="./why.html"
+							class="flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Why Penwise
+						</a>
+						<a
+							href="./blog.html"
+							class="flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Blog
+						</a>
+					</div>
+				</nav>
+
+				<div class="p-6 border-t border-gray-200">
+					<button
+						class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300"
+					>
+						Log In
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section
+			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-16 bg-black text-white overflow-hidden"
+			style="
+				background-image: url('./assets/image/hero/herobackground.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
+		>
+			<div class="max-w-7xl mx-auto px-6 relative">
+				<div class="relative z-20 text-center">
+					<div
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
+					>
+						💡 Community Powered
+					</div>
+					<h1
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
+					>
+						Website Ideation<br />& Votes
+					</h1>
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
+						Help shape penwise.ai. Share your ideas to improve our website, vote
+						on what matters most, and watch changes land in real time.
+					</p>
+
+					<!-- Stats -->
+					<div
+						class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"
+					>
+						<div
+							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+						>
+							<div class="text-4xl font-bold mb-2">247</div>
+							<div class="text-gray-300 text-sm">Ideas Submitted</div>
+						</div>
+						<div
+							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+						>
+							<div class="text-4xl font-bold mb-2">1.2k</div>
+							<div class="text-gray-300 text-sm">Total Votes</div>
+						</div>
+						<div
+							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+						>
+							<div class="text-4xl font-bold mb-2">89</div>
+							<div class="text-gray-300 text-sm">Ideas Shipped</div>
+						</div>
+					</div>
+
+					<div class="flex flex-col sm:flex-row justify-center gap-4">
+						<button
+							onclick="document.getElementById('submit-form').scrollIntoView({behavior: 'smooth'})"
+							class="px-8 py-3.5 text-[16px] font-semibold bg-white text-black rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-xl inline-flex items-center justify-center gap-2"
+						>
+							Get Started
+							<svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+								<path
+									fill-rule="evenodd"
+									d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+						</button>
+					</div>
+
+					<p class="text-sm text-gray-400 mt-8">
+						This board is exclusively for website improvements—not product
+						features—and it's powered by
+						<strong>Penwise Ideation & Votes</strong>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Actions -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<button
+						onclick="document.getElementById('submit-form').scrollIntoView({behavior: 'smooth'})"
+						class="flex items-center justify-center gap-3 p-6 bg-white rounded-2xl border-2 border-gray-200 hover:border-black hover:shadow-lg transition-all duration-300 group"
+					>
+						<svg
+							class="w-6 h-6 text-black"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 4v16m8-8H4"
+							/>
+						</svg>
+						<span class="font-semibold text-lg">Submit a Website Idea</span>
+					</button>
+					<button
+						onclick="document.getElementById('vote-section').scrollIntoView({behavior: 'smooth'})"
+						class="flex items-center justify-center gap-3 p-6 bg-white rounded-2xl border-2 border-gray-200 hover:border-black hover:shadow-lg transition-all duration-300 group"
+					>
+						<svg
+							class="w-6 h-6 text-black"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M5 15l7-7 7 7"
+							/>
+						</svg>
+						<span class="font-semibold text-lg">Vote on Ideas</span>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Website Improvements Section -->
+		<section class="py-16 md:py-24 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Website Improvements
+					</h2>
+					<p class="text-gray-600 max-w-3xl mx-auto">
+						We focus on making our website better for everyone
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M4 6h16M4 12h16M4 18h16"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Navigation & Architecture</h3>
+						<p class="text-sm text-gray-600">
+							Menus, page flow, search, and information hierarchy
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Content Clarity</h3>
+						<p class="text-sm text-gray-600">
+							Homepage narrative, pricing explanations, feature pages
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Documentation</h3>
+						<p class="text-sm text-gray-600">
+							Getting started paths, examples, API references
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M13 10V3L4 14h7v7l9-11h-7z"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Performance & Reliability</h3>
+						<p class="text-sm text-gray-600">
+							Page speed, broken links, mobile responsiveness
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+								/>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Accessibility</h3>
+						<p class="text-sm text-gray-600">
+							Contrast, keyboard navigation, screen reader support
+						</p>
+					</div>
+
+					<div
+						class="p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-md transition-all duration-300 border border-transparent hover:border-gray-100"
+					>
+						<div
+							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4"
+						>
+							<svg
+								class="w-6 h-6 text-white"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"
+								/>
+							</svg>
+						</div>
+						<h3 class="font-bold text-lg mb-2">Localization</h3>
+						<p class="text-sm text-gray-600">
+							Languages you need, tone, regional examples
+						</p>
+					</div>
+				</div>
+
+				<!-- What Belongs Elsewhere -->
+				<div
+					class="mt-16 p-8 bg-yellow-50 border-2 border-yellow-200 rounded-2xl"
+				>
+					<h3 class="font-bold text-xl mb-4 flex items-center gap-2">
+						<svg
+							class="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+							/>
+						</svg>
+						What Belongs Elsewhere
+					</h3>
+					<p class="text-gray-700 mb-4">
+						Please use the appropriate channels for:
+					</p>
+					<ul class="space-y-2">
+						<li class="flex items-start gap-3">
+							<svg
+								class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span
+								><strong>Product feature requests:</strong> Use our Product
+								Ideation board</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<svg
+								class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span
+								><strong>Billing or account issues:</strong> Contact
+								support@penwise.ai</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<svg
+								class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span
+								><strong>Security or vulnerability reports:</strong>
+								security@penwise.ai</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<svg
+								class="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0"
+								fill="currentColor"
+								viewBox="0 0 20 20"
+							>
+								<path
+									fill-rule="evenodd"
+									d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+									clip-rule="evenodd"
+								/>
+							</svg>
+							<span
+								><strong>Website bugs (broken links, 404s):</strong> Use "Report
+								a bug" in the footer</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Process Section -->
+		<section class="py-16 md:py-24 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-16">
+					<div
+						class="inline-block bg-gray-200 text-black px-4 py-2 rounded-full text-sm font-medium mb-4"
+					>
+						PROCESS
+					</div>
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						How It Works
+					</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">
+						From idea to implementation in 4 simple steps
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<!-- Step 1 -->
+					<div class="relative">
+						<div
+							class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full"
+						>
+							<div
+								class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6"
+							>
+								1
+							</div>
+							<h3 class="font-bold text-xl mb-3">Submit</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">
+								Share your idea with a clear title, page URL, and why it
+								matters. Add screenshots if helpful. Our AI suggests similar
+								ideas to avoid duplicates.
+							</p>
+						</div>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="relative">
+						<div
+							class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full"
+						>
+							<div
+								class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6"
+							>
+								2
+							</div>
+							<h3 class="font-bold text-xl mb-3">Vote</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">
+								Upvote ideas you support and comment with context about who you
+								are, what you were trying to do, and what was confusing.
+							</p>
+						</div>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="relative">
+						<div
+							class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full"
+						>
+							<div
+								class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6"
+							>
+								3
+							</div>
+							<h3 class="font-bold text-xl mb-3">Track</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">
+								Every idea has a public status and history. Get notified when we
+								review, plan, or ship improvements.
+							</p>
+						</div>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="relative">
+						<div
+							class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 h-full"
+						>
+							<div
+								class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center text-2xl font-bold mb-6"
+							>
+								4
+							</div>
+							<h3 class="font-bold text-xl mb-3">Ship</h3>
+							<p class="text-gray-600 text-sm leading-relaxed">
+								We roll out improvements weekly. See changes reflected in our
+								website changelog and on the idea's page.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Vote on Ideas Section -->
+		<section id="vote-section" class="py-16 md:py-24 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-12">
+					<div
+						class="inline-block bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium mb-4"
+					>
+						COMMUNITY FEEDBACK
+					</div>
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Vote on Website Ideas
+					</h2>
+					<p class="text-gray-600 max-w-3xl mx-auto">
+						Help us prioritize the most impactful improvements by voting on
+						submitted ideas
+					</p>
+				</div>
+
+				<!-- Community Stats -->
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+					<div class="text-center p-6 bg-gray-50 rounded-2xl">
+						<div class="text-3xl font-bold mb-1">156</div>
+						<div class="text-sm text-gray-600">Active Voters</div>
+					</div>
+					<div class="text-center p-6 bg-gray-50 rounded-2xl">
+						<div class="text-3xl font-bold mb-1">23</div>
+						<div class="text-sm text-gray-600">Ideas This Week</div>
+					</div>
+					<div class="text-center p-6 bg-gray-50 rounded-2xl">
+						<div class="text-3xl font-bold mb-1">92%</div>
+						<div class="text-sm text-gray-600">Implementation Rate</div>
+					</div>
+					<div class="text-center p-6 bg-gray-50 rounded-2xl">
+						<div class="text-3xl font-bold mb-1">3.2</div>
+						<div class="text-sm text-gray-600">Avg Response Days</div>
+					</div>
+				</div>
+
+				<!-- Ideas List -->
+				<div class="space-y-4 mb-8">
+					<div class="text-center py-12 bg-gray-50 rounded-2xl">
+						<svg
+							class="w-16 h-16 mx-auto text-gray-300 mb-4"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+							/>
+						</svg>
+						<h3 class="text-lg font-medium text-gray-900 mb-1">
+							No Ideas Available
+						</h3>
+						<p class="text-gray-500 mb-6">
+							Be the first to submit a website improvement idea!
+						</p>
+						<button
+							onclick="document.getElementById('submit-form').scrollIntoView({behavior: 'smooth'})"
+							class="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-900 transition-all duration-300 font-semibold"
+						>
+							Submit Your Idea
+						</button>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<button
+						class="px-8 py-3 border-2 border-gray-200 text-gray-700 font-semibold rounded-full hover:border-black hover:bg-gray-50 transition-all duration-300"
+					>
+						Load More Ideas
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- High-Impact Tips -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6">
+				<h2 class="text-2xl md:text-3xl font-bold text-black mb-6 text-center">
+					Make Your Idea High-Impact
+				</h2>
+				<p class="text-gray-600 text-center mb-8">
+					Include these details to increase your idea's chances of
+					implementation:
+				</p>
+
+				<div class="space-y-4">
+					<div class="flex items-start gap-4 p-6 bg-white rounded-xl">
+						<div
+							class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold"
+						>
+							1
+						</div>
+						<div>
+							<h3 class="font-semibold mb-1">Page URL(s)</h3>
+							<p class="text-sm text-gray-600">
+								Where did you experience the issue or opportunity?
+							</p>
+						</div>
+					</div>
+
+					<div class="flex items-start gap-4 p-6 bg-white rounded-xl">
+						<div
+							class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold"
+						>
+							2
+						</div>
+						<div>
+							<h3 class="font-semibold mb-1">Audience</h3>
+							<p class="text-sm text-gray-600">
+								Who is this for? (new visitor, buyer, PM, engineer, enterprise)
+							</p>
+						</div>
+					</div>
+
+					<div class="flex items-start gap-4 p-6 bg-white rounded-xl">
+						<div
+							class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold"
+						>
+							3
+						</div>
+						<div>
+							<h3 class="font-semibold mb-1">Objective</h3>
+							<p class="text-sm text-gray-600">
+								What were you trying to do? (compare plans, verify security,
+								test API)
+							</p>
+						</div>
+					</div>
+
+					<div class="flex items-start gap-4 p-6 bg-white rounded-xl">
+						<div
+							class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold"
+						>
+							4
+						</div>
+						<div>
+							<h3 class="font-semibold mb-1">Impact</h3>
+							<p class="text-sm text-gray-600">
+								What improves if we do this? (clarity, trust, conversion,
+								accessibility)
+							</p>
+						</div>
+					</div>
+
+					<div class="flex items-start gap-4 p-6 bg-white rounded-xl">
+						<div
+							class="w-8 h-8 bg-black text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold"
+						>
+							5
+						</div>
+						<div>
+							<h3 class="font-semibold mb-1">Evidence</h3>
+							<p class="text-sm text-gray-600">
+								Screenshots, examples, or links to best-in-class references
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Submit Form Section -->
+		<section id="submit-form" class="py-16 md:py-24 bg-white">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-12">
+					<div
+						class="inline-block bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium mb-4"
+					>
+						SHARE YOUR VISION
+					</div>
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Submit Your Website Idea
+					</h2>
+					<p class="text-gray-600 max-w-2xl mx-auto">
+						Help us make penwise.ai clearer, faster, and more helpful for
+						everyone
+					</p>
+				</div>
+
+				<form class="space-y-6 bg-gray-50 p-8 rounded-2xl">
+					<div>
+						<label class="block text-sm font-semibold text-gray-900 mb-2">
+							Title <span class="text-red-500">*</span>
+						</label>
+						<input
+							type="text"
+							placeholder="Make it specific and action-oriented (e.g., 'Add security summary to pricing page')"
+							class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+							required
+						/>
+					</div>
+
+					<div>
+						<label class="block text-sm font-semibold text-gray-900 mb-2">
+							Page URL <span class="text-red-500">*</span>
+						</label>
+						<input
+							type="url"
+							placeholder="Paste the page you were on"
+							class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+							required
+						/>
+					</div>
+
+					<div>
+						<label class="block text-sm font-semibold text-gray-900 mb-2">
+							Describe your idea <span class="text-red-500">*</span>
+						</label>
+						<textarea
+							rows="6"
+							placeholder="What should change and why? Be specific about the problem and your proposed solution."
+							class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all resize-none"
+							required
+						></textarea>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+						<div>
+							<label class="block text-sm font-semibold text-gray-900 mb-2">
+								Who is this for?
+							</label>
+							<select
+								class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+							>
+								<option value="">Select audience</option>
+								<option value="new-visitor">New Visitor</option>
+								<option value="buyer">Buyer</option>
+								<option value="pm">Product Manager</option>
+								<option value="engineer">Engineer</option>
+								<option value="enterprise">Enterprise</option>
+								<option value="all">All Users</option>
+							</select>
+						</div>
+
+						<div>
+							<label class="block text-sm font-semibold text-gray-900 mb-2">
+								Expected Impact
+							</label>
+							<select
+								class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-black focus:ring-1 focus:ring-black outline-none transition-all"
+							>
+								<option value="">Select impact type</option>
+								<option value="clarity">Clarity</option>
+								<option value="trust">Trust</option>
+								<option value="conversion">Conversion</option>
+								<option value="accessibility">Accessibility</option>
+								<option value="performance">Performance</option>
+							</select>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-sm font-semibold text-gray-900 mb-2">
+							Attachments
+						</label>
+						<div
+							class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center hover:border-gray-400 transition-colors cursor-pointer"
+						>
+							<input
+								type="file"
+								class="hidden"
+								id="file-upload"
+								multiple
+								accept="image/*,video/*"
+							/>
+							<label for="file-upload" class="cursor-pointer">
+								<svg
+									class="w-12 h-12 mx-auto text-gray-400 mb-3"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+									/>
+								</svg>
+								<p class="text-sm text-gray-600 mb-1">
+									<span class="font-semibold text-black">Click to upload</span>
+									or drag and drop
+								</p>
+								<p class="text-xs text-gray-500">
+									Screenshots or short clips welcome (max 10MB each)
+								</p>
+							</label>
+						</div>
+					</div>
+
+					<div class="flex items-center gap-2">
+						<input
+							type="checkbox"
+							id="updates"
+							class="w-4 h-4 rounded border-gray-300 text-black focus:ring-black"
+						/>
+						<label for="updates" class="text-sm text-gray-700">
+							Send me updates when this idea moves forward
+						</label>
+					</div>
+
+					<button
+						type="submit"
+						class="w-full px-8 py-4 bg-black text-white font-semibold rounded-full hover:bg-gray-900 transition-all duration-300 hover:shadow-lg"
+					>
+						Submit Idea
+					</button>
+				</form>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-16 md:py-24 bg-gray-50">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Frequently Asked Questions
+					</h2>
+				</div>
+
+				<div class="space-y-4">
+					<!-- FAQ 1 -->
+					<div
+						class="faq-item bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+					>
+						<button
+							class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-black"
+						>
+							<span>Who can participate?</span>
+							<svg
+								class="faq-icon w-5 h-5 transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						<div
+							class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+						>
+							<div class="p-6 pt-0 text-gray-600 text-sm">
+								Anyone! Customers, prospects, partners, and curious visitors are
+								all welcome to submit ideas and vote.
+							</div>
+						</div>
+					</div>
+
+					<!-- FAQ 2 -->
+					<div
+						class="faq-item bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+					>
+						<button
+							class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-black"
+						>
+							<span>Do I need an account?</span>
+							<svg
+								class="faq-icon w-5 h-5 transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						<div
+							class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+						>
+							<div class="p-6 pt-0 text-gray-600 text-sm">
+								No full account required—just verify via email or SSO to submit
+								ideas and vote to keep things authentic.
+							</div>
+						</div>
+					</div>
+
+					<!-- FAQ 3 -->
+					<div
+						class="faq-item bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+					>
+						<button
+							class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-black"
+						>
+							<span>Will my idea be public?</span>
+							<svg
+								class="faq-icon w-5 h-5 transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						<div
+							class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+						>
+							<div class="p-6 pt-0 text-gray-600 text-sm">
+								Yes, by default. If you need to share something privately, email
+								website@penwise.ai instead.
+							</div>
+						</div>
+					</div>
+
+					<!-- FAQ 4 -->
+					<div
+						class="faq-item bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
+					>
+						<button
+							class="faq-question w-full flex items-center justify-between p-6 text-left font-semibold text-black"
+						>
+							<span>How will I know what changed?</span>
+							<svg
+								class="faq-icon w-5 h-5 transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						<div
+							class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+						>
+							<div class="p-6 pt-0 text-gray-600 text-sm">
+								You'll receive status updates on ideas you submitted or voted
+								on, and you can follow our website changelog.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="py-12 md:py-16 bg-white border-t border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div
+					class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-8 md:mb-12"
+				>
+					<div class="sm:col-span-2 lg:col-span-1">
+						<div class="flex items-center gap-2 mb-4">
+							<img src="./assets/image/logo.png" alt="Penwise" />
+						</div>
+						<p class="text-[16px] text-[#7B8189] leading-relaxed max-w-xs">
+							Penwise is an AI-powered writing platform designed to help
+							storytellers, authors, and teams create, edit, and organize their
+							work effortlessly.
+						</p>
+					</div>
+
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">
+							Quick Links
+						</h3>
+						<ul class="space-y-2.5 list-disc pl-6">
+							<li>
+								<a
+									href="./index.html"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>Home</a
+								>
+							</li>
+							<li>
+								<a
+									href="./howitworks.html"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>How It Works</a
+								>
+							</li>
+							<li>
+								<a
+									href="./pricing.html"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="./blog.html"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>Blog</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">Resources</h3>
+						<ul class="space-y-2.5 list-disc pl-6">
+							<li>
+								<a
+									href="#"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>Help Center</a
+								>
+							</li>
+							<li>
+								<a
+									href="./faq.html"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>FAQs</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-sm text-[#7B8189] hover:text-black transition-colors"
+									>Privacy Policy</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">
+							Contact Info
+						</h3>
+						<ul class="space-y-2.5 pl-3">
+							<li class="flex items-start gap-3">
+								<span class="text-sm text-[#7B8189]">website@penwise.ai</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-sm text-[#7B8189]">support@penwise.ai</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pt-8 border-t border-gray-200">
+					<p class="text-[16px] text-[#7B8189] text-center">
+						© 2025 Penwise. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			// Mobile menu toggle
+			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+			const mobileMenu = document.getElementById("mobileMenu");
+			const closeMenuBtn = document.getElementById("closeMenuBtn");
+
+			mobileMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.remove("translate-x-full");
+			});
+
+			closeMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.add("translate-x-full");
+			});
+
+			// FAQ Accordion
+			const faqQuestions = document.querySelectorAll(".faq-question");
+
+			faqQuestions.forEach((question) => {
+				question.addEventListener("click", () => {
+					const answer = question.nextElementSibling;
+					const icon = question.querySelector(".faq-icon");
+
+					// Close all other FAQs
+					faqQuestions.forEach((q) => {
+						if (q !== question) {
+							const a = q.nextElementSibling;
+							const i = q.querySelector(".faq-icon");
+							a.style.maxHeight = "0px";
+							i.style.transform = "rotate(0deg)";
+						}
+					});
+
+					// Toggle current FAQ
+					if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
+						answer.style.maxHeight = "0px";
+						icon.style.transform = "rotate(0deg)";
+					} else {
+						answer.style.maxHeight = answer.scrollHeight + "px";
+						icon.style.transform = "rotate(180deg)";
+					}
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 		rel="stylesheet" />
 	<script src="https://cdn.tailwindcss.com"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script>
 		tailwind.config = {
 			theme: {
@@ -203,7 +204,7 @@
 	</section>
 
 	<!-- Stats Section -->
-	<section class="bg-white  border-gray-200">
+	<section class="bg-white  border-gray-200" data-aos="fade-up">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-0">
 				<!-- Stat 1: Books Created -->
@@ -258,7 +259,7 @@
 	</section>
 
 	<!-- Tagline -->
-	<section class="mt-4 lg:mt-[80px] flex flex-col justify-center items-center space-y-2 p-4 md:p-0">
+	<section class="mt-4 lg:mt-[80px] flex flex-col justify-center items-center space-y-2 p-4 md:p-0" data-aos="fade-up">
 		<div
 			class="px-[16px] py-[8px] align-center bg-[#F2F2F2] text-center flex items-center gap-2 justify-center rounded-full border border-black">
 			<div class="flex items-center">
@@ -395,7 +396,7 @@
 	</section>
 
 	<!-- Tagline -->
-	<section class="mt-4 lg:mt-[80px] flex flex-col justify-center items-center space-y-2 p-4 md:p-0">
+	<section class="mt-4 lg:mt-[80px] flex flex-col justify-center items-center space-y-2 p-4 md:p-0" data-aos="fade-up">
 		<!-- <div
 				class="px-[16px] py-[8px] align-center bg-[#F2F2F2] text-center flex items-center gap-2 justify-center rounded-full border border-black"
 			>
@@ -436,7 +437,7 @@
 	</section>
 
 	<!-- Comparison Table -->
-	<section class="py-10">
+	<section class="py-10" data-aos="fade-up">
 		<div class="max-w-7xl mx-auto px-5 sm:px-6">
 			<div class="w-full overflow-x-auto">
 				<div class="w-full inline-block min-w-full sm:min-w-0 rounded-none sm:rounded-3xl overflow-hidden rounded-xl"
@@ -612,7 +613,7 @@
 
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
 			<!-- Section Header -->
-			<div class="text-start mb-12 md:mb-16">
+			<div class="text-start mb-12 md:mb-16" data-aos="fade-up">
 				<h2 class="text-3xl md:text-4xl lg:text-[38px] font-bold text-white mb-4">
 					From Idea to Published Masterpiece
 				</h2>
@@ -624,7 +625,7 @@
 
 
 			<!-- Workflow Steps -->
-			<div class="relative">
+			<div class="relative" data-aos="fade-up">
 				<!-- Desktop: Horizontal Layout -->
 				<div class="hidden lg:flex items-start justify-between gap-8 relative">
 					<!-- Step 1: Generate Ideas -->
@@ -824,7 +825,7 @@
 	<section id="pricing" class="py-16 md:py-24 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6">
 			<!-- Section Header -->
-			<div class="text-center mb-12 md:mb-16">
+			<div class="text-center mb-12 md:mb-16" data-aos="fade-up">
 				<h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
 					Choose the Plan That Fits You
 				</h2>
@@ -835,7 +836,7 @@
 			</div>
 
 			<!-- Pricing Cards -->
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 p-4 sm:p-6 md:p-8 lg:p-12">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 p-4 sm:p-6 md:p-8 lg:p-12" data-aos="fade-up">
 				<!-- Starter Book Plan -->
 				<div
 					class="relative bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 hover:shadow-xl transition-shadow duration-300">
@@ -1004,7 +1005,7 @@
 		<!-- Dark Overlay -->
 		<div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+		<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center" data-aos="fade-up">
 			<!-- Heading -->
 			<h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight">
 				Bring your Novel to Life - Let<br />Penwise Be Your Writing Partner
@@ -1168,6 +1169,13 @@
 	</footer>
 
 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 800,
+			once: true,
+		});
+	</script>
 	<script src="script.js"></script>
 </body>
 

@@ -1,92 +1,94 @@
 // Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const closeMenuBtn = document.getElementById('closeMenuBtn');
-const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenuBtn = document.getElementById("closeMenuBtn");
+const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
 function openMobileMenu() {
-    mobileMenu.classList.remove('translate-x-full');
-    document.body.style.overflow = 'hidden';
+	mobileMenu.classList.remove("translate-x-full");
+	document.body.style.overflow = "hidden";
 }
 
 function closeMobileMenu() {
-    mobileMenu.classList.add('translate-x-full');
-    document.body.style.overflow = '';
+	mobileMenu.classList.add("translate-x-full");
+	document.body.style.overflow = "";
 }
 
-mobileMenuBtn.addEventListener('click', openMobileMenu);
-closeMenuBtn.addEventListener('click', closeMobileMenu);
+mobileMenuBtn.addEventListener("click", openMobileMenu);
+closeMenuBtn.addEventListener("click", closeMobileMenu);
 
 // Close mobile menu when clicking on links
-mobileNavLinks.forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
+mobileNavLinks.forEach((link) => {
+	link.addEventListener("click", closeMobileMenu);
 });
 
 // Navbar scroll effect with shadow
-const navbar = document.querySelector('nav');
+const navbar = document.querySelector("nav");
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 50) {
-        navbar.classList.add('shadow-md');
-    } else {
-        navbar.classList.remove('shadow-md');
-    }
-    
-    lastScroll = currentScroll;
+window.addEventListener("scroll", () => {
+	const currentScroll = window.pageYOffset;
+
+	if (currentScroll > 50) {
+		navbar.classList.add("shadow-md");
+	} else {
+		navbar.classList.remove("shadow-md");
+	}
+
+	lastScroll = currentScroll;
 });
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px'
+	threshold: 0.15,
+	rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.remove('opacity-0', 'translate-y-8');
-            entry.target.classList.add('opacity-100', 'translate-y-0');
-            observer.unobserve(entry.target);
-        }
-    });
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.classList.remove("opacity-0", "translate-y-8");
+			entry.target.classList.add("opacity-100", "translate-y-0");
+			observer.unobserve(entry.target);
+		}
+	});
 }, observerOptions);
 
 // Observe all animated elements
-const animatedElements = document.querySelectorAll('.stat-item, section#features > div > div');
-animatedElements.forEach(el => observer.observe(el));
+const animatedElements = document.querySelectorAll(
+	".stat-item, section#features > div > div"
+);
+animatedElements.forEach((el) => observer.observe(el));
 
 // Smooth scroll with offset for fixed navbar
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href === '#' || href.length <= 1) return;
-        
-        e.preventDefault();
-        
-        const target = document.querySelector(href);
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+	anchor.addEventListener("click", function (e) {
+		const href = this.getAttribute("href");
+		if (href === "#" || href.length <= 1) return;
+
+		e.preventDefault();
+
+		const target = document.querySelector(href);
+		if (target) {
+			const offsetTop = target.offsetTop - 80;
+			window.scrollTo({
+				top: offsetTop,
+				behavior: "smooth",
+			});
+		}
+	});
 });
 
 // Add ripple effect to buttons
-document.querySelectorAll('button').forEach(button => {
-    button.addEventListener('click', function(e) {
-        const ripple = document.createElement('span');
-        const rect = this.getBoundingClientRect();
-        const size = Math.max(rect.width, rect.height);
-        const x = e.clientX - rect.left - size / 2;
-        const y = e.clientY - rect.top - size / 2;
-        
-        ripple.style.cssText = `
+document.querySelectorAll("button").forEach((button) => {
+	button.addEventListener("click", function (e) {
+		const ripple = document.createElement("span");
+		const rect = this.getBoundingClientRect();
+		const size = Math.max(rect.width, rect.height);
+		const x = e.clientX - rect.left - size / 2;
+		const y = e.clientY - rect.top - size / 2;
+
+		ripple.style.cssText = `
             position: absolute;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.5);
@@ -98,17 +100,17 @@ document.querySelectorAll('button').forEach(button => {
             animation: ripple-animation 0.6s ease-out;
             pointer-events: none;
         `;
-        
-        this.style.position = 'relative';
-        this.style.overflow = 'hidden';
-        this.appendChild(ripple);
-        
-        setTimeout(() => ripple.remove(), 600);
-    });
+
+		this.style.position = "relative";
+		this.style.overflow = "hidden";
+		this.appendChild(ripple);
+
+		setTimeout(() => ripple.remove(), 600);
+	});
 });
 
 // Add ripple animation keyframes
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
     @keyframes ripple-animation {
         to {
@@ -150,5 +152,11 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Console welcome message
-console.log('%c🚀 Penwise - Write Smarter, Faster, and Better', 'font-size: 20px; font-weight: bold; color: #000;');
-console.log('%cBuilt with ❤️ using Tailwind CSS', 'font-size: 14px; color: #666;');
+console.log(
+	"%c🚀 Penwise - Write Smarter, Faster, and Better",
+	"font-size: 20px; font-weight: bold; color: #000;"
+);
+console.log(
+	"%cBuilt with ❤️ using Tailwind CSS",
+	"font-size: 14px; color: #666;"
+);

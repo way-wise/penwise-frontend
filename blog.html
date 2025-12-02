@@ -14,6 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -223,7 +224,7 @@
 				class="flex flex-col lg:flex-row items-center justify-between gap-10"
 			>
 				<!-- Center Content -->
-				<div class="z-20 space-y-6">
+				<div class="z-20 space-y-6" data-aos="fade-right">
 					<h1
 						class="text-3xl text-center lg:text-left md:text-[56px] font-semibold leading-tight tracking-tight animate-fade-in-up"
 					>
@@ -261,7 +262,7 @@
 						</button>
 					</div>
 				</div>
-				<div class="lg:w-[50%] w-full">
+				<div class="lg:w-[50%] w-full" data-aos="fade-left">
 					<div class="">
 						<img
 							src="./assets/image/blog/blogcard.png"
@@ -280,6 +281,7 @@
 				<!-- Grid Container -->
 				<div
 					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"
+					data-aos="fade-up"
 				>
 					<!-- Card 1 -->
 					<a href="./blogdetails.html" class="group cursor-pointer block">
@@ -804,7 +806,10 @@
 			<!-- Dark Overlay -->
 			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-			<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
 				<!-- Heading -->
 				<h2
 					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
@@ -842,7 +847,7 @@
 		</section>
 
 		<!-- Footer Section -->
-		<footer class="rounded-b-2xl py-12 md:py-16">
+		<footer data-aos="fade-up" class="rounded-b-2xl py-12 md:py-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<!-- Footer Content Grid -->
 				<div
@@ -911,7 +916,9 @@
 						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./contactus.html"
+									class="hover:text-black transition-colors"
 									>Contact</a
 								>
 							</li>
@@ -930,7 +937,9 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
 									>Published books</a
 								>
 							</li>
@@ -1172,6 +1181,15 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 800,
+				once: true,
+			});
+		</script>
 
 		<script src="script.js"></script>
 	</body>

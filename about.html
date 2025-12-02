@@ -14,6 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -221,15 +222,18 @@
 		>
 			<div class="max-w-7xl mx-auto">
 				<!-- Center Content -->
-				<div class="w-full z-20 space-y-6 mx-auto text-center">
+				<div
+					class="w-full z-20 space-y-6 mx-auto text-center"
+					data-aos="fade-up"
+				>
 					<div
-						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6 animate-fade-in"
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
 					>
 						✨ About Us
 					</div>
 
 					<h1
-						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight animate-fade-in-up"
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
 					>
 						About Penwise
 					</h1>
@@ -247,7 +251,7 @@
 		<!-- Our Story Section -->
 		<section class="mt-[60px] py-5 lg:py-16 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12 md:mb-16">
+				<div class="text-center mb-12 md:mb-16" data-aos="fade-up">
 					<h2
 						class="text-3xl md:text-4xl lg:text-[38px] font-bold text-black mb-4"
 					>
@@ -262,6 +266,7 @@
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 					<div
 						class="bg-white rounded-2xl p-6 shadow-xl relative z-10 space-y-4"
+						data-aos="fade-right"
 					>
 						<h3 class="text-xl font-bold text-black">We Are Storytellers</h3>
 						<p class="text-sm text-gray-600 leading-relaxed">
@@ -274,6 +279,7 @@
 
 					<div
 						class="bg-white rounded-2xl p-6 shadow-xl relative z-10 space-y-4"
+						data-aos="fade-up"
 					>
 						<h3 class="text-xl font-bold text-black">
 							The Midnight Realization
@@ -288,6 +294,7 @@
 
 					<div
 						class="bg-white rounded-2xl p-6 shadow-xl relative z-10 space-y-4"
+						data-aos="fade-left"
 					>
 						<h3 class="text-xl font-bold text-black">The Emotional Journey</h3>
 						<p class="text-sm text-gray-600 leading-relaxed">
@@ -305,7 +312,7 @@
 			class="py-5 lg:py-16 bg-[url('/assets/image/howitwork/gridbg.png')] bg-cover bg-center relative bg-white overflow-hidden"
 		>
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12 md:mb-16">
+				<div class="text-center mb-12 md:mb-16" data-aos="fade-right">
 					<h2
 						class="text-3xl md:text-4xl lg:text-[38px] font-bold text-white mb-4"
 					>
@@ -316,7 +323,7 @@
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-aos="fade-left">
 					<!-- Card 1 -->
 					<div
 						class="bg-white rounded-2xl p-6 shadow-xl relative z-10 space-y-2"
@@ -407,7 +414,7 @@
 		<!-- Our Principles Section -->
 		<section class="py-5 lg:py-16 bg-white">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12 md:mb-16">
+				<div class="text-center mb-12 md:mb-16" data-aos="fade-right">
 					<h2
 						class="text-3xl md:text-4xl lg:text-[38px] font-bold text-black mb-4"
 					>
@@ -418,7 +425,10 @@
 					</p>
 				</div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+				<div
+					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+					data-aos="fade-left"
+				>
 					<div
 						class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
 					>
@@ -472,7 +482,10 @@
 			class="lg:mx-[60px] mx-5 rounded-3xl bg-black text-white py-16 md:py-24 mt-10"
 		>
 			<div class="max-w-7xl mx-auto px-6">
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+				<div
+					class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+					data-aos="fade-up"
+				>
 					<div>
 						<div class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
 							10k+
@@ -513,7 +526,7 @@
 		<section class="py-20 bg-white">
 			<div class="max-w-4xl mx-auto px-6 space-y-20">
 				<!-- Promise -->
-				<div class="text-center">
+				<div class="text-center" data-aos="fade-right">
 					<h2 class="text-3xl font-bold mb-6 text-black">
 						Our Promise to the World
 					</h2>
@@ -525,7 +538,10 @@
 				</div>
 
 				<!-- Founders Note -->
-				<div class="bg-gray-50 p-8 md:p-12 rounded-3xl relative">
+				<div
+					class="bg-gray-50 p-8 md:p-12 rounded-3xl relative"
+					data-aos="fade-left"
+				>
 					<div class="text-4xl text-gray-300 absolute top-8 left-8">"</div>
 					<blockquote
 						class="text-xl md:text-2xl font-medium text-center text-gray-800 mb-6 relative z-10"
@@ -544,7 +560,7 @@
 
 		<!-- Explore More -->
 		<section class="py-20 border-t border-gray-100">
-			<div class="max-w-7xl mx-auto px-6 text-center">
+			<div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
 				<h2 class="text-2xl font-bold mb-10 text-black">Explore More</h2>
 				<div class="flex flex-wrap justify-center gap-4">
 					<a
@@ -583,7 +599,10 @@
 			<!-- Dark Overlay -->
 			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-			<div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
 				<!-- Heading -->
 				<h2
 					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
@@ -621,7 +640,7 @@
 		</section>
 
 		<!-- Footer Section -->
-		<footer class="rounded-b-2xl py-12 md:py-16">
+		<footer data-aos="fade-up" class="rounded-b-2xl py-12 md:py-16">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<!-- Footer Content Grid -->
 				<div
@@ -690,7 +709,9 @@
 						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./contactus.html"
+									class="hover:text-black transition-colors"
 									>Contact</a
 								>
 							</li>
@@ -709,7 +730,9 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
 									>Published books</a
 								>
 							</li>
@@ -951,6 +974,15 @@
 				</div>
 			</div>
 		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 800,
+				once: true,
+			});
+		</script>
 
 		<script src="script.js"></script>
 	</body>

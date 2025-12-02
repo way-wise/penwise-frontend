@@ -1,0 +1,9 @@
+{
+	"files.exclude": {
+		"?": true,
+		"*": true,
+		"**": true,
+		"/": true,
+		"/*": true
+	}
+}

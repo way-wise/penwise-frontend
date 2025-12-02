@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Free AI Story Title Generator – Get Ideas Instantly | Penwise</title>
+		<meta
+			name="description"
+			content="Instantly create unique, professional, and engaging titles designed for short stories, essays, or anthology entries with Penwise's AI."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: ["Inter", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
+	</head>
+
+	<body class="font-sans antialiased overflow-x-hidden bg-white">
+		<!-- Navigation -->
+		<nav class="fixed top-0 left-0 right-0 bg-white z-50">
+			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
+				<div class="flex items-center justify-between h-18">
+					<a
+						href="./index.html"
+						class="flex items-center gap-2 text-xl font-bold text-black hover:scale-105 transition-transform duration-300"
+					>
+						<img src="./assets/image/logo.png" alt="Penwise" />
+					</a>
+
+					<div class="hidden lg:flex items-center gap-8">
+						<a
+							href="./howitworks.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							How It Works
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./pricing.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Pricing
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./why.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Why Penwise
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./affiliates.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Affiliates
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./faq.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							FAQ
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./blog.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Blog
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+					</div>
+
+					<div class="hidden lg:flex items-center gap-3">
+						<button
+							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
+						>
+							Log In
+						</button>
+					</div>
+
+					<button
+						id="mobileMenuBtn"
+						class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+					>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+						<span
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+						></span>
+					</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Mobile Menu -->
+		<div
+			id="mobileMenu"
+			class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden"
+		>
+			<div class="flex flex-col h-full">
+				<div
+					class="flex items-center justify-between p-6 border-b border-gray-200"
+				>
+					<a
+						href="#"
+						class="flex items-center gap-2 text-xl font-bold text-black"
+					>
+						<img src="./assets/image/logo.png" alt="" />
+					</a>
+					<button
+						id="closeMenuBtn"
+						class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 text-3xl text-gray-700"
+					>
+						&times;
+					</button>
+				</div>
+
+				<nav class="flex-1 overflow-y-auto p-6">
+					<div class="flex flex-col gap-2">
+						<a
+							href="./howitworks.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							How It Works
+						</a>
+						<a
+							href="./pricing.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Pricing
+						</a>
+						<a
+							href="./why.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Why Penwise
+						</a>
+						<a
+							href="./affiliates.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Affiliates
+						</a>
+						<a
+							href="./faq.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							FAQ
+						</a>
+						<a
+							href="./blog.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Blog
+						</a>
+					</div>
+				</nav>
+
+				<div class="p-6 border-t border-gray-200 space-y-3">
+					<button
+						class="w-full px-6 py-3.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
+					>
+						Log In
+					</button>
+					<button
+						class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300"
+					>
+						Get Started
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section
+			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-10 bg-black text-white overflow-hidden"
+			style="
+				background-image: url('./assets/image/hero/herobackground.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
+		>
+			<div class="max-w-7xl mx-auto">
+				<div
+					class="w-full z-20 space-y-6 mx-auto text-center"
+					data-aos="fade-up"
+				>
+					<div
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
+					>
+						✨ Free AI Tool
+					</div>
+
+					<h1
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
+					>
+						Free AI Story Title Generator<br /><span class="text-gray-400"
+							>Get Ideas Instantly</span
+						>
+					</h1>
+
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
+						Every story begins with a spark, and often that spark is the title.
+						A strong title captures attention, sets the tone, and invites
+						readers into your world. With Penwise's AI Story Title Generator,
+						you can instantly create unique, professional, and engaging titles
+						designed for short stories, essays, or anthology entries.
+					</p>
+
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
+						Whether you're an aspiring writer, a student working on a creative
+						writing project, or a published author, you'll find the perfect
+						inspiration here to kickstart your next masterpiece.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Generator Tool Section -->
+		<section class="py-12 lg:py-20 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6" data-aos="fade-up">
+				<div
+					class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+				>
+					<div
+						class="p-8 md:p-10 bg-gray-50 border-b border-gray-100 text-center"
+					>
+						<h2 class="text-2xl font-bold text-black mb-2">
+							Generate Your Perfect Story Title
+						</h2>
+						<p class="text-gray-600">
+							Enter a theme, keyword, or mood, and our AI will produce creative
+							and original titles.
+						</p>
+					</div>
+
+					<div class="p-8 md:p-10 space-y-6">
+						<div>
+							<label
+								for="story-prompt"
+								class="block text-sm font-semibold text-gray-900 mb-2"
+								>Describe Your Story Theme or Concept</label
+							>
+							<textarea
+								id="story-prompt"
+								rows="4"
+								class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-black focus:border-black transition-colors resize-none"
+								placeholder="Example: A melancholic story about childhood memories in a small town, mystery involving lost letters, romantic tale set in a bookstore..."
+							></textarea>
+							<p class="mt-2 text-sm text-gray-500">
+								Include the genre, mood, setting, or main theme. You can also
+								mention keywords or feelings you want the title to convey.
+							</p>
+						</div>
+
+						<button
+							class="w-full py-4 bg-black text-white font-bold rounded-xl hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+						>
+							<span>Generate Story Titles</span>
+							<svg
+								class="w-5 h-5"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M13 10V3L4 14h7v7l9-11h-7z"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Use AI Section -->
+		<section class="py-16 lg:py-24 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+						Why Use an AI Story Title Generator?
+					</h2>
+					<p class="text-gray-600 leading-relaxed">
+						Finding the right title can sometimes take longer than writing the
+						story itself. That's where AI comes in. Penwise uses advanced
+						language models to suggest creative story titles that match your
+						genre, theme, and tone. Instead of endless brainstorming, you get
+						instant ideas that feel polished and ready to use.
+					</p>
+				</div>
+
+				<div
+					class="grid md:grid-cols-3 gap-8"
+					data-aos="fade-up"
+					data-aos-delay="100"
+				>
+					<div
+						class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+					>
+						<div
+							class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6 text-2xl"
+						>
+							📚
+						</div>
+						<h3 class="text-xl font-bold text-black mb-4">For All Genres</h3>
+						<p class="text-gray-600">
+							Writers across all genres—mystery, fantasy, romance, science
+							fiction, thriller, or literary fiction—can use Penwise to discover
+							new directions for their work.
+						</p>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+					>
+						<div
+							class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6 text-2xl"
+						>
+							✨
+						</div>
+						<h3 class="text-xl font-bold text-black mb-4">
+							Professional Quality
+						</h3>
+						<p class="text-gray-600">
+							Get polished, professional-quality titles that feel authentic and
+							genre-appropriate, not random word combinations.
+						</p>
+					</div>
+
+					<div
+						class="bg-white p-8 rounded-2xl border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+					>
+						<div
+							class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-6 text-2xl"
+						>
+							🎓
+						</div>
+						<h3 class="text-xl font-bold text-black mb-4">
+							Perfect for Students
+						</h3>
+						<p class="text-gray-600">
+							A powerful tool for students, bloggers, and essayists who need
+							quick and professional title suggestions for their assignments.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- How It Works Section -->
+		<section class="py-16 lg:py-24 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<div data-aos="fade-right">
+						<h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+							Perfect for Every Type of Writing
+						</h2>
+						<p class="text-gray-600 mb-8 leading-relaxed">
+							Simply enter a theme, a keyword, or even just a mood, and our AI
+							story generator will produce a range of creative and original
+							titles for you. Whether you're looking for something poetic,
+							dramatic, or playful, Penwise adapts to your style.
+						</p>
+
+						<ul class="space-y-4">
+							<li class="flex items-center gap-3">
+								<span
+									class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm"
+									>✓</span
+								>
+								<span class="text-gray-700 font-medium"
+									>Short stories in any genre</span
+								>
+							</li>
+							<li class="flex items-center gap-3">
+								<span
+									class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm"
+									>✓</span
+								>
+								<span class="text-gray-700 font-medium"
+									>Essays or personal reflections</span
+								>
+							</li>
+							<li class="flex items-center gap-3">
+								<span
+									class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm"
+									>✓</span
+								>
+								<span class="text-gray-700 font-medium"
+									>Creative writing assignments</span
+								>
+							</li>
+							<li class="flex items-center gap-3">
+								<span
+									class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm"
+									>✓</span
+								>
+								<span class="text-gray-700 font-medium"
+									>Anthology entries or competitions</span
+								>
+							</li>
+							<li class="flex items-center gap-3">
+								<span
+									class="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center text-sm"
+									>✓</span
+								>
+								<span class="text-gray-700 font-medium"
+									>Blog posts or serialized fiction</span
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="relative" data-aos="fade-left">
+						<div
+							class="aspect-square rounded-3xl bg-gray-100 overflow-hidden relative"
+						>
+							<!-- Placeholder for illustration -->
+							<div
+								class="absolute inset-0 flex items-center justify-center bg-gray-50"
+							>
+								<span class="text-6xl">✍️</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Explore More Section -->
+		<section class="py-16 lg:py-24 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-16" data-aos="fade-up">
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Generate Story Titles Effortlessly
+					</h2>
+					<p class="text-gray-600">
+						Discover unique, engaging story titles with the click of a button —
+						powered by AI.
+					</p>
+				</div>
+
+				<div
+					class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+					data-aos="fade-up"
+				>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							AI Story Title Generator
+						</h3>
+						<p class="text-sm text-gray-500">
+							Quickly generate story titles that capture your theme.
+						</p>
+					</a>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							Use of Devices
+						</h3>
+						<p class="text-sm text-gray-500">
+							Incorporate literary devices to create compelling titles.
+						</p>
+					</a>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							Storytelling Terms
+						</h3>
+						<p class="text-sm text-gray-500">
+							Understand the terminology used in crafting strong titles.
+						</p>
+					</a>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							Keep It Unique
+						</h3>
+						<p class="text-sm text-gray-500">
+							Generate titles that stand out and stay plagiarism-free.
+						</p>
+					</a>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							Boost Efficiency
+						</h3>
+						<p class="text-sm text-gray-500">
+							Accelerate your creative process with automated title ideas.
+						</p>
+					</a>
+					<a
+						href="#"
+						class="group bg-white p-6 rounded-2xl border border-gray-100 hover:shadow-md transition-all duration-300"
+					>
+						<h3
+							class="text-lg font-bold text-black mb-2 group-hover:text-gray-700"
+						>
+							Compare Title Styles
+						</h3>
+						<p class="text-sm text-gray-500">
+							See how different genres influence storytelling titles.
+						</p>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-16 lg:py-24 bg-white">
+			<div class="max-w-3xl mx-auto px-4 sm:px-6">
+				<div class="text-center mb-12" data-aos="fade-up">
+					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
+						Everything You Need to Know
+					</h2>
+				</div>
+
+				<div class="space-y-4" data-aos="fade-up">
+					<!-- FAQ Item 1 -->
+					<div class="border border-gray-200 rounded-2xl overflow-hidden">
+						<button
+							class="w-full px-6 py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+							onclick="toggleFaq('faq1')"
+						>
+							<span class="font-semibold text-black"
+								>What's the difference between a book title and a story
+								title?</span
+							>
+							<svg
+								id="icon-faq1"
+								class="w-5 h-5 text-gray-400 transform transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								></path>
+							</svg>
+						</button>
+						<div id="content-faq1" class="hidden px-6 pb-6 text-gray-600">
+							<p>
+								A book title usually represents a full narrative arc, while a
+								story title is often shorter, symbolic, and designed to capture
+								a single theme or mood. Story titles work best when they
+								intrigue the reader and leave space for interpretation.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 2 -->
+					<div class="border border-gray-200 rounded-2xl overflow-hidden">
+						<button
+							class="w-full px-6 py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+							onclick="toggleFaq('faq2')"
+						>
+							<span class="font-semibold text-black"
+								>Can I use these titles for short stories or essays?</span
+							>
+							<svg
+								id="icon-faq2"
+								class="w-5 h-5 text-gray-400 transform transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								></path>
+							</svg>
+						</button>
+						<div id="content-faq2" class="hidden px-6 pb-6 text-gray-600">
+							<p>
+								Absolutely. This tool is built for short-form writing like short
+								stories, essays, and creative writing assignments. You'll get
+								titles that fit academic or artistic contexts.
+							</p>
+						</div>
+					</div>
+
+					<!-- FAQ Item 3 -->
+					<div class="border border-gray-200 rounded-2xl overflow-hidden">
+						<button
+							class="w-full px-6 py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+							onclick="toggleFaq('faq3')"
+						>
+							<span class="font-semibold text-black"
+								>How unique are AI-generated titles?</span
+							>
+							<svg
+								id="icon-faq3"
+								class="w-5 h-5 text-gray-400 transform transition-transform duration-300"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								></path>
+							</svg>
+						</button>
+						<div id="content-faq3" class="hidden px-6 pb-6 text-gray-600">
+							<p>
+								Each title is generated dynamically by AI. While no generator
+								can guarantee absolute uniqueness, Penwise is built to avoid
+								clichés and overused patterns, giving you fresh and original
+								titles tailored to your input.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Penwise Section -->
+		<section class="py-16 lg:py-24 bg-gray-50">
+			<div
+				class="max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2 class="text-3xl md:text-4xl font-bold text-black mb-6">
+					Why Penwise Is the Best Choice
+				</h2>
+				<p class="text-gray-600 leading-relaxed mb-6">
+					Many title generators online produce random word combinations that
+					don't feel meaningful. Penwise is different. Our AI is designed for
+					writers, students, and creators, so it generates relevant,
+					genre-specific, and professional-quality titles you can actually use.
+				</p>
+				<p class="text-gray-600 leading-relaxed">
+					Other tools might give you 100 options you'll never pick, while
+					Penwise aims to deliver a handful of truly useful suggestions—saving
+					you time and sparking creativity.
+				</p>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section
+			class="mt-[80px] max-w-7xl mx-auto px-4 sm:px-6 rounded-t-2xl relative py-16 md:py-20 lg:py-24 w-full h-full bg-cover bg-center bg-no-repeat overflow-hidden"
+			style="background-image: url('./assets/image/footer/bg.png')"
+		>
+			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
+				>
+					Ready to Take Your Idea Further?
+				</h2>
+
+				<p
+					class="text-sm sm:text-base md:text-lg text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+				>
+					Don't just stop at the title—use Penwise to write your short story,
+					essay, or even the first chapter of your novel. Start building your
+					story with AI today.
+				</p>
+
+				<button
+					class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+				>
+					Write Your Complete Story with Penwise AI
+					<svg
+						class="w-4 h-4 sm:w-5 sm:h-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</button>
+			</div>
+		</section>
+
+		<!-- Footer Section -->
+		<footer class="rounded-b-2xl py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<!-- Footer Content Grid -->
+				<div
+					class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-8 mb-8 md:mb-12"
+				>
+					<!-- Penwise Brand Column -->
+					<div class="sm:col-span-2 md:col-span-1 lg:col-span-1">
+						<div class="flex items-center gap-2 mb-4">
+							<img src="./assets/image/logo.png" alt="Penwise" />
+						</div>
+						<p class="text-[16px] text-[#7B8189] leading-relaxed max-w-xs mb-6">
+							Penwise is an AI-powered writing platform designed to help
+							storytellers, authors, and teams create, edit, and organize their
+							work effortlessly.
+						</p>
+						<div class="flex gap-4">
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Facebook"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Instagram"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Twitter"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="YouTube"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+
+					<!-- Product Column -->
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./contactus.html"
+									class="hover:text-black transition-colors"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<a
+									href="./howitworks.html"
+									class="hover:text-black transition-colors"
+									>How it works</a
+								>
+							</li>
+							<li>
+								<a
+									href="./pricing.html"
+									class="hover:text-black transition-colors"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
+									>Published books</a
+								>
+							</li>
+							<li>
+								<a href="./blog.html" class="hover:text-black transition-colors"
+									>Blog</a
+								>
+							</li>
+							<li>
+								<a href="/about.html" class="hover:text-black transition-colors"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="./educators-and-schools.html"
+									class="hover:text-black transition-colors"
+									>For Educators & Schools</a
+								>
+							</li>
+							<li>
+								<a href="./why.html" class="hover:text-black transition-colors"
+									>Why penwise</a
+								>
+							</li>
+							<li>
+								<a
+									href="./ambassadors-program.html"
+									class="hover:text-black transition-colors"
+									>Ambassadors Program</a
+								>
+							</li>
+							<li>
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
+									>Book Titles Generator</a
+								>
+							</li>
+							<li>
+								<a
+									href="./story-title-generator.html"
+									class="hover:text-black transition-colors"
+									>Story Title Generator</a
+								>
+							</li>
+							<li>
+								<a
+									href="./plot-generator.html"
+									class="hover:text-black transition-colors"
+									>Generate Story Arcs</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Free AI Tools Column -->
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">Resources</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./for-parents.html"
+									class="hover:text-black transition-colors"
+									>For Parents</a
+								>
+							</li>
+							<li>
+								<a
+									href="./writing-tips-and-techniques.html"
+									class="hover:text-black transition-colors"
+									>Writing Tips & Techniques</a
+								>
+							</li>
+							<li>
+								<a
+									href="./the-complete-publishing-mastery-course.html"
+									class="hover:text-black transition-colors"
+									>Publishing Mastery Course</a
+								>
+							</li>
+							<li>
+								<a
+									href="./self-publishing-guide.html"
+									class="hover:text-black transition-colors"
+									>Self-Publishing Guide</a
+								>
+							</li>
+							<li>
+								<a
+									href="./literary-devices.html"
+									class="hover:text-black transition-colors"
+									>Literary Devices Masterclass</a
+								>
+							</li>
+							<li>
+								<a
+									href="./editing-and-proofreading-tips.html"
+									class="hover:text-black transition-colors"
+									>Editing & Proofreading Tips</a
+								>
+							</li>
+							<li>
+								<a
+									href="./guide-to-literary-genres.html"
+									class="hover:text-black transition-colors"
+									>Guide to Literary Genres</a
+								>
+							</li>
+							<li>
+								<a
+									href="./story_arcs-explained.html"
+									class="hover:text-black transition-colors"
+									>Story Arcs Explained</a
+								>
+							</li>
+							<li>
+								<a
+									href="./ideation-and-votes.html"
+									class="hover:text-black transition-colors"
+									>Ideation & Votes</a
+								>
+							</li>
+							<li>
+								<a
+									href="./literary-glossary.html"
+									class="hover:text-black transition-colors"
+									>Literary Glossary</a
+								>
+							</li>
+							<li>
+								<a
+									href="./platforms-and-comparisons.html"
+									class="hover:text-black transition-colors"
+									>Platforms & Comparisons</a
+								>
+							</li>
+							<li>
+								<a
+									href="./our-mission-and-vision.html"
+									class="hover:text-black transition-colors"
+									>Our Mission & Vision</a
+								>
+							</li>
+							<li>
+								<a
+									href="./pricing-and-value.html"
+									class="hover:text-black transition-colors"
+									>Pricing & Value</a
+								>
+							</li>
+							<li>
+								<a
+									href="./future-oriented.html"
+									class="hover:text-black transition-colors"
+									>Future Oriented</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Use-Case Specific Column -->
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">
+							Use-Case Specific
+						</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./use-case.html"
+									class="hover:text-black transition-colors"
+									>Use Cases</a
+								>
+							</li>
+							<li>
+								<a
+									href="./publishing-copyright.html"
+									class="hover:text-black transition-colors"
+									>Publishing & Copyright</a
+								>
+							</li>
+							<li>
+								<a
+									href="./originality-and-plagiarism.html"
+									class="hover:text-black transition-colors"
+									>Originality & Plagiarism</a
+								>
+							</li>
+							<li>
+								<a
+									href="./quality-and-professional.html"
+									class="hover:text-black transition-colors"
+									>Quality & Professional Use</a
+								>
+							</li>
+							<li>
+								<a
+									href="./end-writers-block.html"
+									class="hover:text-black transition-colors"
+									>End Writer's Block</a
+								>
+							</li>
+							<li>
+								<a
+									href="./trust-and-safety.html"
+									class="hover:text-black transition-colors"
+									>Trust & Safety</a
+								>
+							</li>
+							<li>
+								<a
+									href="./speed-and-efficiency.html"
+									class="hover:text-black transition-colors"
+									>Speed & Efficiency</a
+								>
+							</li>
+							<li>
+								<a
+									href="./performance-analytics.html"
+									class="hover:text-black transition-colors"
+									>Performance Analytics</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Copyright -->
+				<div class="pt-8 border-t border-gray-200">
+					<div
+						class="flex flex-col sm:flex-row justify-between items-center gap-4"
+					>
+						<p class="text-[14px] text-[#7B8189]">
+							© 2025 Penwise. All rights reserved.
+						</p>
+						<div class="flex gap-6">
+							<a
+								href="./privacy-policy.html"
+								class="text-[14px] text-[#7B8189] hover:text-black"
+								>Privacy</a
+							>
+							<a
+								href="./terms-and-conditions.html"
+								class="text-[14px] text-[#7B8189] hover:text-black"
+								>Terms</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 800,
+				once: true,
+			});
+
+			function toggleFaq(id) {
+				const content = document.getElementById("content-" + id);
+				const icon = document.getElementById("icon-" + id);
+
+				if (content.classList.contains("hidden")) {
+					content.classList.remove("hidden");
+					icon.classList.add("rotate-180");
+				} else {
+					content.classList.add("hidden");
+					icon.classList.remove("rotate-180");
+				}
+			}
+		</script>
+	</body>
+</html>

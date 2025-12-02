@@ -14,6 +14,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -28,20 +29,9 @@
 		</script>
 	</head>
 
-	<body class="font-sans antialiased bg-gray-50">
-		<!-- Progress Bar -->
-		<div class="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
-			<div
-				id="progress-bar"
-				class="h-full bg-black transition-all duration-300"
-				style="width: 0%"
-			></div>
-		</div>
-
+	<body class="font-sans antialiased overflow-x-hidden bg-white">
 		<!-- Navigation -->
-		<nav
-			class="fixed top-1 left-0 right-0 bg-white/95 backdrop-blur-sm z-40 border-b border-gray-100"
-		>
+		<nav class="fixed top-0 left-0 right-0 bg-white z-50">
 			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
 				<div class="flex items-center justify-between h-18">
 					<a
@@ -50,6 +40,7 @@
 					>
 						<img src="./assets/image/logo.png" alt="Penwise" />
 					</a>
+
 					<div class="hidden lg:flex items-center gap-8">
 						<a
 							href="./howitworks.html"
@@ -70,6 +61,33 @@
 							></span>
 						</a>
 						<a
+							href="./why.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Why Penwise
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./affiliates.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Affiliates
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./faq.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							FAQ
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
 							href="./blog.html"
 							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
@@ -79,13 +97,15 @@
 							></span>
 						</a>
 					</div>
+
 					<div class="hidden lg:flex items-center gap-3">
 						<button
-							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900"
+							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
 						>
 							Log In
 						</button>
 					</div>
+
 					<button
 						id="mobileMenuBtn"
 						class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
@@ -104,147 +124,168 @@
 			</div>
 		</nav>
 
-	<!-- Mobile Menu -->
-	<div id="mobileMenu"
-		class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden">
-		<div class="flex flex-col h-full">
-			<div class="flex items-center justify-between p-6 border-b border-gray-200">
-				<a href="#" class="flex items-center gap-2 text-xl font-bold text-black">
-					<img src="./assets/image/logo.png" alt="" />
-				</a>
-				<button id="closeMenuBtn"
-					class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 text-3xl text-gray-700">
-					&times;
-				</button>
-			</div>
-
-			<nav class="flex-1 overflow-y-auto p-6">
-				<div class="flex flex-col gap-2">
-					<a href="./howitworks.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						How It Works
+		<!-- Mobile Menu -->
+		<div
+			id="mobileMenu"
+			class="fixed top-0 right-0 h-full w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 lg:hidden"
+		>
+			<div class="flex flex-col h-full">
+				<div
+					class="flex items-center justify-between p-6 border-b border-gray-200"
+				>
+					<a
+						href="#"
+						class="flex items-center gap-2 text-xl font-bold text-black"
+					>
+						<img src="./assets/image/logo.png" alt="" />
 					</a>
-					<a href="./pricing.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						Pricing
-					</a>
-					<a href="./why.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						Why Penwise
-					</a>
-					<a href="./affiliates.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						Affiliates
-					</a>
-					<a href="./faq.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						FAQ
-					</a>
-					<a href="./blog.html"
-						class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200">
-						<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
-						Blog
-					</a>
+					<button
+						id="closeMenuBtn"
+						class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 text-3xl text-gray-700"
+					>
+						&times;
+					</button>
 				</div>
-			</nav>
 
-			<div class="p-6 border-t border-gray-200 space-y-3">
-				<button
-					class="w-full px-6 py-3.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300">
-					Log In
-				</button>
-				<button
-					class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300">
-					Get Started
-				</button>
+				<nav class="flex-1 overflow-y-auto p-6">
+					<div class="flex flex-col gap-2">
+						<a
+							href="./howitworks.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							How It Works
+						</a>
+						<a
+							href="./pricing.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Pricing
+						</a>
+						<a
+							href="./why.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Why Penwise
+						</a>
+						<a
+							href="./affiliates.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Affiliates
+						</a>
+						<a
+							href="./faq.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							FAQ
+						</a>
+						<a
+							href="./blog.html"
+							class="mobile-nav-link flex items-center gap-3 p-4 font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-200"
+						>
+							<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
+							Blog
+						</a>
+					</div>
+				</nav>
+
+				<div class="p-6 border-t border-gray-200 space-y-3">
+					<button
+						class="w-full px-6 py-3.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
+					>
+						Log In
+					</button>
+					<button
+						class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300"
+					>
+						Get Started
+					</button>
+				</div>
 			</div>
 		</div>
-	</div>
 
 		<!-- Hero Section -->
 		<section
-			class="pt-32 pb-16 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white"
+			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-10 bg-black text-white overflow-hidden"
+			style="
+				background-image: url('./assets/image/hero/herobackground.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
 		>
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center max-w-4xl mx-auto">
+			<div class="max-w-7xl mx-auto">
+				<div
+					class="w-full z-20 space-y-6 mx-auto text-center"
+					data-aos="fade-up"
+				>
 					<div
-						class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
 					>
 						📚 Literary Masterclass
 					</div>
+
 					<h1
-						class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
 					>
 						Literary Devices:<br />A Complete Masterclass
 					</h1>
-					<p class="text-lg md:text-xl text-gray-200 mb-10">
+
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
 						From foundational concepts to advanced literary analysis - your
 						comprehensive guide to understanding and mastering the art of
-						literary expression
+						literary expression.
 					</p>
-
-					<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">7</div>
-							<div class="text-gray-200 text-sm">Modules</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">50+</div>
-							<div class="text-gray-200 text-sm">Devices</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">30+</div>
-							<div class="text-gray-200 text-sm">Examples</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">15+</div>
-							<div class="text-gray-200 text-sm">Exercises</div>
-						</div>
-					</div>
-
-					<button
-						onclick="document.getElementById('content-start').scrollIntoView({behavior: 'smooth'})"
-						class="px-8 py-4 bg-white text-purple-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
-					>
-						Begin Masterclass
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M19 9l-7 7-7-7"
-							></path>
-						</svg>
-					</button>
 				</div>
 			</div>
 		</section>
 
-		<!-- Welcome Section -->
-		<section id="content-start" class="py-16 bg-white">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6">
-				<h2 class="text-3xl font-bold text-black mb-6">
+		<!-- Stats Section -->
+		<section class="mt-[60px] py-5 lg:py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div
+					class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+					data-aos="fade-up"
+				>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">7</div>
+						<div class="text-gray-600 text-sm">Modules</div>
+					</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">50+</div>
+						<div class="text-gray-600 text-sm">Devices</div>
+					</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">30+</div>
+						<div class="text-gray-600 text-sm">Examples</div>
+					</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">15+</div>
+						<div class="text-gray-600 text-sm">Exercises</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Introduction Section -->
+		<section class="py-5 lg:py-16 bg-white">
+			<div
+				class="max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-3xl md:text-4xl lg:text-[38px] font-bold text-black mb-6"
+				>
 					Welcome to Your Literary Devices Masterclass
 				</h2>
-				<p class="text-gray-700 leading-relaxed mb-6">
+				<p class="text-gray-700 text-base md:text-[16px] leading-relaxed mb-8">
 					Welcome, aspiring writers and literature enthusiasts. This
 					comprehensive journey into the world of literary devices will explore
 					not just what these devices are, but why they exist, how they function
@@ -253,12 +294,10 @@
 				</p>
 
 				<div
-					class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl my-8"
+					class="bg-gray-50 border-l-4 border-black p-6 rounded-r-xl my-8 text-left"
 				>
-					<h3 class="font-bold text-lg mb-3 text-purple-900">
-						Professor's Note
-					</h3>
-					<p class="text-purple-800">
+					<h3 class="font-bold text-lg mb-3 text-black">Professor's Note</h3>
+					<p class="text-gray-600">
 						Literary devices are not mere ornaments sprinkled throughout text
 						for decoration. They are the fundamental architecture of meaning
 						itself. Just as a carpenter must understand the properties of
@@ -268,7 +307,7 @@
 					</p>
 				</div>
 
-				<p class="text-gray-700 leading-relaxed">
+				<p class="text-gray-700 text-base md:text-[16px] leading-relaxed">
 					This course is structured as a progressive journey from foundational
 					understanding to sophisticated application. We begin with the
 					neurological basis of why literary devices work on human
@@ -278,1113 +317,1097 @@
 			</div>
 		</section>
 
-		<!-- Main Content -->
-		<div class="bg-gray-50 py-12">
+		<!-- Course Content Section -->
+		<section class="py-5 lg:py-16 bg-gray-50">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="lg:grid lg:grid-cols-12 lg:gap-12">
-					<!-- Sidebar -->
+					<!-- Sidebar Navigation -->
 					<aside class="lg:col-span-3 mb-8 lg:mb-0">
 						<div
 							class="lg:sticky lg:top-24 bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
 						>
-							<h3 class="font-bold text-lg mb-4">Course Modules</h3>
+							<h3 class="font-bold text-lg mb-4 text-black">Course Modules</h3>
 							<nav class="space-y-2">
 								<a
 									href="#module1"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 1: Theoretical Foundation</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 1: Theory</a
 								>
 								<a
 									href="#module2"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 2: Foundational Devices</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 2: Foundational</a
 								>
 								<a
 									href="#module3"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 3: Sound & Music</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 3: Sound</a
 								>
 								<a
 									href="#module4"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 4: Architecture</a
 								>
 								<a
 									href="#module5"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 5: Symbolism</a
 								>
 								<a
 									href="#module6"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 6: Rhetoric</a
 								>
 								<a
 									href="#module7"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 7: Mastery Integration</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 7: Mastery</a
 								>
 							</nav>
 						</div>
 					</aside>
 
 					<!-- Main Content -->
-					<main class="lg:col-span-9">
-						<div class="space-y-6">
-							<!-- Module 1 -->
-							<div
-								id="module1"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+					<main class="lg:col-span-9 space-y-6">
+						<!-- Module 1 -->
+						<div
+							id="module1"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod1')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
-								<button
-									onclick="toggleAccordion('mod1')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											1
-										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												The Theoretical Foundation
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Understanding the cognitive science behind literary
-												devices
-											</p>
-										</div>
-									</div>
-									<svg
-										id="mod1-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod1-content" class="hidden px-8 pb-8">
-									<div class="space-y-6 text-gray-700">
-										<div>
-											<h3 class="text-xl font-bold mb-3">
-												The Cognitive Science of Literary Devices
-											</h3>
-											<p class="mb-4">
-												Literary devices exploit fundamental aspects of human
-												cognition, memory, and emotional processing. When you
-												encounter a metaphor like "Time is money," your brain
-												performs remarkable cognitive operations involving
-												bilateral processing and conceptual blending.
-											</p>
-
-											<div class="bg-blue-50 p-6 rounded-xl mb-4">
-												<h4 class="font-bold mb-3">
-													Cognitive Processing Example
-												</h4>
-												<p class="font-medium mb-2">
-													Metaphor: "Her voice was velvet in the darkness."
-												</p>
-												<ul class="space-y-2 text-sm">
-													<li>
-														<strong>Sensory Activation:</strong> "Velvet"
-														activates tactile memory centers
-													</li>
-													<li>
-														<strong>Cross-Modal Mapping:</strong> Brain maps
-														tactile qualities onto auditory experience
-													</li>
-													<li>
-														<strong>Emotional Resonance:</strong> Velvet's
-														luxury associations transfer to voice
-													</li>
-													<li>
-														<strong>Contextual Enhancement:</strong> Darkness
-														heightens non-visual senses
-													</li>
-												</ul>
-											</div>
-										</div>
-
-										<div>
-											<h3 class="text-xl font-bold mb-3">
-												The Architecture of Meaning
-											</h3>
-											<p class="mb-4">
-												Literary devices operate on five interconnected
-												dimensions:
-											</p>
-											<div class="grid md:grid-cols-2 gap-4">
-												<div class="border border-gray-200 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Surface Level</h4>
-													<p class="text-sm">
-														Grammar, sound patterns, rhythm, visual appearance
-													</p>
-												</div>
-												<div class="border border-gray-200 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Semantic Level</h4>
-													<p class="text-sm">
-														Meaning construction, literal vs. figurative,
-														cultural context
-													</p>
-												</div>
-												<div class="border border-gray-200 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Cognitive Level</h4>
-													<p class="text-sm">
-														Memory activation, pattern recognition, attention
-														direction
-													</p>
-												</div>
-												<div class="border border-gray-200 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Emotional Level</h4>
-													<p class="text-sm">
-														Mood, emotional intensity, empathetic engagement
-													</p>
-												</div>
-											</div>
-										</div>
+										1
 									</div>
-								</div>
-							</div>
-
-							<!-- Module 2 -->
-							<div
-								id="module2"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
-							>
-								<button
-									onclick="toggleAccordion('mod2')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											2
-										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												Foundational Devices
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Imagery, metaphor, simile, and comparison devices
-											</p>
-										</div>
-									</div>
-									<svg
-										id="mod2-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod2-content" class="hidden px-8 pb-8">
-									<div class="space-y-6 text-gray-700">
-										<div>
-											<h3 class="text-xl font-bold mb-3">
-												Imagery - Foundation of Literary Experience
-											</h3>
-											<p class="mb-4">
-												Imagery bridges the abstract world of ideas and the
-												concrete world of sensory experience. The seven
-												categories:
-											</p>
-
-											<div class="grid md:grid-cols-2 gap-3 mb-6">
-												<div
-													class="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-blue-900">
-														Visual (Sight)
-													</h4>
-													<p class="text-sm text-blue-800">
-														Colors, shapes, movement, light/darkness
-													</p>
-												</div>
-												<div
-													class="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-green-900">
-														Auditory (Sound)
-													</h4>
-													<p class="text-sm text-green-800">
-														Volume, pitch, timbre, rhythm, silence
-													</p>
-												</div>
-												<div
-													class="bg-gradient-to-br from-amber-50 to-amber-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-amber-900">
-														Tactile (Touch)
-													</h4>
-													<p class="text-sm text-amber-800">
-														Texture, temperature, pressure
-													</p>
-												</div>
-												<div
-													class="bg-gradient-to-br from-rose-50 to-rose-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-rose-900">
-														Olfactory (Smell)
-													</h4>
-													<p class="text-sm text-rose-800">
-														Sweet, acrid, fresh, familiar scents
-													</p>
-												</div>
-												<div
-													class="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-purple-900">
-														Gustatory (Taste)
-													</h4>
-													<p class="text-sm text-purple-800">
-														Sweet, sour, bitter, salty, umami
-													</p>
-												</div>
-												<div
-													class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-4 rounded-lg"
-												>
-													<h4 class="font-bold text-indigo-900">
-														Kinesthetic (Movement)
-													</h4>
-													<p class="text-sm text-indigo-800">
-														Physical motion, balance, acceleration
-													</p>
-												</div>
-											</div>
-
-											<div class="bg-purple-50 p-6 rounded-xl">
-												<h4 class="font-bold mb-2">Master Class Example</h4>
-												<p class="italic mb-3">
-													"The coffee shop exhaled its familiar breath of
-													roasted beans and yesterday's pastries, while Sarah's
-													fingers drummed an anxious staccato against the
-													ceramic mug's warmth."
-												</p>
-												<ul class="text-sm space-y-1">
-													<li>
-														<strong>Olfactory:</strong> Roasted beans, pastries
-														- comfort + staleness
-													</li>
-													<li>
-														<strong>Auditory:</strong> Drummed staccato -
-														matches anxiety
-													</li>
-													<li>
-														<strong>Tactile:</strong> Mug's warmth - grounding
-														sensation
-													</li>
-												</ul>
-											</div>
-										</div>
-
-										<div>
-											<h3 class="text-xl font-bold mb-3">Comparison Devices</h3>
-											<div class="space-y-4">
-												<div
-													class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg"
-												>
-													<h4 class="font-bold mb-2">
-														Simile: Explicit Comparison
-													</h4>
-													<p class="text-sm mb-2">Structure: A is like B</p>
-													<p class="italic text-sm">
-														"Her anger was like a forest fire - beautiful from a
-														distance, devastating up close."
-													</p>
-												</div>
-												<div
-													class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded-r-lg"
-												>
-													<h4 class="font-bold mb-2">
-														Metaphor: Implicit Comparison
-													</h4>
-													<p class="text-sm mb-2">Structure: A is B</p>
-													<p class="italic text-sm">
-														"Her anger was wildfire consuming everything in its
-														path."
-													</p>
-												</div>
-												<div
-													class="border-l-4 border-green-500 bg-green-50 p-4 rounded-r-lg"
-												>
-													<h4 class="font-bold mb-2">Personification</h4>
-													<p class="text-sm mb-2">
-														Strategic animation of the inanimate
-													</p>
-													<p class="italic text-sm">
-														"The March wind had opinions about everything - the
-														proper angle for newspapers, the correct speed for
-														walking."
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Module 3 -->
-							<div
-								id="module3"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
-							>
-								<button
-									onclick="toggleAccordion('mod3')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											3
-										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												The Music of Language
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Sound devices and rhythmic structures
-											</p>
-										</div>
-									</div>
-									<svg
-										id="mod3-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod3-content" class="hidden px-8 pb-8">
-									<div class="space-y-6 text-gray-700">
-										<p>
-											Language evolved from music, and music remains embedded in
-											all effective writing. Sound patterns affect meaning as
-											profoundly as word choice itself.
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											The Theoretical Foundation
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Understanding the cognitive science behind literary
+											devices
 										</p>
+									</div>
+								</div>
+								<svg
+									id="mod1-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod1-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										The Cognitive Science of Literary Devices
+									</h3>
+									<p class="text-gray-600 mb-6">
+										Literary devices exploit fundamental aspects of human
+										cognition, memory, and emotional processing. When you
+										encounter a metaphor like "Time is money," your brain
+										performs remarkable cognitive operations involving bilateral
+										processing and conceptual blending.
+									</p>
 
-										<div>
-											<h3 class="text-xl font-bold mb-3">
-												Sound Device Taxonomy
-											</h3>
-											<div class="space-y-3">
-												<div class="bg-blue-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Alliteration</h4>
-													<p class="text-sm mb-1">
-														Initial consonant repetition
-													</p>
-													<p class="italic text-sm">
-														"The storm struck suddenly"
-													</p>
-												</div>
-												<div class="bg-green-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Assonance</h4>
-													<p class="text-sm mb-1">Vowel sound repetition</p>
-													<p class="italic text-sm">
-														"The rain in Spain stays mainly in the plain"
-													</p>
-												</div>
-												<div class="bg-purple-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Consonance</h4>
-													<p class="text-sm mb-1">
-														Consonant sound repetition (any position)
-													</p>
-													<p class="italic text-sm">"The lumpy, bumpy road"</p>
-												</div>
-												<div class="bg-amber-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Onomatopoeia</h4>
-													<p class="text-sm mb-1">
-														Words that sound like their meaning
-													</p>
-													<p class="italic text-sm">
-														"Buzz, crash, whisper, boom"
-													</p>
-												</div>
-											</div>
+									<div
+										class="bg-gray-50 p-6 rounded-xl mb-6 border border-gray-100"
+									>
+										<h4 class="font-bold mb-3 text-black">
+											Cognitive Processing Example
+										</h4>
+										<p class="font-medium mb-3 text-gray-800">
+											Metaphor: "Her voice was velvet in the darkness."
+										</p>
+										<ul class="space-y-2 text-sm text-gray-600">
+											<li>
+												<strong>Sensory Activation:</strong> "Velvet" activates
+												tactile memory centers
+											</li>
+											<li>
+												<strong>Cross-Modal Mapping:</strong> Brain maps tactile
+												qualities onto auditory experience
+											</li>
+											<li>
+												<strong>Emotional Resonance:</strong> Velvet's luxury
+												associations transfer to voice
+											</li>
+											<li>
+												<strong>Contextual Enhancement:</strong> Darkness
+												heightens non-visual senses
+											</li>
+										</ul>
+									</div>
+
+									<h3 class="text-lg font-bold mb-4 text-black">
+										The Architecture of Meaning
+									</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Surface Level</h4>
+											<p class="text-sm text-gray-600">
+												Grammar, sound patterns, rhythm, visual appearance
+											</p>
 										</div>
-
-										<div class="bg-indigo-50 p-6 rounded-xl">
-											<h4 class="font-bold mb-3">Sound Symbolism Guide</h4>
-											<ul class="space-y-2 text-sm">
-												<li>
-													<strong>High Sounds (i, e, ee):</strong> Smallness,
-													quickness, brightness
-												</li>
-												<li>
-													<strong>Low Sounds (o, u, oo):</strong> Largeness,
-													slowness, darkness
-												</li>
-												<li>
-													<strong>Plosive Consonants (p, b, t, d):</strong>
-													Impact, suddenness
-												</li>
-												<li>
-													<strong>Fricative Consonants (f, v, s, z):</strong>
-													Flowing, continuous
-												</li>
-												<li>
-													<strong>Liquid Consonants (l, r):</strong> Smoothness,
-													elegance
-												</li>
-											</ul>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Semantic Level</h4>
+											<p class="text-sm text-gray-600">
+												Meaning construction, literal vs. figurative, cultural
+												context
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Cognitive Level</h4>
+											<p class="text-sm text-gray-600">
+												Memory activation, pattern recognition, attention
+												direction
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Emotional Level</h4>
+											<p class="text-sm text-gray-600">
+												Mood, emotional intensity, empathetic engagement
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<!-- Modules 4-7 Compact -->
-							<div
-								id="module4"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+						<!-- Module 2 -->
+						<div
+							id="module2"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod2')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
-								<button
-									onclick="toggleAccordion('mod4')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										2
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Foundational Devices
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Imagery, metaphor, simile, and comparison devices
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod2-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
 								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											4
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod2-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										Imagery - Foundation of Literary Experience
+									</h3>
+									<p class="text-gray-600 mb-6">
+										Imagery bridges the abstract world of ideas and the concrete
+										world of sensory experience. The seven categories:
+									</p>
+
+									<div class="grid md:grid-cols-2 gap-3 mb-6">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">Visual (Sight)</h4>
+											<p class="text-sm text-gray-600">
+												Colors, shapes, movement, light/darkness
+											</p>
 										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												Architectural Devices
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Structure, time, and narrative control
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">Auditory (Sound)</h4>
+											<p class="text-sm text-gray-600">
+												Volume, pitch, timbre, rhythm, silence
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">Tactile (Touch)</h4>
+											<p class="text-sm text-gray-600">
+												Texture, temperature, pressure
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">Olfactory (Smell)</h4>
+											<p class="text-sm text-gray-600">
+												Sweet, acrid, fresh, familiar scents
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">Gustatory (Taste)</h4>
+											<p class="text-sm text-gray-600">
+												Sweet, sour, bitter, salty, umami
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold text-black">
+												Kinesthetic (Movement)
+											</h4>
+											<p class="text-sm text-gray-600">
+												Physical motion, balance, acceleration
 											</p>
 										</div>
 									</div>
-									<svg
-										id="mod4-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+
+									<div
+										class="bg-gray-50 p-6 rounded-xl mb-6 border border-gray-100"
 									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod4-content" class="hidden px-8 pb-8">
-									<div class="space-y-4 text-gray-700">
-										<p>
-											Time is literature's most flexible element. Understanding
-											temporal devices is crucial for controlling reader
-											experience.
+										<h4 class="font-bold mb-3 text-black">
+											Master Class Example
+										</h4>
+										<p class="italic mb-3 text-gray-800">
+											"The coffee shop exhaled its familiar breath of roasted
+											beans and yesterday's pastries, while Sarah's fingers
+											drummed an anxious staccato against the ceramic mug's
+											warmth."
 										</p>
-										<div class="grid md:grid-cols-2 gap-4">
-											<div
-												class="border border-blue-200 bg-blue-50 p-4 rounded-lg"
-											>
-												<h4 class="font-bold mb-2">Foreshadowing</h4>
-												<p class="text-sm">
-													Strategic hints about future events creating dramatic
-													irony and tension
-												</p>
-											</div>
-											<div
-												class="border border-green-200 bg-green-50 p-4 rounded-lg"
-											>
-												<h4 class="font-bold mb-2">Flashback</h4>
-												<p class="text-sm">
-													Strategic insertion of past events to illuminate
-													present behavior
-												</p>
-											</div>
-											<div
-												class="border border-purple-200 bg-purple-50 p-4 rounded-lg"
-											>
-												<h4 class="font-bold mb-2">In Medias Res</h4>
-												<p class="text-sm">
-													Starting at crisis moment then revealing context
-												</p>
-											</div>
-											<div
-												class="border border-amber-200 bg-amber-50 p-4 rounded-lg"
-											>
-												<h4 class="font-bold mb-2">Point of View</h4>
-												<p class="text-sm">
-													First person, third limited, omniscient - controls
-													information flow
-												</p>
-											</div>
+										<ul class="text-sm space-y-1 text-gray-600">
+											<li>
+												<strong>Olfactory:</strong> Roasted beans, pastries -
+												comfort + staleness
+											</li>
+											<li>
+												<strong>Auditory:</strong> Drummed staccato - matches
+												anxiety
+											</li>
+											<li>
+												<strong>Tactile:</strong> Mug's warmth - grounding
+												sensation
+											</li>
+										</ul>
+									</div>
+
+									<h3 class="text-lg font-bold mb-4 text-black">
+										Comparison Devices
+									</h3>
+									<div class="space-y-4">
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<h4 class="font-bold mb-2 text-black">
+												Simile: Explicit Comparison
+											</h4>
+											<p class="text-sm mb-2 text-gray-600">
+												Structure: A is like B
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"Her anger was like a forest fire - beautiful from a
+												distance, devastating up close."
+											</p>
+										</div>
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<h4 class="font-bold mb-2 text-black">
+												Metaphor: Implicit Comparison
+											</h4>
+											<p class="text-sm mb-2 text-gray-600">
+												Structure: A is B
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"Her anger was wildfire consuming everything in its
+												path."
+											</p>
+										</div>
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<h4 class="font-bold mb-2 text-black">Personification</h4>
+											<p class="text-sm mb-2 text-gray-600">
+												Strategic animation of the inanimate
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"The March wind had opinions about everything - the
+												proper angle for newspapers, the correct speed for
+												walking."
+											</p>
 										</div>
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<div
-								id="module5"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+						<!-- Module 3 -->
+						<div
+							id="module3"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod3')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
-								<button
-									onclick="toggleAccordion('mod5')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										3
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											The Music of Language
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Sound devices and rhythmic structures
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod3-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
 								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-rose-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											5
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod3-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Language evolved from music, and music remains embedded in
+										all effective writing. Sound patterns affect meaning as
+										profoundly as word choice itself.
+									</p>
+
+									<h3 class="text-lg font-bold mb-4 text-black">
+										Sound Device Taxonomy
+									</h3>
+									<div class="space-y-3 mb-6">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Alliteration</h4>
+											<p class="text-sm mb-1 text-gray-600">
+												Initial consonant repetition
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"The storm struck suddenly"
+											</p>
 										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												Symbolism & Meaning
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Symbols, motifs, and thematic development
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Assonance</h4>
+											<p class="text-sm mb-1 text-gray-600">
+												Vowel sound repetition
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"The rain in Spain stays mainly in the plain"
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Consonance</h4>
+											<p class="text-sm mb-1 text-gray-600">
+												Consonant sound repetition (any position)
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"The lumpy, bumpy road"
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Onomatopoeia</h4>
+											<p class="text-sm mb-1 text-gray-600">
+												Words that sound like their meaning
+											</p>
+											<p class="italic text-sm text-gray-500">
+												"Buzz, crash, whisper, boom"
 											</p>
 										</div>
 									</div>
-									<svg
-										id="mod5-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod5-content" class="hidden px-8 pb-8">
-									<div class="space-y-4 text-gray-700">
-										<p>
-											Symbolism transforms concrete objects into vehicles for
-											abstract concepts through accumulation, context, and
-											reader interpretation.
-										</p>
-										<div class="space-y-3">
-											<div class="bg-blue-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">Universal Symbols</h4>
-												<p class="text-sm">
-													Light/dark, water (life, purification), fire
-													(transformation), circles (unity), journeys (growth)
-												</p>
-											</div>
-											<div class="bg-green-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">Cultural Symbols</h4>
-												<p class="text-sm">
-													Objects with meaning specific to particular cultures
-													or historical periods
-												</p>
-											</div>
-											<div class="bg-purple-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">Contextual Symbols</h4>
-												<p class="text-sm">
-													Objects that acquire symbolic meaning only through
-													repetition in specific works
-												</p>
-											</div>
-										</div>
+
+									<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+										<h4 class="font-bold mb-3 text-black">
+											Sound Symbolism Guide
+										</h4>
+										<ul class="space-y-2 text-sm text-gray-600">
+											<li>
+												<strong>High Sounds (i, e, ee):</strong> Smallness,
+												quickness, brightness
+											</li>
+											<li>
+												<strong>Low Sounds (o, u, oo):</strong> Largeness,
+												slowness, darkness
+											</li>
+											<li>
+												<strong>Plosive Consonants (p, b, t, d):</strong>
+												Impact, suddenness
+											</li>
+											<li>
+												<strong>Fricative Consonants (f, v, s, z):</strong>
+												Flowing, continuous
+											</li>
+											<li>
+												<strong>Liquid Consonants (l, r):</strong> Smoothness,
+												elegance
+											</li>
+										</ul>
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<div
-								id="module6"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+						<!-- Module 4 -->
+						<div
+							id="module4"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod4')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
-								<button
-									onclick="toggleAccordion('mod6')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
-								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											6
-										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												Rhetorical Devices
-											</h2>
-											<p class="text-gray-600 text-sm">
-												The art of persuasion and reader manipulation
-											</p>
-										</div>
-									</div>
-									<svg
-										id="mod6-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod6-content" class="hidden px-8 pb-8">
-									<div class="space-y-4 text-gray-700">
-										<p>
-											Classical rhetoric underlies all effective writing. Master
-											these devices to create compelling prose.
+										4
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Architectural Devices
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Structure, time, and narrative control
 										</p>
-										<div class="grid md:grid-cols-2 gap-4">
-											<div
-												class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg"
-											>
-												<h4 class="font-bold mb-2">Anaphora</h4>
-												<p class="text-sm mb-2">
-													Repetition at beginning of successive clauses
-												</p>
-												<p class="italic text-sm">
-													"We shall fight... we shall never surrender"
-												</p>
-											</div>
-											<div
-												class="border-l-4 border-green-500 bg-green-50 p-4 rounded-r-lg"
-											>
-												<h4 class="font-bold mb-2">Parallelism</h4>
-												<p class="text-sm mb-2">
-													Similar grammatical structures
-												</p>
-												<p class="italic text-sm">
-													"She came, she saw, she conquered"
-												</p>
-											</div>
-											<div
-												class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded-r-lg"
-											>
-												<h4 class="font-bold mb-2">Antithesis</h4>
-												<p class="text-sm mb-2">
-													Contrasting ideas in parallel structure
-												</p>
-												<p class="italic text-sm">
-													"It was the best of times, it was the worst of times"
-												</p>
-											</div>
-											<div
-												class="border-l-4 border-amber-500 bg-amber-50 p-4 rounded-r-lg"
-											>
-												<h4 class="font-bold mb-2">Chiasmus</h4>
-												<p class="text-sm mb-2">Reversed parallel structure</p>
-												<p class="italic text-sm">
-													"Ask not what your country can do for you"
-												</p>
-											</div>
-										</div>
 									</div>
 								</div>
-							</div>
-
-							<div
-								id="module7"
-								class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
-							>
-								<button
-									onclick="toggleAccordion('mod7')"
-									class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+								<svg
+									id="mod4-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
 								>
-									<div class="flex items-center gap-4">
-										<div
-											class="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-xl flex-shrink-0"
-										>
-											7
-										</div>
-										<div class="text-left">
-											<h2 class="text-2xl font-bold text-black">
-												Mastery Integration
-											</h2>
-											<p class="text-gray-600 text-sm">
-												Synthesis and advanced application
-											</p>
-										</div>
-									</div>
-									<svg
-										id="mod7-icon"
-										class="w-6 h-6 text-gray-400 transition-transform duration-300"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod4-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Time is literature's most flexible element. Understanding
+										how to manipulate narrative time and structure gives you
+										control over the reader's experience.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 5 -->
+						<div
+							id="module5"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod5')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M19 9l-7 7-7-7"
-										></path>
-									</svg>
-								</button>
-								<div id="mod7-content" class="hidden px-8 pb-8">
-									<div class="space-y-6 text-gray-700">
-										<p>
-											Masterful writing requires integrating multiple devices
-											into a unified whole. Like a symphony conductor balancing
-											instruments, accomplished writers orchestrate devices for
-											harmonious, powerful effects.
-										</p>
-
-										<div
-											class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl"
-										>
-											<h3 class="text-xl font-bold mb-4">
-												The Hierarchy of Literary Effects
-											</h3>
-											<div class="space-y-3">
-												<div class="bg-white p-4 rounded-lg">
-													<h4 class="font-bold mb-1">Subliminal Level</h4>
-													<p class="text-sm">
-														Sound devices, rhythm, basic imagery - felt before
-														noticed
-													</p>
-												</div>
-												<div class="bg-white p-4 rounded-lg">
-													<h4 class="font-bold mb-1">Conscious Level</h4>
-													<p class="text-sm">
-														Obvious metaphors, symbols - recognized as literary
-														techniques
-													</p>
-												</div>
-												<div class="bg-white p-4 rounded-lg">
-													<h4 class="font-bold mb-1">Analytical Level</h4>
-													<p class="text-sm">
-														Complex patterns, thematic development - requires
-														careful reading
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div
-											class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-xl"
-										>
-											<h4 class="font-bold mb-3">Master's Secret</h4>
-											<p>
-												The most sophisticated literary effects occur when
-												multiple devices reinforce the same emotional or
-												thematic goal. Every word choice, every rhythmic
-												pattern, every image should contribute to the unified
-												effect you're creating.
-											</p>
-										</div>
-
-										<div>
-											<h3 class="text-xl font-bold mb-3">
-												Genre-Specific Applications
-											</h3>
-											<div class="grid md:grid-cols-3 gap-4">
-												<div class="bg-blue-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Fiction</h4>
-													<ul class="text-sm space-y-1">
-														<li>• Character development</li>
-														<li>• Plot management</li>
-														<li>• World building</li>
-													</ul>
-												</div>
-												<div class="bg-purple-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Poetry</h4>
-													<ul class="text-sm space-y-1">
-														<li>• Compression</li>
-														<li>• Musicality</li>
-														<li>• Imagery intensity</li>
-													</ul>
-												</div>
-												<div class="bg-green-50 p-4 rounded-lg">
-													<h4 class="font-bold mb-2">Non-Fiction</h4>
-													<ul class="text-sm space-y-1">
-														<li>• Argument structure</li>
-														<li>• Engagement</li>
-														<li>• Clarity</li>
-													</ul>
-												</div>
-											</div>
-										</div>
+										5
 									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Symbolism & Motif
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Layering meaning through recurring elements
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod5-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod5-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Symbols are objects, characters, or actions that stand for
+										something beyond themselves. Motifs are recurring elements
+										that develop themes.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 6 -->
+						<div
+							id="module6"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod6')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										6
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Rhetorical Devices
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Persuasion, emphasis, and sentence structure
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod6-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod6-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Rhetorical devices are techniques used to convey meaning
+										with the goal of persuading the reader or listener.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 7 -->
+						<div
+							id="module7"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod7')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										7
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Mastery Integration
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Combining devices for maximum effect
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod7-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod7-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										True mastery comes not from using devices in isolation, but
+										from weaving them together to create a rich, multi-layered
+										experience.
+									</p>
 								</div>
 							</div>
 						</div>
 					</main>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<!-- Explore More -->
-		<section class="py-16 md:py-24 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12">
-					<div
-						class="inline-block bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium mb-4"
-					>
-						EXPLORE MORE
-					</div>
-					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
-						Dive Into Literary Devices
-					</h2>
-					<p class="text-gray-600 max-w-2xl mx-auto">
-						Understand and master the tools authors use to create impactful,
-						memorable stories
-					</p>
-				</div>
+		<!-- CTA Section -->
+		<section
+			class="mt-[80px] max-w-7xl mx-auto px-4 sm:px-6 rounded-t-2xl relative py-16 md:py-20 lg:py-24 w-full h-full bg-cover bg-center bg-no-repeat overflow-hidden"
+			style="background-image: url('./assets/image/footer/bg.png')"
+		>
+			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<a
-						href="./literary-glossary.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Literary Glossary
-						</h3>
-						<p class="text-sm text-gray-600">
-							Get clear definitions of devices and techniques.
-						</p>
-					</a>
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
+				>
+					Ready to Master Literary Devices?
+				</h2>
 
-					<a
-						href="./guide-to-literary-genres.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Genre Devices
-						</h3>
-						<p class="text-sm text-gray-600">
-							Understand how devices shape narratives in every genre.
-						</p>
-					</a>
+				<p
+					class="text-sm sm:text-base md:text-lg text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+				>
+					Join thousands of writers who have elevated their craft with Penwise.
+					Start your journey today.
+				</p>
 
-					<a
-						href="./story_arcs-explained.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
+				<button
+					class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+				>
+					Start Learning Now
+					<svg
+						class="w-4 h-4 sm:w-5 sm:h-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
 					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M13 10V3L4 14h7v7l9-11h-7z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Devices in Arcs
-						</h3>
-						<p class="text-sm text-gray-600">
-							Learn how to use devices to strengthen plot structures.
-						</p>
-					</a>
-
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Practical Application
-						</h3>
-						<p class="text-sm text-gray-600">
-							Apply devices directly in your creative projects.
-						</p>
-					</a>
-
-					<a
-						href="./editing-and-proofreading-tips.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Quality Writing
-						</h3>
-						<p class="text-sm text-gray-600">
-							Use devices to meet professional writing standards.
-						</p>
-					</a>
-
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Explore Devices
-						</h3>
-						<p class="text-sm text-gray-600">
-							Dive into the power of metaphors, irony, and imagery.
-						</p>
-					</a>
-				</div>
+						<path
+							fill-rule="evenodd"
+							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</button>
 			</div>
 		</section>
 
-			<footer class="py-12 md:py-16 bg-white border-t border-gray-200">
+		<!-- Footer Section -->
+		<footer class="rounded-b-2xl py-12 md:py-16" data-aos="fade-up">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div
+					class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-8 mb-8 md:mb-12"
+				>
+					<div class="sm:col-span-2 md:col-span-1 lg:col-span-1">
+						<div class="flex items-center gap-2 mb-4">
+							<img src="./assets/image/logo.png" alt="Penwise" />
+						</div>
+						<p class="text-[16px] text-[#7B8189] leading-relaxed max-w-xs mb-6">
+							Penwise is an AI-powered writing platform designed to help
+							storytellers, authors, and teams create, edit, and organize their
+							work effortlessly.
+						</p>
+						<div class="flex gap-4">
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Facebook"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Instagram"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="Twitter"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									/>
+								</svg>
+							</a>
+							<a
+								href="#"
+								class="text-black hover:text-black transition-colors"
+								aria-label="YouTube"
+							>
+								<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+									<path
+										d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
 
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./contactus.html"
+									class="hover:text-black transition-colors"
+									>Contact</a
+								>
+							</li>
+							<li>
+								<a
+									href="./howitworks.html"
+									class="hover:text-black transition-colors"
+									>How it works</a
+								>
+							</li>
+							<li>
+								<a
+									href="./pricing.html"
+									class="hover:text-black transition-colors"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
+									>Published books</a
+								>
+							</li>
+							<li>
+								<a href="./blog.html" class="hover:text-black transition-colors"
+									>Blog</a
+								>
+							</li>
+							<li>
+								<a
+									href="./about.html"
+									class="hover:text-black transition-colors"
+									>About</a
+								>
+							</li>
+							<li>
+								<a
+									href="./educators-and-schools.html"
+									class="hover:text-black transition-colors"
+									>For Educators & Schools</a
+								>
+							</li>
+							<li>
+								<a href="./why.html" class="hover:text-black transition-colors"
+									>Why penwise</a
+								>
+							</li>
+							<li>
+								<a href="#" class="hover:text-black transition-colors"
+									>Ambassadors Program</a
+								>
+							</li>
+							<li>
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
+									>Book Titles Generator</a
+								>
+							</li>
+							<li>
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
+									>Story Title Generator</a
+								>
+							</li>
+							<li>
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
+									>Generate Story Arcs</a
+								>
+							</li>
+						</ul>
+					</div>
 
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">Resources</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./for-parents.html"
+									class="hover:text-black transition-colors"
+									>For Parents</a
+								>
+							</li>
+							<li>
+								<a
+									href="./writing-tips-and-techniques.html"
+									class="hover:text-black transition-colors"
+									>Writing Tips & Techniques</a
+								>
+							</li>
+							<li>
+								<a
+									href="./the-complete-publishing-mastery-course.html"
+									class="hover:text-black transition-colors"
+									>Publishing Mastery Course</a
+								>
+							</li>
+							<li>
+								<a
+									href="./self-publishing-guide.html"
+									class="hover:text-black transition-colors"
+									>Self-Publishing Guide</a
+								>
+							</li>
+							<li>
+								<a
+									href="./literary-devices.html"
+									class="hover:text-black transition-colors"
+									>Literary Devices Masterclass</a
+								>
+							</li>
+							<li>
+								<a
+									href="./editing-and-proofreading-tips.html"
+									class="hover:text-black transition-colors"
+									>Editing & Proofreading Tips</a
+								>
+							</li>
+							<li>
+								<a
+									href="./guide-to-literary-genres.html"
+									class="hover:text-black transition-colors"
+									>Guide to Literary Genres</a
+								>
+							</li>
+							<li>
+								<a
+									href="./story_arcs-explained.html"
+									class="hover:text-black transition-colors"
+									>Story Arcs Explained</a
+								>
+							</li>
+							<li>
+								<a
+									href="./ideation-and-votes.html"
+									class="hover:text-black transition-colors"
+									>Ideation & Votes</a
+								>
+							</li>
+							<li>
+								<a
+									href="./literary-glossary.html"
+									class="hover:text-black transition-colors"
+									>Literary Glossary</a
+								>
+							</li>
+							<li>
+								<a
+									href="./platforms-and-comparisons.html"
+									class="hover:text-black transition-colors"
+									>Platforms & Comparisons</a
+								>
+							</li>
+							<li>
+								<a
+									href="./our-mission-and-vision.html"
+									class="hover:text-black transition-colors"
+									>Our Mission & Vision</a
+								>
+							</li>
+							<li>
+								<a
+									href="./pricing-and-value.html"
+									class="hover:text-black transition-colors"
+									>Pricing & Value</a
+								>
+							</li>
+							<li>
+								<a
+									href="./future-oriented.html"
+									class="hover:text-black transition-colors"
+									>Future Oriented</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 class="text-[16px] font-semibold text-black mb-4">
+							Use-Case Specific
+						</h3>
+						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
+							<li>
+								<a
+									href="./use-case.html"
+									class="hover:text-black transition-colors"
+									>Use Cases</a
+								>
+							</li>
+							<li>
+								<a
+									href="./publishing-copyright.html"
+									class="hover:text-black transition-colors"
+									>Publishing & Copyright</a
+								>
+							</li>
+							<li>
+								<a
+									href="./originality-and-plagiarism.html"
+									class="hover:text-black transition-colors"
+									>Originality & Plagiarism</a
+								>
+							</li>
+							<li>
+								<a
+									href="./quality-and-professional.html"
+									class="hover:text-black transition-colors"
+									>Quality & Professional Use</a
+								>
+							</li>
+							<li>
+								<a
+									href="./end-writers-block.html"
+									class="hover:text-black transition-colors"
+									>End Writer's Block</a
+								>
+							</li>
+							<li>
+								<a
+									href="./trust-and-safety.html"
+									class="hover:text-black transition-colors"
+									>Trust & Safety</a
+								>
+							</li>
+							<li>
+								<a
+									href="./speed-and-efficiency.html"
+									class="hover:text-black transition-colors"
+									>Speed & Efficiency</a
+								>
+							</li>
+							<li>
+								<a
+									href="./performance-analytics.html"
+									class="hover:text-black transition-colors"
+									>Performance Analytics</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="pt-8 border-t border-gray-200">
+					<div
+						class="flex flex-col sm:flex-row justify-between items-center gap-4"
+					>
+						<p class="text-[14px] text-[#7B8189]">
+							© 2025 Penwise. All rights reserved.
+						</p>
+						<div class="flex gap-6">
+							<a
+								href="./privacy-policy.html"
+								class="text-[14px] text-[#7B8189] hover:text-black"
+								>Privacy</a
+							>
+							<a
+								href="./terms-and-conditions.html"
+								class="text-[14px] text-[#7B8189] hover:text-black"
+								>Terms</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-			// Mobile menu
-			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-			const mobileMenu = document.getElementById("mobileMenu");
-			const closeMenuBtn = document.getElementById("closeMenuBtn");
-
-			mobileMenuBtn.addEventListener("click", () => {
-				mobileMenu.classList.remove("translate-x-full");
+			AOS.init({
+				duration: 800,
+				once: true,
 			});
 
-			closeMenuBtn.addEventListener("click", () => {
-				mobileMenu.classList.add("translate-x-full");
-			});
-
-			// Progress bar
-			window.addEventListener("scroll", () => {
-				const winScroll =
-					document.body.scrollTop || document.documentElement.scrollTop;
-				const height =
-					document.documentElement.scrollHeight -
-					document.documentElement.clientHeight;
-				const scrolled = (winScroll / height) * 100;
-				document.getElementById("progress-bar").style.width = scrolled + "%";
-			});
-
-			// Accordion toggle
-			function toggleAccordion(id) {
+			function toggle(id) {
 				const content = document.getElementById(id + "-content");
 				const icon = document.getElementById(id + "-icon");
 
 				if (content.classList.contains("hidden")) {
 					content.classList.remove("hidden");
-					icon.style.transform = "rotate(180deg)";
+					icon.classList.add("rotate-180");
 				} else {
 					content.classList.add("hidden");
-					icon.style.transform = "rotate(0deg)";
+					icon.classList.remove("rotate-180");
 				}
 			}
-
-			// Smooth scroll
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute("href"));
-					if (target) {
-						target.scrollIntoView({ behavior: "smooth", block: "start" });
-					}
-				});
-			});
 		</script>
 	</body>
 </html>

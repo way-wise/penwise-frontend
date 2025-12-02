@@ -16,6 +16,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script>
 			tailwind.config = {
@@ -30,20 +31,9 @@
 		</script>
 	</head>
 
-	<body class="font-sans antialiased bg-gray-50">
-		<!-- Progress Bar -->
-		<div class="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
-			<div
-				id="progress-bar"
-				class="h-full bg-black transition-all duration-300"
-				style="width: 0%"
-			></div>
-		</div>
-
+	<body class="font-sans antialiased overflow-x-hidden bg-white">
 		<!-- Navigation -->
-		<nav
-			class="fixed top-1 left-0 right-0 bg-white/95 backdrop-blur-sm z-40 border-b border-gray-100"
-		>
+		<nav class="fixed top-0 left-0 right-0 bg-white z-50">
 			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
 				<div class="flex items-center justify-between h-18">
 					<a
@@ -73,6 +63,33 @@
 							></span>
 						</a>
 						<a
+							href="./why.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Why Penwise
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./affiliates.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Affiliates
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./faq.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							FAQ
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
 							href="./blog.html"
 							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
@@ -85,7 +102,7 @@
 
 					<div class="hidden lg:flex items-center gap-3">
 						<button
-							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900"
+							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
 						>
 							Log In
 						</button>
@@ -196,1121 +213,945 @@
 
 		<!-- Hero Section -->
 		<section
-			class="pt-32 pb-16 bg-gradient-to-br from-black via-gray-900 to-black text-white"
+			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-10 bg-black text-white overflow-hidden"
+			style="
+				background-image: url('./assets/image/hero/herobackground.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
 		>
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center max-w-4xl mx-auto">
+			<div class="max-w-7xl mx-auto">
+				<div
+					class="w-full z-20 space-y-6 mx-auto text-center"
+					data-aos="fade-up"
+				>
 					<div
-						class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
 					>
 						✍️ Professional Course
 					</div>
+
 					<h1
-						class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
 					>
 						The Complete Guide to<br />Professional Editing & Proofreading
 					</h1>
-					<p class="text-lg md:text-xl text-gray-300 mb-10">
+
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
 						Master the art and science of transforming rough drafts into
-						polished, publication-ready manuscripts
+						polished, publication-ready manuscripts.
 					</p>
-
-					<!-- Stats -->
-					<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">7</div>
-							<div class="text-gray-300 text-sm">Modules</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">15+</div>
-							<div class="text-gray-300 text-sm">Techniques</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">20+</div>
-							<div class="text-gray-300 text-sm">Exercises</div>
-						</div>
-						<div
-							class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-						>
-							<div class="text-3xl font-bold mb-2">100+</div>
-							<div class="text-gray-300 text-sm">Tips</div>
-						</div>
-					</div>
-
-					<button
-						onclick="document.getElementById('content-start').scrollIntoView({behavior: 'smooth'})"
-						class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 hover:shadow-xl inline-flex items-center gap-2"
-					>
-						Start Learning
-						<svg
-							class="w-5 h-5"
-							fill="none"
-							stroke="currentColor"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="2"
-								d="M19 9l-7 7-7-7"
-							></path>
-						</svg>
-					</button>
 				</div>
 			</div>
 		</section>
 
-		<!-- Welcome Section -->
-		<section id="content-start" class="py-16 bg-white">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6">
-				<div class="prose prose-lg max-w-none">
-					<h2 class="text-3xl font-bold text-black mb-6">
-						Welcome to Professional Editing Mastery
-					</h2>
-					<p class="text-gray-700 leading-relaxed mb-6">
-						This comprehensive course will transform you from someone who "fixes
-						typos" into a skilled editor who can systematically improve any
-						piece of writing. Whether you're editing your own work, helping
-						colleagues, or building a career in professional editing, this
-						course provides the frameworks, techniques, and insights you need.
-					</p>
-
-					<div
-						class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-xl my-8"
-					>
-						<h3 class="font-bold text-lg mb-3 text-blue-900">
-							Course Philosophy
-						</h3>
-						<p class="text-blue-800">
-							Great editing is not about applying rules mechanically—it's about
-							understanding the writer's intent, the audience's needs, and the
-							context of communication. This course teaches you to think like a
-							professional editor while providing practical tools you can use
-							immediately.
-						</p>
+		<!-- Stats Section -->
+		<section class="mt-[60px] py-5 lg:py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
+				<div
+					class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+					data-aos="fade-up"
+				>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">7</div>
+						<div class="text-gray-600 text-sm">Modules</div>
 					</div>
-
-					<h3 class="text-2xl font-bold mt-8 mb-4">What You'll Learn</h3>
-					<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-						<ul class="space-y-2 text-gray-700">
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>The fundamental principles of effective editing</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>How to approach editing systematically</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Advanced techniques for clarity and concision</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Grammar and mechanics that matter most</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Building and maintaining style consistency</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Using technology to enhance your editing</span>
-							</li>
-						</ul>
-						<ul class="space-y-2 text-gray-700">
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Professional workflows and time management</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Collaboration techniques with authors</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Quality control and final checks</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Industry standards and best practices</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Building your editing skills continuously</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-blue-600 font-bold">✓</span>
-								<span>Ethical considerations in editing</span>
-							</li>
-						</ul>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">15+</div>
+						<div class="text-gray-600 text-sm">Techniques</div>
+					</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">20+</div>
+						<div class="text-gray-600 text-sm">Exercises</div>
+					</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">100+</div>
+						<div class="text-gray-600 text-sm">Tips</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Main Content with Sidebar -->
-		<div class="bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+		<!-- Introduction Section -->
+		<section class="py-5 lg:py-16 bg-white">
+			<div
+				class="max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-3xl md:text-4xl lg:text-[38px] font-bold text-black mb-6"
+				>
+					Welcome to Professional Editing Mastery
+				</h2>
+				<p class="text-gray-700 text-base md:text-[16px] leading-relaxed mb-8">
+					This comprehensive course will transform you from someone who "fixes
+					typos" into a skilled editor who can systematically improve any piece
+					of writing. Whether you're editing your own work, helping colleagues,
+					or building a career in professional editing, this course provides the
+					frameworks, techniques, and insights you need.
+				</p>
+
+				<div
+					class="bg-gray-50 border-l-4 border-black p-6 rounded-r-xl my-8 text-left"
+				>
+					<h3 class="font-bold text-lg mb-3 text-black">Course Philosophy</h3>
+					<p class="text-gray-600">
+						Great editing is not about applying rules mechanically—it's about
+						understanding the writer's intent, the audience's needs, and the
+						context of communication. This course teaches you to think like a
+						professional editor while providing practical tools you can use
+						immediately.
+					</p>
+				</div>
+
+				<h3 class="text-2xl font-bold mt-8 mb-6 text-black">
+					What You'll Learn
+				</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+					<ul class="space-y-3 text-gray-600">
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>The fundamental principles of effective editing</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>How to approach editing systematically</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Advanced techniques for clarity and concision</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Grammar and mechanics that matter most</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Building and maintaining style consistency</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Using technology to enhance your editing</span>
+						</li>
+					</ul>
+					<ul class="space-y-3 text-gray-600">
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Professional workflows and time management</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Collaboration techniques with authors</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Quality control and final checks</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Industry standards and best practices</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Building your editing skills continuously</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-black font-bold">✓</span>
+							<span>Ethical considerations in editing</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- Course Content Section -->
+		<section class="py-5 lg:py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="lg:grid lg:grid-cols-12 lg:gap-12">
 					<!-- Sidebar Navigation -->
 					<aside class="lg:col-span-3 mb-8 lg:mb-0">
 						<div
 							class="lg:sticky lg:top-24 bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
 						>
-							<h3 class="font-bold text-lg mb-4">Course Modules</h3>
-							<nav class="chapter-nav space-y-2">
+							<h3 class="font-bold text-lg mb-4 text-black">Course Modules</h3>
+							<nav class="space-y-2">
 								<a
 									href="#module1"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors active"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 1: Foundations</a
 								>
 								<a
 									href="#module2"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 2: Multi-Pass System</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 2: Multi-Pass</a
 								>
 								<a
 									href="#module3"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 3: Line Editing</a
 								>
 								<a
 									href="#module4"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 4: Grammar</a
 								>
 								<a
 									href="#module5"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 5: Consistency</a
 								>
 								<a
 									href="#module6"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 6: Digital Tools</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 6: Tools</a
 								>
 								<a
 									href="#module7"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
-									>Module 7: Professional Practice</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 7: Practice</a
 								>
 							</nav>
 						</div>
 					</aside>
 
 					<!-- Main Content -->
-					<main class="lg:col-span-9">
+					<main class="lg:col-span-9 space-y-6">
+						<!-- Module 1 -->
 						<div
-							class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12"
+							id="module1"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
-							<div class="prose-custom max-w-none space-y-12">
-								<!-- Module 1 -->
-								<section id="module1" class="scroll-mt-24">
-									<div class="flex items-center gap-3 mb-6">
-										<div
-											class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-										>
-											1
-										</div>
-										<div>
-											<h2 class="text-3xl font-bold text-black">
-												The Foundations of Professional Editing
-											</h2>
-											<p class="text-gray-600">
-												Understanding what editing really is—and what it isn't
-											</p>
-										</div>
+							<button
+								onclick="toggle('mod1')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										1
 									</div>
-
-									<div class="space-y-6">
-										<div>
-											<h3 class="text-xl font-bold mb-4">
-												1.1 The Four Levels of Edit: Your Editorial Roadmap
-											</h3>
-											<p class="text-gray-700 mb-4">
-												Professional editors don't try to fix everything at
-												once. Instead, they work through four distinct levels,
-												each with its own focus and techniques.
-											</p>
-
-											<div class="overflow-x-auto">
-												<table
-													class="min-w-full border border-gray-200 rounded-lg"
-												>
-													<thead class="bg-gray-50">
-														<tr>
-															<th
-																class="px-4 py-3 text-left text-sm font-semibold text-gray-900"
-															>
-																Level
-															</th>
-															<th
-																class="px-4 py-3 text-left text-sm font-semibold text-gray-900"
-															>
-																Focus
-															</th>
-															<th
-																class="px-4 py-3 text-left text-sm font-semibold text-gray-900"
-															>
-																Time
-															</th>
-															<th
-																class="px-4 py-3 text-left text-sm font-semibold text-gray-900"
-															>
-																Skills Required
-															</th>
-														</tr>
-													</thead>
-													<tbody class="divide-y divide-gray-200">
-														<tr>
-															<td class="px-4 py-3 font-medium">
-																Developmental Edit
-															</td>
-															<td class="px-4 py-3 text-sm">
-																Structure, argument, organization
-															</td>
-															<td class="px-4 py-3 text-sm">40-50%</td>
-															<td class="px-4 py-3 text-sm">
-																Strategic thinking
-															</td>
-														</tr>
-														<tr>
-															<td class="px-4 py-3 font-medium">Line Edit</td>
-															<td class="px-4 py-3 text-sm">
-																Clarity, flow, voice
-															</td>
-															<td class="px-4 py-3 text-sm">30-35%</td>
-															<td class="px-4 py-3 text-sm">
-																Language sensitivity
-															</td>
-														</tr>
-														<tr>
-															<td class="px-4 py-3 font-medium">Copy Edit</td>
-															<td class="px-4 py-3 text-sm">
-																Grammar, consistency
-															</td>
-															<td class="px-4 py-3 text-sm">15-20%</td>
-															<td class="px-4 py-3 text-sm">
-																Grammar knowledge
-															</td>
-														</tr>
-														<tr>
-															<td class="px-4 py-3 font-medium">Proofread</td>
-															<td class="px-4 py-3 text-sm">
-																Final errors, typos
-															</td>
-															<td class="px-4 py-3 text-sm">5-10%</td>
-															<td class="px-4 py-3 text-sm">
-																Pattern recognition
-															</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
-
-											<div
-												class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-xl mt-6"
-											>
-												<p class="text-sm text-amber-900">
-													<strong>Common Mistake:</strong> Many people jump
-													straight to proofreading—fixing typos and grammar
-													errors—without addressing larger issues first. This
-													leads to polished sentences that don't serve the
-													document's purpose.
-												</p>
-											</div>
-										</div>
-
-										<div>
-											<h3 class="text-xl font-bold mb-4">
-												1.2 Understanding Your Role: Editor vs. Writer
-											</h3>
-											<div class="grid md:grid-cols-2 gap-6">
-												<div class="bg-green-50 p-6 rounded-xl">
-													<h4 class="font-bold mb-3 text-green-900">
-														✓ Preserve When:
-													</h4>
-													<ul class="space-y-2 text-sm text-green-800">
-														<li>• Author's voice is distinctive</li>
-														<li>• Meaning is clear</li>
-														<li>• Choice serves rhetorical purpose</li>
-														<li>• Text is creative/artistic</li>
-														<li>• Working with field expert</li>
-													</ul>
-												</div>
-												<div class="bg-red-50 p-6 rounded-xl">
-													<h4 class="font-bold mb-3 text-red-900">
-														⚠ Intervene When:
-													</h4>
-													<ul class="space-y-2 text-sm text-red-800">
-														<li>• Meaning is unclear</li>
-														<li>• Tone is inappropriate</li>
-														<li>• Grammar impedes understanding</li>
-														<li>• Doesn't achieve purpose</li>
-														<li>• Factual accuracy at stake</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-
-										<div
-											class="bg-purple-50 border-l-4 border-purple-600 p-6 rounded-r-xl"
-										>
-											<h4 class="font-bold mb-2 text-purple-900">
-												💡 Professional Principle
-											</h4>
-											<p class="text-purple-800">
-												Your job is to make the author's ideas shine, not to
-												rewrite them in your voice. The best edits are often
-												invisible—readers should feel like they're hearing
-												directly from the author, just more clearly.
-											</p>
-										</div>
-									</div>
-								</section>
-
-								<!-- Module 2 -->
-								<section id="module2" class="scroll-mt-24">
-									<div class="flex items-center gap-3 mb-6">
-										<div
-											class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-										>
-											2
-										</div>
-										<div>
-											<h2 class="text-3xl font-bold text-black">
-												The Multi-Pass Editing System
-											</h2>
-											<p class="text-gray-600">
-												A systematic approach that ensures nothing falls through
-												the cracks
-											</p>
-										</div>
-									</div>
-
-									<div class="space-y-6">
-										<div>
-											<h3 class="text-xl font-bold mb-4">
-												The Six-Pass Professional System
-											</h3>
-											<p class="text-gray-700 mb-6">
-												This system is used by professional editors worldwide.
-												Each pass has a specific focus and set of techniques.
-											</p>
-
-											<div class="space-y-4">
-												<div
-													class="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg"
-												>
-													<div class="flex items-center justify-between mb-2">
-														<h4 class="font-bold text-blue-900">
-															Pass 1: Purpose & Structure
-														</h4>
-														<span
-															class="text-sm bg-blue-200 px-3 py-1 rounded-full text-blue-900"
-															>20% of time</span
-														>
-													</div>
-													<p class="text-sm text-blue-800 mb-2">
-														<strong>Focus:</strong> Does this document achieve
-														its purpose? Is it well-organized?
-													</p>
-													<p class="text-sm text-blue-700">
-														<strong>Check:</strong> Clear intro/conclusion,
-														logical order, appropriate length, consistent tone
-													</p>
-												</div>
-
-												<div
-													class="border-l-4 border-green-500 bg-green-50 p-4 rounded-r-lg"
-												>
-													<div class="flex items-center justify-between mb-2">
-														<h4 class="font-bold text-green-900">
-															Pass 2: Paragraph & Flow
-														</h4>
-														<span
-															class="text-sm bg-green-200 px-3 py-1 rounded-full text-green-900"
-															>15% of time</span
-														>
-													</div>
-													<p class="text-sm text-green-800 mb-2">
-														<strong>Focus:</strong> Does each paragraph serve a
-														purpose? Do ideas flow logically?
-													</p>
-													<p class="text-sm text-green-700">
-														<strong>Check:</strong> One idea per paragraph,
-														strong topic sentences, logical transitions
-													</p>
-												</div>
-
-												<div
-													class="border-l-4 border-purple-500 bg-purple-50 p-4 rounded-r-lg"
-												>
-													<div class="flex items-center justify-between mb-2">
-														<h4 class="font-bold text-purple-900">
-															Pass 3: Line Editing
-														</h4>
-														<span
-															class="text-sm bg-purple-200 px-3 py-1 rounded-full text-purple-900"
-															>25% of time</span
-														>
-													</div>
-													<p class="text-sm text-purple-800 mb-2">
-														<strong>Focus:</strong> Is every sentence clear,
-														concise, and purposeful?
-													</p>
-													<p class="text-sm text-purple-700">
-														<strong>Check:</strong> Sentence variety, active
-														voice, precise words, eliminate wordiness
-													</p>
-												</div>
-
-												<div
-													class="border-l-4 border-amber-500 bg-amber-50 p-4 rounded-r-lg"
-												>
-													<div class="flex items-center justify-between mb-2">
-														<h4 class="font-bold text-amber-900">
-															Pass 4-6: Consistency, Grammar & Proofread
-														</h4>
-														<span
-															class="text-sm bg-amber-200 px-3 py-1 rounded-full text-amber-900"
-															>40% of time</span
-														>
-													</div>
-													<p class="text-sm text-amber-800">
-														Final passes focus on style consistency, grammar
-														mechanics, and catching remaining surface errors
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-
-								<!-- Module 3 -->
-								<section id="module3" class="scroll-mt-24">
-									<div class="flex items-center gap-3 mb-6">
-										<div
-											class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-										>
-											3
-										</div>
-										<div>
-											<h2 class="text-3xl font-bold text-black">
-												Line Editing Mastery
-											</h2>
-											<p class="text-gray-600">
-												The art of making every sentence sing
-											</p>
-										</div>
-									</div>
-
-									<div class="space-y-6">
-										<h3 class="text-xl font-bold mb-4">
-											The Concision Toolkit: 15 Proven Techniques
-										</h3>
-
-										<div class="grid md:grid-cols-2 gap-4">
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">
-													1. Eliminate Throat-Clearing
-												</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"It should be noted that"
-												</p>
-												<p class="text-sm text-green-600">→ [delete]</p>
-											</div>
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">
-													2. Convert Nominalizations
-												</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"conduct an analysis"
-												</p>
-												<p class="text-sm text-green-600">→ "analyze"</p>
-											</div>
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">3. Eliminate Redundancy</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"basic fundamentals"
-												</p>
-												<p class="text-sm text-green-600">→ "fundamentals"</p>
-											</div>
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">
-													4. Replace Weak Verb + Adverb
-												</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"walked quickly"
-												</p>
-												<p class="text-sm text-green-600">
-													→ "strode" or "hurried"
-												</p>
-											</div>
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">5. Tighten Wordy Phrases</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"in order to"
-												</p>
-												<p class="text-sm text-green-600">→ "to"</p>
-											</div>
-											<div class="bg-gray-50 p-4 rounded-lg">
-												<h4 class="font-bold mb-2">6. Use Active Voice</h4>
-												<p class="text-sm text-gray-600 line-through">
-													"was completed by the team"
-												</p>
-												<p class="text-sm text-green-600">
-													→ "the team completed"
-												</p>
-											</div>
-										</div>
-
-										<div class="bg-blue-50 p-6 rounded-xl">
-											<h4 class="font-bold mb-3">Before & After Example</h4>
-											<div class="space-y-3">
-												<div>
-													<p class="text-sm font-medium text-gray-600 mb-1">
-														High cognitive load (38 words):
-													</p>
-													<p class="text-sm text-gray-700 italic">
-														"The methodology that was employed by the research
-														team in order to analyze the qualitative data that
-														had been collected through the semi-structured
-														interviews involved the utilization of thematic
-														analysis techniques."
-													</p>
-												</div>
-												<div>
-													<p class="text-sm font-medium text-green-600 mb-1">
-														Reduced cognitive load (12 words):
-													</p>
-													<p class="text-sm text-green-700 font-medium">
-														"The research team used thematic analysis to analyze
-														interview data."
-													</p>
-												</div>
-												<p class="text-sm text-blue-800 mt-3">
-													<strong>Result:</strong> 68% word reduction, improved
-													clarity, shortened subject-verb distance
-												</p>
-											</div>
-										</div>
-									</div>
-								</section>
-
-								<!-- Module 4 -->
-								<section id="module4" class="scroll-mt-24">
-									<div class="flex items-center gap-3 mb-6">
-										<div
-											class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-										>
-											4
-										</div>
-										<div>
-											<h2 class="text-3xl font-bold text-black">
-												Grammar & Mechanics That Matter
-											</h2>
-											<p class="text-gray-600">
-												Focus on the 20% of rules that solve 80% of problems
-											</p>
-										</div>
-									</div>
-
-									<div class="space-y-6">
-										<h3 class="text-xl font-bold mb-4">
-											The Big Five: Grammar Issues That Matter Most
-										</h3>
-
-										<div class="space-y-4">
-											<div class="border border-gray-200 rounded-lg p-4">
-												<h4 class="font-bold mb-3">
-													1. Pronoun Problems: The Clarity Killers
-												</h4>
-												<div class="bg-red-50 p-3 rounded mb-2">
-													<p class="text-sm text-red-800">
-														<strong>Problem:</strong> "The manager told the
-														employee that he was being promoted."
-													</p>
-													<p class="text-xs text-red-600 mt-1">
-														Who is being promoted? Ambiguous reference!
-													</p>
-												</div>
-												<div class="bg-green-50 p-3 rounded">
-													<p class="text-sm text-green-800">
-														<strong>Solution:</strong> "The manager told the
-														employee, 'You're being promoted.'"
-													</p>
-												</div>
-											</div>
-
-											<div class="border border-gray-200 rounded-lg p-4">
-												<h4 class="font-bold mb-3">
-													2. Modifier Mayhem: Keeping Things Connected
-												</h4>
-												<div class="bg-red-50 p-3 rounded mb-2">
-													<p class="text-sm text-red-800">
-														<strong>Dangling:</strong> "Walking to the office,
-														the rain started."
-													</p>
-													<p class="text-xs text-red-600 mt-1">
-														The rain was walking?
-													</p>
-												</div>
-												<div class="bg-green-50 p-3 rounded">
-													<p class="text-sm text-green-800">
-														<strong>Fixed:</strong> "As I walked to the office,
-														the rain started."
-													</p>
-												</div>
-											</div>
-
-											<div class="border border-gray-200 rounded-lg p-4">
-												<h4 class="font-bold mb-3">
-													3. Parallel Structure: The Rhythm of Logic
-												</h4>
-												<div class="bg-red-50 p-3 rounded mb-2">
-													<p class="text-sm text-red-800">
-														<strong>Non-parallel:</strong> "I like reading, to
-														write, and movies"
-													</p>
-												</div>
-												<div class="bg-green-50 p-3 rounded">
-													<p class="text-sm text-green-800">
-														<strong>Parallel:</strong> "I like reading, writing,
-														and watching movies"
-													</p>
-												</div>
-											</div>
-
-											<div class="border border-gray-200 rounded-lg p-4">
-												<h4 class="font-bold mb-3">
-													4. Subject-Verb Agreement: Beyond Basics
-												</h4>
-												<p class="text-sm text-gray-700 mb-2">
-													Tricky cases require careful attention:
-												</p>
-												<ul class="text-sm text-gray-600 space-y-1">
-													<li>
-														• Collective nouns: "The team is working" (as unit)
-													</li>
-													<li>
-														• Compound subjects: Verb agrees with nearest
-														subject
-													</li>
-													<li>
-														• Data: "The data is clear" (modern) vs "are"
-														(formal)
-													</li>
-												</ul>
-											</div>
-
-											<div class="border border-gray-200 rounded-lg p-4">
-												<h4 class="font-bold mb-3">
-													5. Comma Sense: Strategic Punctuation
-												</h4>
-												<p class="text-sm text-gray-700 mb-3">
-													Essential comma rules:
-												</p>
-												<ul class="text-sm text-gray-600 space-y-2">
-													<li>
-														✓ After introductory elements: "After the meeting,
-														we revised..."
-													</li>
-													<li>
-														✓ Before coordinating conjunctions: "We tested, and
-														it worked"
-													</li>
-													<li>
-														✓ Around non-essential info: "The report, completed
-														yesterday, shows..."
-													</li>
-													<li>
-														✓ To prevent misreading: "While eating, the dog
-														barked"
-													</li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</section>
-
-								<!-- Module 5-7 Summary -->
-								<section id="module5" class="scroll-mt-24">
-									<div class="space-y-8">
-										<div class="flex items-center gap-3 mb-6">
-											<div
-												class="w-12 h-12 bg-rose-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-											>
-												5
-											</div>
-											<div>
-												<h2 class="text-3xl font-bold text-black">
-													Building Bulletproof Consistency
-												</h2>
-												<p class="text-gray-600">
-													Creating and maintaining style standards
-												</p>
-											</div>
-										</div>
-										<p class="text-gray-700">
-											A style sheet isn't just a list of preferences—it's a
-											decision-making tool that saves time and ensures quality.
-											Professional editors create comprehensive style sheets
-											covering spelling, capitalization, numbers, dates,
-											abbreviations, terminology, and more.
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											The Foundations of Professional Editing
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Understanding what editing really is—and what it isn't
 										</p>
 									</div>
-								</section>
+								</div>
+								<svg
+									id="mod1-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod1-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										1.1 The Four Levels of Edit: Your Editorial Roadmap
+									</h3>
+									<p class="text-gray-600 mb-4">
+										Professional editors don't try to fix everything at once.
+										Instead, they work through four distinct levels, each with
+										its own focus and techniques.
+									</p>
 
-								<section id="module6" class="scroll-mt-24">
-									<div class="space-y-8">
-										<div class="flex items-center gap-3 mb-6">
-											<div
-												class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-											>
-												6
-											</div>
-											<div>
-												<h2 class="text-3xl font-bold text-black">
-													Advanced Digital Editing Techniques
-												</h2>
-												<p class="text-gray-600">
-													Leveraging technology to edit faster and better
-												</p>
-											</div>
-										</div>
-										<p class="text-gray-700 mb-4">
-											AI tools can enhance your workflow, but require strategic
-											use. Learn what AI does well (pattern recognition,
-											suggestions) and its limitations (context understanding,
-											voice preservation, factual accuracy).
+									<div class="overflow-x-auto mb-6">
+										<table class="min-w-full border border-gray-200 rounded-lg">
+											<thead class="bg-gray-50">
+												<tr>
+													<th
+														class="px-4 py-3 text-left text-sm font-semibold text-black"
+													>
+														Level
+													</th>
+													<th
+														class="px-4 py-3 text-left text-sm font-semibold text-black"
+													>
+														Focus
+													</th>
+													<th
+														class="px-4 py-3 text-left text-sm font-semibold text-black"
+													>
+														Time
+													</th>
+													<th
+														class="px-4 py-3 text-left text-sm font-semibold text-black"
+													>
+														Skills Required
+													</th>
+												</tr>
+											</thead>
+											<tbody class="divide-y divide-gray-200 text-gray-600">
+												<tr>
+													<td class="px-4 py-3 font-medium text-black">
+														Developmental Edit
+													</td>
+													<td class="px-4 py-3 text-sm">
+														Structure, argument, organization
+													</td>
+													<td class="px-4 py-3 text-sm">40-50%</td>
+													<td class="px-4 py-3 text-sm">Strategic thinking</td>
+												</tr>
+												<tr>
+													<td class="px-4 py-3 font-medium text-black">
+														Line Edit
+													</td>
+													<td class="px-4 py-3 text-sm">
+														Clarity, flow, voice
+													</td>
+													<td class="px-4 py-3 text-sm">30-35%</td>
+													<td class="px-4 py-3 text-sm">
+														Language sensitivity
+													</td>
+												</tr>
+												<tr>
+													<td class="px-4 py-3 font-medium text-black">
+														Copy Edit
+													</td>
+													<td class="px-4 py-3 text-sm">
+														Grammar, consistency
+													</td>
+													<td class="px-4 py-3 text-sm">15-20%</td>
+													<td class="px-4 py-3 text-sm">Grammar knowledge</td>
+												</tr>
+												<tr>
+													<td class="px-4 py-3 font-medium text-black">
+														Proofread
+													</td>
+													<td class="px-4 py-3 text-sm">Final errors, typos</td>
+													<td class="px-4 py-3 text-sm">5-10%</td>
+													<td class="px-4 py-3 text-sm">Pattern recognition</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<div
+										class="bg-gray-50 border-l-4 border-black p-4 rounded-r-xl mb-6"
+									>
+										<p class="text-sm text-gray-600">
+											<strong>Common Mistake:</strong> Many people jump straight
+											to proofreading—fixing typos and grammar errors—without
+											addressing larger issues first. This leads to polished
+											sentences that don't serve the document's purpose.
 										</p>
-										<div class="bg-gray-50 p-6 rounded-xl">
-											<h4 class="font-bold mb-3">
-												Essential Digital Editing Stack:
+									</div>
+
+									<h3 class="text-lg font-bold mb-4 text-black">
+										1.2 Understanding Your Role: Editor vs. Writer
+									</h3>
+									<div class="grid md:grid-cols-2 gap-6">
+										<div
+											class="bg-gray-50 p-6 rounded-xl border-l-4 border-black"
+										>
+											<h4 class="font-bold mb-3 text-black">
+												✓ Preserve When:
 											</h4>
-											<ul class="space-y-2 text-gray-700">
-												<li>
-													• <strong>Word Processors:</strong> MS Word, Google
-													Docs (track changes, collaboration)
-												</li>
-												<li>
-													• <strong>Grammar Checkers:</strong> Grammarly,
-													ProWritingAid, Hemingway Editor
-												</li>
-												<li>
-													• <strong>Specialized Tools:</strong> PerfectIt
-													(consistency), text-to-speech (proofreading)
-												</li>
+											<ul class="space-y-2 text-sm text-gray-600">
+												<li>• Author's voice is distinctive</li>
+												<li>• Meaning is clear</li>
+												<li>• Choice serves rhetorical purpose</li>
+												<li>• Text is creative/artistic</li>
+												<li>• Working with field expert</li>
+											</ul>
+										</div>
+										<div
+											class="bg-gray-50 p-6 rounded-xl border-l-4 border-black"
+										>
+											<h4 class="font-bold mb-3 text-black">
+												⚠ Intervene When:
+											</h4>
+											<ul class="space-y-2 text-sm text-gray-600">
+												<li>• Meaning is unclear</li>
+												<li>• Tone is inappropriate</li>
+												<li>• Grammar impedes understanding</li>
+												<li>• Doesn't achieve purpose</li>
+												<li>• Factual accuracy at stake</li>
 											</ul>
 										</div>
 									</div>
-								</section>
+								</div>
+							</div>
+						</div>
 
-								<section id="module7" class="scroll-mt-24">
-									<div class="space-y-8">
-										<div class="flex items-center gap-3 mb-6">
-											<div
-												class="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
-											>
-												7
-											</div>
-											<div>
-												<h2 class="text-3xl font-bold text-black">
-													Professional Editing Practice
-												</h2>
-												<p class="text-gray-600">
-													Building systems for consistent, efficient,
-													high-quality editing
-												</p>
-											</div>
-										</div>
+						<!-- Module 2 -->
+						<div
+							id="module2"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod2')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										2
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											The Multi-Pass Editing System
+										</h2>
+										<p class="text-gray-500 text-sm">
+											A systematic approach that ensures nothing falls through
+											the cracks
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod2-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod2-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										The Six-Pass Professional System
+									</h3>
+									<p class="text-gray-600 mb-6">
+										This system is used by professional editors worldwide. Each
+										pass has a specific focus and set of techniques.
+									</p>
 
-										<div>
-											<h3 class="text-xl font-bold mb-4">
-												Time Management Framework
-											</h3>
-											<div class="grid md:grid-cols-2 gap-4">
-												<div class="bg-blue-50 p-4 rounded-lg">
-													<h4 class="font-semibold mb-2">Technical Docs</h4>
-													<p class="text-sm">3-5 pages/hour</p>
-													<p class="text-xs text-gray-600">
-														Focus: Accuracy, consistency
-													</p>
-												</div>
-												<div class="bg-green-50 p-4 rounded-lg">
-													<h4 class="font-semibold mb-2">Business Reports</h4>
-													<p class="text-sm">4-6 pages/hour</p>
-													<p class="text-xs text-gray-600">
-														Focus: Clarity, structure
-													</p>
-												</div>
-												<div class="bg-purple-50 p-4 rounded-lg">
-													<h4 class="font-semibold mb-2">Marketing Copy</h4>
-													<p class="text-sm">2-4 pages/hour</p>
-													<p class="text-xs text-gray-600">
-														Focus: Tone, impact
-													</p>
-												</div>
-												<div class="bg-amber-50 p-4 rounded-lg">
-													<h4 class="font-semibold mb-2">Web Content</h4>
-													<p class="text-sm">5-8 pages/hour</p>
-													<p class="text-xs text-gray-600">
-														Focus: Scannability, SEO
-													</p>
-												</div>
+									<div class="space-y-4">
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<div class="flex items-center justify-between mb-2">
+												<h4 class="font-bold text-black">
+													Pass 1: Purpose & Structure
+												</h4>
+												<span
+													class="text-xs bg-black text-white px-2 py-1 rounded-full"
+													>20% of time</span
+												>
 											</div>
+											<p class="text-sm text-gray-600 mb-2">
+												<strong>Focus:</strong> Does this document achieve its
+												purpose? Is it well-organized?
+											</p>
+											<p class="text-sm text-gray-500">
+												<strong>Check:</strong> Clear intro/conclusion, logical
+												order, appropriate length, consistent tone
+											</p>
 										</div>
 
 										<div
-											class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-xl"
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
 										>
-											<h4 class="font-bold mb-3 text-green-900">
-												Key Takeaways
-											</h4>
-											<ul class="space-y-2 text-green-800">
-												<li>
-													✓ Systems over perfection: Consistent approaches yield
-													better results
-												</li>
-												<li>
-													✓ Reader-first thinking: Every decision should serve
-													the reader
-												</li>
-												<li>
-													✓ Efficiency through structure: Multi-pass method
-													makes you faster
-												</li>
-												<li>
-													✓ Technology as tool: AI enhances but never replaces
-													human judgment
-												</li>
-												<li>
-													✓ Collaboration creates quality: Best editing is
-													collaborative
-												</li>
-											</ul>
+											<div class="flex items-center justify-between mb-2">
+												<h4 class="font-bold text-black">
+													Pass 2: Paragraph & Flow
+												</h4>
+												<span
+													class="text-xs bg-black text-white px-2 py-1 rounded-full"
+													>15% of time</span
+												>
+											</div>
+											<p class="text-sm text-gray-600 mb-2">
+												<strong>Focus:</strong> Does each paragraph serve a
+												purpose? Do ideas flow logically?
+											</p>
+											<p class="text-sm text-gray-500">
+												<strong>Check:</strong> One idea per paragraph, strong
+												topic sentences, logical transitions
+											</p>
+										</div>
+
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<div class="flex items-center justify-between mb-2">
+												<h4 class="font-bold text-black">
+													Pass 3: Line Editing
+												</h4>
+												<span
+													class="text-xs bg-black text-white px-2 py-1 rounded-full"
+													>25% of time</span
+												>
+											</div>
+											<p class="text-sm text-gray-600 mb-2">
+												<strong>Focus:</strong> Is every sentence clear,
+												concise, and purposeful?
+											</p>
+											<p class="text-sm text-gray-500">
+												<strong>Check:</strong> Sentence variety, active voice,
+												precise words, eliminate wordiness
+											</p>
+										</div>
+
+										<div
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
+										>
+											<div class="flex items-center justify-between mb-2">
+												<h4 class="font-bold text-black">
+													Pass 4-6: Consistency, Grammar & Proofread
+												</h4>
+												<span
+													class="text-xs bg-black text-white px-2 py-1 rounded-full"
+													>40% of time</span
+												>
+											</div>
+											<p class="text-sm text-gray-600">
+												Final passes focus on style consistency, grammar
+												mechanics, and catching remaining surface errors
+											</p>
 										</div>
 									</div>
-								</section>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 3 -->
+						<div
+							id="module3"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod3')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										3
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Line Editing Mastery
+										</h2>
+										<p class="text-gray-500 text-sm">
+											The art of making every sentence sing
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod3-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod3-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										The Concision Toolkit: 15 Proven Techniques
+									</h3>
+
+									<div class="grid md:grid-cols-2 gap-4 mb-6">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												1. Eliminate Throat-Clearing
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"It should be noted that"
+											</p>
+											<p class="text-sm text-black font-medium">→ [delete]</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												2. Convert Nominalizations
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"conduct an analysis"
+											</p>
+											<p class="text-sm text-black font-medium">→ "analyze"</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												3. Eliminate Redundancy
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"basic fundamentals"
+											</p>
+											<p class="text-sm text-black font-medium">
+												→ "fundamentals"
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												4. Replace Weak Verb + Adverb
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"walked quickly"
+											</p>
+											<p class="text-sm text-black font-medium">
+												→ "strode" or "hurried"
+											</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												5. Tighten Wordy Phrases
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"in order to"
+											</p>
+											<p class="text-sm text-black font-medium">→ "to"</p>
+										</div>
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												6. Use Active Voice
+											</h4>
+											<p class="text-sm text-gray-500 line-through">
+												"was completed by the team"
+											</p>
+											<p class="text-sm text-black font-medium">
+												→ "the team completed"
+											</p>
+										</div>
+									</div>
+
+									<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
+										<h4 class="font-bold mb-3 text-black">
+											Before & After Example
+										</h4>
+										<div class="space-y-3">
+											<div>
+												<p class="text-sm font-medium text-gray-500 mb-1">
+													High cognitive load (38 words):
+												</p>
+												<p class="text-sm text-gray-600 italic">
+													"The methodology that was employed by the research
+													team in order to analyze the qualitative data that had
+													been collected through the semi-structured interviews
+													involved the utilization of thematic analysis
+													techniques."
+												</p>
+											</div>
+											<div>
+												<p class="text-sm font-medium text-black mb-1">
+													Reduced cognitive load (12 words):
+												</p>
+												<p class="text-sm text-black font-medium">
+													"The research team used thematic analysis to analyze
+													interview data."
+												</p>
+											</div>
+											<p class="text-sm text-gray-500 mt-3">
+												<strong>Result:</strong> 68% word reduction, improved
+												clarity.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 4 -->
+						<div
+							id="module4"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod4')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										4
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Grammar & Mechanics
+										</h2>
+										<p class="text-gray-500 text-sm">
+											The rules that matter most for clarity
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod4-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod4-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Mastering grammar isn't about memorizing obscure rules; it's
+										about understanding how sentence structure affects meaning
+										and readability.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 5 -->
+						<div
+							id="module5"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod5')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										5
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Style & Consistency
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Creating a unified voice and professional polish
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod5-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod5-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Consistency is the hallmark of professional writing. Learn
+										how to create and use style sheets to ensure uniformity
+										throughout a document.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 6 -->
+						<div
+							id="module6"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod6')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										6
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Digital Tools & Workflow
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Leveraging technology to enhance your editing
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod6-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod6-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Modern editors use a suite of digital tools to improve
+										efficiency and accuracy. Learn which tools are essential and
+										how to use them effectively.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Module 7 -->
+						<div
+							id="module7"
+							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
+						>
+							<button
+								onclick="toggle('mod7')"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
+							>
+								<div class="flex items-center gap-4">
+									<div
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
+									>
+										7
+									</div>
+									<div class="text-left">
+										<h2 class="text-xl font-bold text-black">
+											Professional Practice
+										</h2>
+										<p class="text-gray-500 text-sm">
+											Building a career and working with clients
+										</p>
+									</div>
+								</div>
+								<svg
+									id="mod7-icon"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									></path>
+								</svg>
+							</button>
+							<div
+								id="mod7-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-gray-600 mb-6">
+										Whether you're freelancing or working in-house,
+										understanding the business side of editing is crucial for
+										long-term success.
+									</p>
+								</div>
 							</div>
 						</div>
 					</main>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<!-- Explore More Section -->
-		<section class="py-16 md:py-24 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12">
-					<div
-						class="inline-block bg-gray-100 text-black px-4 py-2 rounded-full text-sm font-medium mb-4"
-					>
-						EXPLORE MORE
-					</div>
-					<h2 class="text-3xl md:text-4xl font-bold text-black mb-4">
-						Perfect Your Writing With Editing
-					</h2>
-					<p class="text-gray-600 max-w-2xl mx-auto">
-						Simple techniques and professional advice to refine, polish, and
-						elevate your drafts
-					</p>
-				</div>
+		<!-- CTA Section -->
+		<section
+			class="mt-[80px] max-w-7xl mx-auto px-4 sm:px-6 rounded-t-2xl relative py-16 md:py-20 lg:py-24 w-full h-full bg-cover bg-center bg-no-repeat overflow-hidden"
+			style="background-image: url('./assets/image/footer/bg.png')"
+		>
+			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Proofreading Basics
-						</h3>
-						<p class="text-sm text-gray-600">
-							Catch common mistakes and polish your drafts.
-						</p>
-					</a>
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
+				>
+					Ready to Polish Your Prose?
+				</h2>
 
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Style Improvements
-						</h3>
-						<p class="text-sm text-gray-600">
-							Enhance readability with proven editing strategies.
-						</p>
-					</a>
+				<p
+					class="text-sm sm:text-base md:text-lg text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+				>
+					Join thousands of writers and editors who have elevated their craft
+					with Penwise. Start your journey today.
+				</p>
 
-					<a
-						href="./literary-glossary.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
+				<button
+					class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+				>
+					Start Learning Now
+					<svg
+						class="w-4 h-4 sm:w-5 sm:h-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
 					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Using Devices
-						</h3>
-						<p class="text-sm text-gray-600">
-							Strengthen your text with advanced literary techniques.
-						</p>
-					</a>
-
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Quality Check
-						</h3>
-						<p class="text-sm text-gray-600">
-							Learn how to evaluate drafts for professional standards.
-						</p>
-					</a>
-
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Track Progress
-						</h3>
-						<p class="text-sm text-gray-600">
-							Measure how editing improves your writing efficiency.
-						</p>
-					</a>
-
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2 group-hover:text-black">
-							Fix Writer's Block
-						</h3>
-						<p class="text-sm text-gray-600">
-							Editing exercises that spark new inspiration.
-						</p>
-					</a>
-				</div>
+						<path
+							fill-rule="evenodd"
+							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+							clip-rule="evenodd"
+						/>
+					</svg>
+				</button>
 			</div>
 		</section>
 
 		<!-- Footer Section -->
-		<footer class="rounded-b-2xl py-12 md:py-16">
+		<footer class="rounded-b-2xl py-12 md:py-16" data-aos="fade-up">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<!-- Footer Content Grid -->
 				<div
 					class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-8 mb-8 md:mb-12"
 				>
-					<!-- Penwise Brand Column -->
 					<div class="sm:col-span-2 md:col-span-1 lg:col-span-1">
 						<div class="flex items-center gap-2 mb-4">
 							<img src="./assets/image/logo.png" alt="Penwise" />
@@ -1368,7 +1209,6 @@
 						</div>
 					</div>
 
-					<!-- Product Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
@@ -1394,7 +1234,9 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
 									>Published books</a
 								>
 							</li>
@@ -1404,12 +1246,16 @@
 								>
 							</li>
 							<li>
-								<a href="/about.html" class="hover:text-black transition-colors"
+								<a
+									href="./about.html"
+									class="hover:text-black transition-colors"
 									>About</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./educators-and-schools.html"
+									class="hover:text-black transition-colors"
 									>For Educators & Schools</a
 								>
 							</li>
@@ -1438,14 +1284,15 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
 									>Generate Story Arcs</a
 								>
 							</li>
 						</ul>
 					</div>
 
-					<!-- Free AI Tools Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">Resources</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
@@ -1550,7 +1397,6 @@
 						</ul>
 					</div>
 
-					<!-- Use-Case Specific Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">
 							Use-Case Specific
@@ -1616,7 +1462,6 @@
 					</div>
 				</div>
 
-				<!-- Copyright -->
 				<div class="pt-8 border-t border-gray-200">
 					<div
 						class="flex flex-col sm:flex-row justify-between items-center gap-4"
@@ -1641,67 +1486,26 @@
 			</div>
 		</footer>
 
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-			// Mobile menu toggle
-			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-			const mobileMenu = document.getElementById("mobileMenu");
-			const closeMenuBtn = document.getElementById("closeMenuBtn");
-
-			mobileMenuBtn.addEventListener("click", () => {
-				mobileMenu.classList.remove("translate-x-full");
+			AOS.init({
+				duration: 800,
+				once: true,
 			});
 
-			closeMenuBtn.addEventListener("click", () => {
-				mobileMenu.classList.add("translate-x-full");
-			});
+			function toggle(id) {
+				const content = document.getElementById(id + "-content");
+				const icon = document.getElementById(id + "-icon");
 
-			// Progress bar
-			window.addEventListener("scroll", () => {
-				const winScroll =
-					document.body.scrollTop || document.documentElement.scrollTop;
-				const height =
-					document.documentElement.scrollHeight -
-					document.documentElement.clientHeight;
-				const scrolled = (winScroll / height) * 100;
-				document.getElementById("progress-bar").style.width = scrolled + "%";
-			});
-
-			// Chapter navigation active state
-			const chapters = document.querySelectorAll('section[id^="module"]');
-			const navLinks = document.querySelectorAll(".chapter-nav a");
-
-			const observerOptions = {
-				threshold: 0.3,
-				rootMargin: "-100px 0px -66%",
-			};
-
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						navLinks.forEach((link) => {
-							link.classList.remove("active", "bg-gray-100", "text-gray-900");
-							link.classList.add("text-gray-700");
-							if (link.getAttribute("href") === `#${entry.target.id}`) {
-								link.classList.add("active", "bg-gray-100", "text-gray-900");
-								link.classList.remove("text-gray-700");
-							}
-						});
-					}
-				});
-			}, observerOptions);
-
-			chapters.forEach((chapter) => observer.observe(chapter));
-
-			// Smooth scroll
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute("href"));
-					if (target) {
-						target.scrollIntoView({ behavior: "smooth", block: "start" });
-					}
-				});
-			});
+				if (content.classList.contains("hidden")) {
+					content.classList.remove("hidden");
+					icon.classList.add("rotate-180");
+				} else {
+					content.classList.add("hidden");
+					icon.classList.remove("rotate-180");
+				}
+			}
 		</script>
 	</body>
 </html>

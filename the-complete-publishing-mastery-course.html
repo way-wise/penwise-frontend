@@ -14,55 +14,98 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script>
+			tailwind.config = {
+				theme: {
+					extend: {
+						fontFamily: {
+							sans: ["Inter", "sans-serif"],
+						},
+					},
+				},
+			};
+		</script>
 	</head>
 
-	<body class="font-sans antialiased bg-gray-50">
-		<div class="fixed top-0 left-0 right-0 h-1 bg-gray-200 z-50">
-			<div
-				id="progress-bar"
-				class="h-full bg-black transition-all duration-300"
-				style="width: 0%"
-			></div>
-		</div>
-
-		<nav
-			class="fixed top-1 left-0 right-0 bg-white/95 backdrop-blur-sm z-40 border-b border-gray-100"
-		>
+	<body class="font-sans antialiased overflow-x-hidden bg-white">
+		<!-- Navigation -->
+		<nav class="fixed top-0 left-0 right-0 bg-white z-50">
 			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
 				<div class="flex items-center justify-between h-18">
-					<a href="./index.html" class="flex items-center gap-2">
+					<a
+						href="./index.html"
+						class="flex items-center gap-2 text-xl font-bold text-black hover:scale-105 transition-transform duration-300"
+					>
 						<img src="./assets/image/logo.png" alt="Penwise" />
 					</a>
+
 					<div class="hidden lg:flex items-center gap-8">
 						<a
 							href="./howitworks.html"
-							class="font-medium text-gray-600 hover:text-gray-900"
-							>How It Works</a
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
+							How It Works
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
 						<a
 							href="./pricing.html"
-							class="font-medium text-gray-600 hover:text-gray-900"
-							>Pricing</a
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
+							Pricing
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
 						<a
 							href="./why.html"
-							class="font-medium text-gray-600 hover:text-gray-900"
-							>Why Penwise</a
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
+							Why Penwise
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./affiliates.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							Affiliates
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
+						<a
+							href="./faq.html"
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+						>
+							FAQ
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
 						<a
 							href="./blog.html"
-							class="font-medium text-gray-600 hover:text-gray-900"
-							>Blog</a
+							class="relative font-medium text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
 						>
+							Blog
+							<span
+								class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-gray-900 to-gray-700 group-hover:w-3/4 transition-all duration-300"
+							></span>
+						</a>
 					</div>
+
 					<div class="hidden lg:flex items-center gap-3">
 						<button
-							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900"
+							class="px-6 py-2.5 font-semibold text-white bg-black rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
 						>
 							Log In
 						</button>
 					</div>
+
 					<button
 						id="mobileMenuBtn"
 						class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
@@ -91,10 +134,10 @@
 					class="flex items-center justify-between p-6 border-b border-gray-200"
 				>
 					<a
-						href="./index.html"
+						href="#"
 						class="flex items-center gap-2 text-xl font-bold text-black"
 					>
-						<img src="./assets/image/logo.png" alt="Penwise" />
+						<img src="./assets/image/logo.png" alt="" />
 					</a>
 					<button
 						id="closeMenuBtn"
@@ -151,176 +194,235 @@
 					</div>
 				</nav>
 
-				<div class="p-6 border-t border-gray-200">
+				<div class="p-6 border-t border-gray-200 space-y-3">
+					<button
+						class="w-full px-6 py-3.5 font-semibold text-gray-900 border-2 border-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition-all duration-300"
+					>
+						Log In
+					</button>
 					<button
 						class="w-full px-6 py-3.5 font-semibold bg-gradient-to-r from-gray-900 to-gray-700 text-white rounded-full hover:shadow-lg transition-all duration-300"
 					>
-						Log In
+						Get Started
 					</button>
 				</div>
 			</div>
 		</div>
 
+		<!-- Hero Section -->
 		<section
-			class="pt-32 pb-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900 text-white"
+			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-10 bg-black text-white overflow-hidden"
+			style="
+				background-image: url('./assets/image/hero/herobackground.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+			"
 		>
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+			<div class="max-w-7xl mx-auto">
 				<div
-					class="inline-block bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 border border-white/20"
+					class="w-full z-20 space-y-6 mx-auto text-center"
+					data-aos="fade-up"
 				>
-					📚 University-Level Curriculum
+					<div
+						class="inline-block bg-white text-black px-4 py-2 rounded-full text-sm font-normal mb-6"
+					>
+						📚 University-Level Curriculum
+					</div>
+
+					<h1
+						class="text-4xl sm:text-5xl md:text-6xl lg:text-[56px] font-semibold leading-tight mb-6 tracking-tight"
+					>
+						The Complete Publishing<br />Mastery Course
+					</h1>
+
+					<p
+						class="text-base md:text-lg lg:text-[16px] text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
+					>
+						A comprehensive guide to mastering every aspect of modern book
+						publishing, from manuscript to bestseller.
+					</p>
 				</div>
-				<h1
-					class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6"
-				>
-					The Complete Publishing<br />Mastery Course
-				</h1>
-				<p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-					A comprehensive guide to mastering every aspect of modern book
-					publishing, from manuscript to bestseller
-				</p>
+			</div>
+		</section>
+
+		<!-- Stats Section -->
+		<section class="mt-[60px] py-5 lg:py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div
-					class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12"
+					class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+					data-aos="fade-up"
 				>
-					<div
-						class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-					>
-						<div class="text-3xl font-bold mb-2">9</div>
-						<div class="text-gray-200 text-sm">Modules</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">9</div>
+						<div class="text-gray-600 text-sm">Modules</div>
 					</div>
-					<div
-						class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-					>
-						<div class="text-3xl font-bold mb-2">15+</div>
-						<div class="text-gray-200 text-sm">Years Experience</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">15+</div>
+						<div class="text-gray-600 text-sm">Years Experience</div>
 					</div>
-					<div
-						class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-					>
-						<div class="text-3xl font-bold mb-2">50+</div>
-						<div class="text-gray-200 text-sm">Strategies</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">50+</div>
+						<div class="text-gray-600 text-sm">Strategies</div>
 					</div>
-					<div
-						class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
-					>
-						<div class="text-3xl font-bold mb-2">100%</div>
-						<div class="text-gray-200 text-sm">Actionable</div>
+					<div class="p-6 rounded-2xl bg-gray-50">
+						<div class="text-4xl font-bold text-black mb-2">100%</div>
+						<div class="text-gray-600 text-sm">Actionable</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="py-16 bg-white">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6">
-				<h2 class="text-3xl font-bold mb-6">
+		<!-- Introduction Section -->
+		<section class="py-5 lg:py-16 bg-white">
+			<div
+				class="max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-3xl md:text-4xl lg:text-[38px] font-bold text-black mb-6"
+				>
 					Welcome to Your Publishing Education
 				</h2>
-				<p class="text-gray-700 mb-6">
+				<p class="text-gray-700 text-base md:text-[16px] leading-relaxed mb-12">
 					This comprehensive course represents over 15 years of combined
 					industry experience, distilled into a practical, actionable curriculum
 					that will transform you from aspiring author to published
 					professional.
 				</p>
-				<div class="bg-indigo-50 border-l-4 border-indigo-600 p-6 rounded-r-xl">
-					<h3 class="font-bold text-lg mb-3">What You'll Master</h3>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li>✓ Strategic publishing decision-making and path selection</li>
-						<li>✓ Market analysis and positioning techniques</li>
-						<li>✓ Professional production standards</li>
-						<li>✓ Distribution and sales optimization</li>
-						<li>✓ Marketing and platform building</li>
-						<li>✓ Financial planning and ROI analysis</li>
-						<li>✓ Legal and rights management</li>
-						<li>✓ Career development strategies</li>
+
+				<div
+					class="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-left"
+				>
+					<h3 class="font-bold text-lg mb-4 text-black">What You'll Master</h3>
+					<ul class="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Strategic publishing decision-making
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Market analysis and positioning
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Professional production standards
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Distribution and sales optimization
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Marketing and platform building
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Financial planning and ROI analysis
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Legal and rights management
+						</li>
+						<li class="flex items-center gap-2">
+							<span class="w-1.5 h-1.5 rounded-full bg-black"></span>
+							Career development strategies
+						</li>
 					</ul>
 				</div>
 			</div>
 		</section>
 
-		<div class="bg-gray-50 py-12">
+		<!-- Course Content Section -->
+		<section class="py-5 lg:py-16 bg-gray-50">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
 				<div class="lg:grid lg:grid-cols-12 lg:gap-12">
+					<!-- Sidebar Navigation -->
 					<aside class="lg:col-span-3 mb-8 lg:mb-0">
-						<div class="lg:sticky lg:top-24 bg-white rounded-2xl p-6 shadow-sm">
-							<h3 class="font-bold text-lg mb-4">Course Modules</h3>
+						<div
+							class="lg:sticky lg:top-24 bg-white rounded-2xl p-6 shadow-sm border border-gray-100"
+						>
+							<h3 class="font-bold text-lg mb-4 text-black">Course Modules</h3>
 							<nav class="space-y-2">
 								<a
 									href="#mod1"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 1: Publishing Ecosystem</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 1: Ecosystem</a
 								>
 								<a
 									href="#mod2"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 2: Market Analysis</a
 								>
 								<a
 									href="#mod3"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 3: Traditional Publishing</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 3: Traditional</a
 								>
 								<a
 									href="#mod4"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 4: Self-Publishing</a
 								>
 								<a
 									href="#mod5"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 5: Hybrid Publishing</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 5: Hybrid</a
 								>
 								<a
 									href="#mod6"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
 									>Module 6: Marketing</a
 								>
 								<a
 									href="#mod7"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 7: Financial Management</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 7: Finance</a
 								>
 								<a
 									href="#mod8"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 8: Legal & Rights</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 8: Legal</a
 								>
 								<a
 									href="#mod9"
-									class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg"
-									>Module 9: Career Development</a
+									class="block px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-black rounded-lg transition-colors"
+									>Module 9: Career</a
 								>
 							</nav>
 						</div>
 					</aside>
 
+					<!-- Main Content -->
 					<main class="lg:col-span-9 space-y-6">
 						<!-- Module 1 -->
 						<div
 							id="mod1"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m1')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										1
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
+										<h2 class="text-xl font-bold text-black">
 											Understanding the Modern Publishing Ecosystem
 										</h2>
-										<p class="text-gray-600 text-sm">
+										<p class="text-gray-500 text-sm">
 											Evolution, pathways, and industry dynamics
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m1-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -333,20 +435,25 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m1-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">
+							<div
+								id="m1-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
 										The Three Primary Publishing Pathways
 									</h3>
 									<div class="grid md:grid-cols-3 gap-4">
 										<div
-											class="border border-blue-200 bg-blue-50 p-4 rounded-lg"
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
 										>
-											<h4 class="font-bold mb-2">Traditional Publishing</h4>
-											<p class="text-sm mb-3">
+											<h4 class="font-bold mb-2 text-black">
+												Traditional Publishing
+											</h4>
+											<p class="text-sm mb-3 text-gray-600">
 												The established, prestigious path with gatekeepers
 											</p>
-											<ul class="text-xs space-y-1">
+											<ul class="text-xs space-y-1 text-gray-500">
 												<li>✓ Professional editing & design</li>
 												<li>✓ Bookstore distribution</li>
 												<li>✓ Marketing support</li>
@@ -355,13 +462,13 @@
 											</ul>
 										</div>
 										<div
-											class="border border-green-200 bg-green-50 p-4 rounded-lg"
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
 										>
-											<h4 class="font-bold mb-2">Self-Publishing</h4>
-											<p class="text-sm mb-3">
+											<h4 class="font-bold mb-2 text-black">Self-Publishing</h4>
+											<p class="text-sm mb-3 text-gray-600">
 												The entrepreneurial path with full control
 											</p>
-											<ul class="text-xs space-y-1">
+											<ul class="text-xs space-y-1 text-gray-500">
 												<li>✓ 35-70% royalties</li>
 												<li>✓ 8-16 week timeline</li>
 												<li>✓ Complete creative control</li>
@@ -370,13 +477,15 @@
 											</ul>
 										</div>
 										<div
-											class="border border-purple-200 bg-purple-50 p-4 rounded-lg"
+											class="bg-gray-50 p-4 rounded-xl border-l-4 border-black"
 										>
-											<h4 class="font-bold mb-2">Hybrid Publishing</h4>
-											<p class="text-sm mb-3">
+											<h4 class="font-bold mb-2 text-black">
+												Hybrid Publishing
+											</h4>
+											<p class="text-sm mb-3 text-gray-600">
 												The middle path combining both models
 											</p>
-											<ul class="text-xs space-y-1">
+											<ul class="text-xs space-y-1 text-gray-500">
 												<li>✓ Professional services</li>
 												<li>✓ Better distribution</li>
 												<li>✓ Moderate royalties</li>
@@ -386,16 +495,6 @@
 										</div>
 									</div>
 								</div>
-								<div
-									class="bg-amber-50 border-l-4 border-amber-600 p-4 rounded-r-lg"
-								>
-									<h4 class="font-bold mb-2">⚠️ Critical Success Factors</h4>
-									<p class="text-sm">
-										Success requires treating publishing as a business,
-										maintaining professional quality, understanding your market,
-										and investing in marketing—not just writing.
-									</p>
-								</div>
 							</div>
 						</div>
 
@@ -403,29 +502,30 @@
 						<div
 							id="mod2"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m2')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										2
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
-											Advanced Market Analysis and Strategic Positioning
+										<h2 class="text-xl font-bold text-black">
+											Advanced Market Analysis
 										</h2>
-										<p class="text-gray-600 text-sm">
+										<p class="text-gray-500 text-sm">
 											Research, competition, and positioning strategies
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m2-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -438,15 +538,18 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m2-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">
+							<div
+								id="m2-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
 										Genre Analysis Framework
 									</h3>
 									<div class="space-y-3">
-										<div class="bg-blue-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">Fiction Genres</h4>
-											<div class="text-sm space-y-2">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">Fiction Genres</h4>
+											<div class="text-sm space-y-2 text-gray-600">
 												<p>
 													<strong>Romance:</strong> Largest category, highly
 													engaged readers, 50k-90k words
@@ -461,9 +564,11 @@
 												</p>
 											</div>
 										</div>
-										<div class="bg-green-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">Nonfiction Categories</h4>
-											<div class="text-sm space-y-2">
+										<div class="bg-gray-50 p-4 rounded-xl">
+											<h4 class="font-bold mb-2 text-black">
+												Nonfiction Categories
+											</h4>
+											<div class="text-sm space-y-2 text-gray-600">
 												<p>
 													<strong>Business/Self-Help:</strong> Platform crucial,
 													40k-70k words
@@ -480,16 +585,6 @@
 										</div>
 									</div>
 								</div>
-								<div class="bg-purple-50 p-6 rounded-xl">
-									<h4 class="font-bold mb-3">
-										💡 Positioning Statement Formula
-									</h4>
-									<p class="text-sm italic mb-2">
-										"For [target audience] who [need/problem], [your book] is a
-										[category] that [unique benefit] unlike [competitors]
-										because [proof/reason]."
-									</p>
-								</div>
 							</div>
 						</div>
 
@@ -497,29 +592,30 @@
 						<div
 							id="mod3"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m3')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										3
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
+										<h2 class="text-xl font-bold text-black">
 											Traditional Publishing Mastery
 										</h2>
-										<p class="text-gray-600 text-sm">
+										<p class="text-gray-500 text-sm">
 											Agents, queries, contracts, and publisher relationships
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m3-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -532,62 +628,46 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m3-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">Query Letter Structure</h3>
+							<div
+								id="m3-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
+										Query Letter Structure
+									</h3>
 									<div class="space-y-2">
 										<div
-											class="border-l-4 border-blue-500 bg-blue-50 p-3 rounded-r"
+											class="bg-gray-50 p-3 rounded-lg border-l-4 border-black"
 										>
 											<strong>Opening Hook (1-2 sentences):</strong> Most
 											compelling aspect of your book
 										</div>
 										<div
-											class="border-l-4 border-green-500 bg-green-50 p-3 rounded-r"
+											class="bg-gray-50 p-3 rounded-lg border-l-4 border-black"
 										>
 											<strong>Story Synopsis (150-250 words):</strong> Main
 											character, goal, obstacles, stakes
 										</div>
 										<div
-											class="border-l-4 border-purple-500 bg-purple-50 p-3 rounded-r"
+											class="bg-gray-50 p-3 rounded-lg border-l-4 border-black"
 										>
 											<strong>Book Details:</strong> Title, genre, word count,
 											series info
 										</div>
 										<div
-											class="border-l-4 border-amber-500 bg-amber-50 p-3 rounded-r"
+											class="bg-gray-50 p-3 rounded-lg border-l-4 border-black"
 										>
 											<strong>Comparable Titles:</strong> Two recent books with
 											similar audience
 										</div>
 										<div
-											class="border-l-4 border-rose-500 bg-rose-50 p-3 rounded-r"
+											class="bg-gray-50 p-3 rounded-lg border-l-4 border-black"
 										>
 											<strong>Author Bio:</strong> Relevant experience,
 											platform, credentials
 										</div>
 									</div>
-								</div>
-								<div class="bg-indigo-50 p-6 rounded-xl">
-									<h4 class="font-bold mb-3">Contract Key Terms</h4>
-									<ul class="text-sm space-y-2">
-										<li>
-											<strong>Royalties:</strong> Hardcover 10-15%, Paperback
-											7.5%, E-book 25% net
-										</li>
-										<li>
-											<strong>Advance:</strong> Loan against future royalties,
-											must "earn out"
-										</li>
-										<li>
-											<strong>Rights:</strong> Primary vs. subsidiary, territory
-											restrictions
-										</li>
-										<li>
-											<strong>Reversion:</strong> Conditions for rights
-											returning to author
-										</li>
-									</ul>
 								</div>
 							</div>
 						</div>
@@ -596,29 +676,30 @@
 						<div
 							id="mod4"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m4')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										4
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
+										<h2 class="text-xl font-bold text-black">
 											Self-Publishing Business Mastery
 										</h2>
-										<p class="text-gray-600 text-sm">
+										<p class="text-gray-500 text-sm">
 											Production, distribution, and scaling strategies
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m4-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -631,76 +712,52 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m4-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">
+							<div
+								id="m4-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<h3 class="text-lg font-bold mb-4 text-black">
 										The Four-Level Editing System
 									</h3>
 									<div class="grid md:grid-cols-2 gap-4">
-										<div class="bg-blue-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">1. Developmental Editing</h4>
-											<p class="text-sm mb-2">
+										<div class="bg-gray-50 p-4 rounded-lg">
+											<h4 class="font-bold mb-2 text-black">
+												1. Developmental Editing
+											</h4>
+											<p class="text-sm mb-2 text-gray-600">
 												Structure, plot, characters, pacing
 											</p>
-											<p class="text-xs text-gray-600">
+											<p class="text-xs text-gray-500">
 												$0.02-$0.08/word • 2-6 weeks
 											</p>
 										</div>
-										<div class="bg-green-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">2. Line Editing</h4>
-											<p class="text-sm mb-2">
+										<div class="bg-gray-50 p-4 rounded-lg">
+											<h4 class="font-bold mb-2 text-black">2. Line Editing</h4>
+											<p class="text-sm mb-2 text-gray-600">
 												Sentence structure, word choice, flow
 											</p>
-											<p class="text-xs text-gray-600">
+											<p class="text-xs text-gray-500">
 												$0.01-$0.05/word • 1-3 weeks
 											</p>
 										</div>
-										<div class="bg-purple-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">3. Copy Editing</h4>
-											<p class="text-sm mb-2">
+										<div class="bg-gray-50 p-4 rounded-lg">
+											<h4 class="font-bold mb-2 text-black">3. Copy Editing</h4>
+											<p class="text-sm mb-2 text-gray-600">
 												Grammar, punctuation, consistency
 											</p>
-											<p class="text-xs text-gray-600">
+											<p class="text-xs text-gray-500">
 												$0.01-$0.03/word • 1-2 weeks
 											</p>
 										</div>
-										<div class="bg-amber-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">4. Proofreading</h4>
-											<p class="text-sm mb-2">
+										<div class="bg-gray-50 p-4 rounded-lg">
+											<h4 class="font-bold mb-2 text-black">4. Proofreading</h4>
+											<p class="text-sm mb-2 text-gray-600">
 												Final error catching after layout
 											</p>
-											<p class="text-xs text-gray-600">
+											<p class="text-xs text-gray-500">
 												$0.005-$0.02/word • 3-7 days
 											</p>
-										</div>
-									</div>
-								</div>
-								<div>
-									<h3 class="text-xl font-bold mb-3">Distribution Strategy</h3>
-									<div class="space-y-3">
-										<div
-											class="flex items-start gap-3 border-l-4 border-blue-500 bg-blue-50 p-3 rounded-r"
-										>
-											<span class="font-bold">Amazon KDP:</span>
-											<span class="text-sm"
-												>Largest market, KDP Select exclusivity benefits</span
-											>
-										</div>
-										<div
-											class="flex items-start gap-3 border-l-4 border-green-500 bg-green-50 p-3 rounded-r"
-										>
-											<span class="font-bold">Wide Distribution:</span>
-											<span class="text-sm"
-												>Apple, B&N, Kobo, Google Play for broader reach</span
-											>
-										</div>
-										<div
-											class="flex items-start gap-3 border-l-4 border-purple-500 bg-purple-50 p-3 rounded-r"
-										>
-											<span class="font-bold">Print Options:</span>
-											<span class="text-sm"
-												>KDP Print (easy) + IngramSpark (bookstores)</span
-											>
 										</div>
 									</div>
 								</div>
@@ -711,29 +768,30 @@
 						<div
 							id="mod5"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m5')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-rose-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										5
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
+										<h2 class="text-xl font-bold text-black">
 											Hybrid Publishing Mastery
 										</h2>
-										<p class="text-gray-600 text-sm">
+										<p class="text-gray-500 text-sm">
 											Evaluating partners and navigating the middle path
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m5-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -746,36 +804,30 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m5-content" class="hidden px-8 pb-8 space-y-6">
-								<div
-									class="bg-green-50 border-l-4 border-green-600 p-6 rounded-r-xl"
-								>
-									<h3 class="font-bold text-lg mb-3">
-										IBPA Criteria for Legitimate Hybrid Publishers
-									</h3>
-									<ul class="space-y-2 text-sm">
-										<li>✓ Selective acceptance with editorial standards</li>
-										<li>
-											✓ High-quality production meeting industry standards
-										</li>
-										<li>✓ Broad distribution including bookstores/libraries</li>
-										<li>✓ Transparent costs and royalty arrangements</li>
-										<li>✓ Authors retain rights to their work</li>
-										<li>✓ Ethical marketing without unrealistic promises</li>
-									</ul>
-								</div>
-								<div
-									class="bg-red-50 border-l-4 border-red-600 p-6 rounded-r-xl"
-								>
-									<h3 class="font-bold text-lg mb-3">⚠️ Red Flags to Avoid</h3>
-									<ul class="space-y-2 text-sm">
-										<li>✗ Guarantees of bestseller status</li>
-										<li>✗ No verifiable track record or references</li>
-										<li>✗ Pressure to sign immediately</li>
-										<li>✗ Unrealistic income promises</li>
-										<li>✗ Hidden fees or vague cost structures</li>
-										<li>✗ Exclusive rights to all future works</li>
-									</ul>
+							<div
+								id="m5-content"
+								class="hidden px-8 pb-8 space-y-6 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<div
+										class="bg-gray-50 border-l-4 border-black p-6 rounded-r-xl"
+									>
+										<h3 class="font-bold text-lg mb-3 text-black">
+											IBPA Criteria for Legitimate Hybrid Publishers
+										</h3>
+										<ul class="space-y-2 text-sm text-gray-600">
+											<li>✓ Selective acceptance with editorial standards</li>
+											<li>
+												✓ High-quality production meeting industry standards
+											</li>
+											<li>
+												✓ Broad distribution including bookstores/libraries
+											</li>
+											<li>✓ Transparent costs and royalty arrangements</li>
+											<li>✓ Authors retain rights to their work</li>
+											<li>✓ Ethical marketing without unrealistic promises</li>
+										</ul>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -784,29 +836,30 @@
 						<div
 							id="mod6"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m6')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										6
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
-											Advanced Marketing and Platform Building
+										<h2 class="text-xl font-bold text-black">
+											Advanced Marketing
 										</h2>
-										<p class="text-gray-600 text-sm">
-											Email, social media, advertising, and partnerships
+										<p class="text-gray-500 text-sm">
+											Platform building and promotion strategies
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m6-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -819,52 +872,16 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m6-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">The Platform Ecosystem</h3>
-									<div class="grid md:grid-cols-2 gap-4">
-										<div class="bg-blue-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-3">Owned Media (You Control)</h4>
-											<ul class="text-sm space-y-1">
-												<li>• Email list (most valuable asset)</li>
-												<li>• Website/blog</li>
-												<li>• Podcast</li>
-												<li>• YouTube channel</li>
-											</ul>
-										</div>
-										<div class="bg-green-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-3">
-												Earned Media (Others Control)
-											</h4>
-											<ul class="text-sm space-y-1">
-												<li>• Media coverage & interviews</li>
-												<li>• Speaking opportunities</li>
-												<li>• Podcast guesting</li>
-												<li>• Guest articles</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="bg-purple-50 p-6 rounded-xl">
-									<h4 class="font-bold mb-3">Email Marketing ROI</h4>
-									<p class="text-sm mb-3">
-										Average ROI: $40 for every $1 invested - the
-										highest-converting channel
+							<div
+								id="m6-content"
+								class="hidden px-8 pb-8 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-sm text-gray-600 leading-relaxed">
+										Learn to build an author platform, launch your book
+										effectively, and implement long-term marketing strategies to
+										sustain sales.
 									</p>
-									<div class="space-y-2 text-sm">
-										<p>
-											<strong>Lead Magnets:</strong> Free novellas, character
-											guides, deleted scenes
-										</p>
-										<p>
-											<strong>Welcome Series:</strong> Automated introduction to
-											your work
-										</p>
-										<p>
-											<strong>Launch Campaigns:</strong> Build excitement and
-											drive preorders
-										</p>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -873,29 +890,30 @@
 						<div
 							id="mod7"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m7')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-teal-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										7
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
-											Financial Management and ROI Optimization
+										<h2 class="text-xl font-bold text-black">
+											Financial Management
 										</h2>
-										<p class="text-gray-600 text-sm">
-											Revenue streams, budgeting, and profitability
+										<p class="text-gray-500 text-sm">
+											Budgeting, ROI, and business planning
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m7-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -908,52 +926,15 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m7-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">
-										Revenue Stream Diversification
-									</h3>
-									<div class="grid md:grid-cols-2 gap-4">
-										<div class="bg-blue-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-3">Primary Streams</h4>
-											<ul class="text-sm space-y-2">
-												<li>• Book sales (ebook, print, audio)</li>
-												<li>• Subscription revenue (KU, Patreon)</li>
-												<li>• Licensing and rights</li>
-												<li>• Direct sales via website</li>
-											</ul>
-										</div>
-										<div class="bg-green-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-3">Secondary Streams</h4>
-											<ul class="text-sm space-y-2">
-												<li>• Speaking and events</li>
-												<li>• Consulting/coaching</li>
-												<li>• Online courses</li>
-												<li>• Merchandise</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="bg-amber-50 p-6 rounded-xl">
-									<h4 class="font-bold mb-3">Key Performance Indicators</h4>
-									<ul class="text-sm space-y-2">
-										<li>
-											<strong>Customer Acquisition Cost (CAC):</strong> Cost to
-											acquire each reader
-										</li>
-										<li>
-											<strong>Lifetime Value (LTV):</strong> Total revenue per
-											reader over time
-										</li>
-										<li>
-											<strong>Return on Ad Spend (ROAS):</strong> Revenue per
-											advertising dollar
-										</li>
-										<li>
-											<strong>Email List Growth Rate:</strong> New subscribers
-											monthly
-										</li>
-									</ul>
+							<div
+								id="m7-content"
+								class="hidden px-8 pb-8 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-sm text-gray-600 leading-relaxed">
+										Treat your writing as a business. Understand P&L statements,
+										manage expenses, and plan for profitability.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -962,29 +943,28 @@
 						<div
 							id="mod8"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m8')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-cyan-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										8
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
-											Legal and Rights Management
-										</h2>
-										<p class="text-gray-600 text-sm">
-											Copyright, contracts, and protecting your work
+										<h2 class="text-xl font-bold text-black">Legal & Rights</h2>
+										<p class="text-gray-500 text-sm">
+											Copyrights, contracts, and IP protection
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m8-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -997,41 +977,15 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m8-content" class="hidden px-8 pb-8 space-y-6">
-								<div class="bg-blue-50 p-6 rounded-xl">
-									<h3 class="font-bold text-lg mb-3">
-										Copyright Registration Benefits
-									</h3>
-									<ul class="text-sm space-y-2">
-										<li>✓ Legal presumption of ownership</li>
-										<li>✓ Statutory damages up to $150,000 per work</li>
-										<li>✓ Ability to recover attorney fees</li>
-										<li>✓ U.S. Customs protection against imports</li>
-										<li>✓ Duration: Life + 70 years</li>
-									</ul>
-								</div>
-								<div>
-									<h3 class="text-xl font-bold mb-3">Rights Categories</h3>
-									<div class="space-y-3">
-										<div
-											class="border-l-4 border-blue-500 bg-blue-50 p-3 rounded-r"
-										>
-											<strong>Primary Rights:</strong> Print, digital, audio in
-											specific territories
-										</div>
-										<div
-											class="border-l-4 border-green-500 bg-green-50 p-3 rounded-r"
-										>
-											<strong>Subsidiary Rights:</strong> Translation, film/TV,
-											merchandise
-										</div>
-										<div
-											class="border-l-4 border-purple-500 bg-purple-50 p-3 rounded-r"
-										>
-											<strong>Reversion Clauses:</strong> Conditions for rights
-											returning to author
-										</div>
-									</div>
+							<div
+								id="m8-content"
+								class="hidden px-8 pb-8 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-sm text-gray-600 leading-relaxed">
+										Navigate the legal landscape of publishing. Protect your
+										intellectual property and understand key contract clauses.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -1040,29 +994,30 @@
 						<div
 							id="mod9"
 							class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden scroll-mt-24"
+							data-aos="fade-up"
 						>
 							<button
 								onclick="toggle('m9')"
-								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50"
+								class="w-full px-8 py-6 flex items-center justify-between hover:bg-gray-50 transition-colors"
 							>
 								<div class="flex items-center gap-4">
 									<div
-										class="w-12 h-12 bg-pink-600 rounded-xl flex items-center justify-center text-white font-bold text-xl"
+										class="w-12 h-12 bg-black text-white rounded-xl flex items-center justify-center font-bold text-xl"
 									>
 										9
 									</div>
 									<div class="text-left">
-										<h2 class="text-2xl font-bold">
-											Career Development and Long-term Strategy
+										<h2 class="text-xl font-bold text-black">
+											Career Development
 										</h2>
-										<p class="text-gray-600 text-sm">
-											Building a sustainable author career
+										<p class="text-gray-500 text-sm">
+											Long-term strategy and author brand
 										</p>
 									</div>
 								</div>
 								<svg
 									id="m9-icon"
-									class="w-6 h-6 text-gray-400 transition-transform"
+									class="w-6 h-6 text-gray-400 transition-transform duration-300"
 									fill="none"
 									stroke="currentColor"
 									viewBox="0 0 24 24"
@@ -1075,204 +1030,72 @@
 									></path>
 								</svg>
 							</button>
-							<div id="m9-content" class="hidden px-8 pb-8 space-y-6">
-								<div>
-									<h3 class="text-xl font-bold mb-3">Career Stages</h3>
-									<div class="space-y-4">
-										<div class="bg-blue-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">
-												Emerging Author (0-2 books)
-											</h4>
-											<p class="text-sm mb-2">
-												<strong>Focus:</strong> Learning craft, market
-												understanding, platform building
-											</p>
-											<p class="text-xs text-gray-600">
-												Priorities: Education, professional editing, quality
-												production
-											</p>
-										</div>
-										<div class="bg-green-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">
-												Developing Author (3-10 books)
-											</h4>
-											<p class="text-sm mb-2">
-												<strong>Focus:</strong> Brand establishment, process
-												optimization, scaling
-											</p>
-											<p class="text-xs text-gray-600">
-												Priorities: Marketing automation, team building,
-												backlist optimization
-											</p>
-										</div>
-										<div class="bg-purple-50 p-4 rounded-lg">
-											<h4 class="font-bold mb-2">
-												Established Author (10+ books)
-											</h4>
-											<p class="text-sm mb-2">
-												<strong>Focus:</strong> Diversification, legacy
-												building, industry influence
-											</p>
-											<p class="text-xs text-gray-600">
-												Priorities: New markets, format expansion, business
-												development
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="bg-indigo-50 p-6 rounded-xl">
-									<h4 class="font-bold mb-3">SMART Goals for Authors</h4>
-									<ul class="text-sm space-y-2">
-										<li>
-											<strong>Specific:</strong> "Publish 4 novels in urban
-											fantasy series"
-										</li>
-										<li>
-											<strong>Measurable:</strong> "Grow email list to 10,000
-											subscribers"
-										</li>
-										<li>
-											<strong>Achievable:</strong> "Increase monthly revenue to
-											$5,000"
-										</li>
-										<li>
-											<strong>Relevant:</strong> "Launch audiobook versions"
-										</li>
-										<li>
-											<strong>Time-bound:</strong> "Complete within 18 months"
-										</li>
-									</ul>
+							<div
+								id="m9-content"
+								class="hidden px-8 pb-8 border-t border-gray-100"
+							>
+								<div class="pt-6">
+									<p class="text-sm text-gray-600 leading-relaxed">
+										Plan your career trajectory, build a sustainable author
+										brand, and network effectively within the industry.
+									</p>
 								</div>
 							</div>
 						</div>
 					</main>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- CTA Section -->
 		<section
-			class="py-16 bg-gradient-to-br from-indigo-900 to-purple-900 text-white"
+			class="mt-[80px] max-w-7xl mx-auto px-4 sm:px-6 rounded-t-2xl relative py-16 md:py-20 lg:py-24 w-full h-full bg-cover bg-center bg-no-repeat overflow-hidden"
+			style="background-image: url('./assets/image/footer/bg.png')"
 		>
-			<div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-				<h2 class="text-3xl md:text-4xl font-bold mb-6">
-					Ready to Master Publishing?
-				</h2>
-				<p class="text-lg text-gray-200 mb-10">
-					Join Penwise and get access to tools, resources, and support for every
-					stage of your publishing journey.
-				</p>
-				<button
-					class="px-8 py-4 text-lg font-semibold bg-white text-purple-900 rounded-full hover:bg-gray-100 transition-all duration-300"
+			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+			<div
+				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
+				data-aos="fade-up"
+			>
+				<h2
+					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
 				>
-					Start Your Journey
+					Ready to Publish Your Masterpiece?
+				</h2>
+
+				<p
+					class="text-sm sm:text-base md:text-lg text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+				>
+					Join thousands of authors who have navigated the publishing world
+					successfully with Penwise. Start your journey today.
+				</p>
+
+				<button
+					class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+				>
+					Start Learning Now
+					<svg
+						class="w-4 h-4 sm:w-5 sm:h-5"
+						viewBox="0 0 20 20"
+						fill="currentColor"
+					>
+						<path
+							fill-rule="evenodd"
+							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+							clip-rule="evenodd"
+						/>
+					</svg>
 				</button>
 			</div>
 		</section>
 
-		<!-- Explore More -->
-		<section class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl font-bold mb-4">
-						Publishing Mastery, Simplified
-					</h2>
-					<p class="text-gray-600">
-						Step-by-step training to guide you from idea to successful published
-						work
-					</p>
-				</div>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-					<a
-						href="./self-publishing-guide.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2">Independent Authors</h3>
-						<p class="text-sm text-gray-600">
-							Learn how to self-publish your book step by step.
-						</p>
-					</a>
-					<a
-						href="./editing-and-proofreading-tips.html"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2">Professional Standards</h3>
-						<p class="text-sm text-gray-600">
-							Ensure top-quality output with editing methods.
-						</p>
-					</a>
-					<a
-						href="#"
-						class="group p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all border border-transparent hover:border-gray-200"
-					>
-						<div
-							class="w-12 h-12 bg-black rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
-						>
-							<svg
-								class="w-6 h-6 text-white"
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="M13 10V3L4 14h7v7l9-11h-7z"
-								/>
-							</svg>
-						</div>
-						<h3 class="font-bold text-lg mb-2">Faster Publishing</h3>
-						<p class="text-sm text-gray-600">
-							Save time with AI-assisted tools.
-						</p>
-					</a>
-				</div>
-			</div>
-		</section>
-
 		<!-- Footer Section -->
-		<footer class="rounded-b-2xl py-12 md:py-16">
+		<footer class="rounded-b-2xl py-12 md:py-16" data-aos="fade-up">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<!-- Footer Content Grid -->
 				<div
 					class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-8 mb-8 md:mb-12"
 				>
-					<!-- Penwise Brand Column -->
 					<div class="sm:col-span-2 md:col-span-1 lg:col-span-1">
 						<div class="flex items-center gap-2 mb-4">
 							<img src="./assets/image/logo.png" alt="Penwise" />
@@ -1330,7 +1153,6 @@
 						</div>
 					</div>
 
-					<!-- Product Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">Product</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
@@ -1356,7 +1178,9 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./published_books.html"
+									class="hover:text-black transition-colors"
 									>Published books</a
 								>
 							</li>
@@ -1366,12 +1190,16 @@
 								>
 							</li>
 							<li>
-								<a href="/about.html" class="hover:text-black transition-colors"
+								<a
+									href="./about.html"
+									class="hover:text-black transition-colors"
 									>About</a
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./educators-and-schools.html"
+									class="hover:text-black transition-colors"
 									>For Educators & Schools</a
 								>
 							</li>
@@ -1400,14 +1228,15 @@
 								>
 							</li>
 							<li>
-								<a href="#" class="hover:text-black transition-colors"
+								<a
+									href="./book-title-generator.html"
+									class="hover:text-black transition-colors"
 									>Generate Story Arcs</a
 								>
 							</li>
 						</ul>
 					</div>
 
-					<!-- Free AI Tools Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">Resources</h3>
 						<ul class="space-y-2.5 list-none text-sm text-[#7B8189]">
@@ -1512,7 +1341,6 @@
 						</ul>
 					</div>
 
-					<!-- Use-Case Specific Column -->
 					<div>
 						<h3 class="text-[16px] font-semibold text-black mb-4">
 							Use-Case Specific
@@ -1578,7 +1406,6 @@
 					</div>
 				</div>
 
-				<!-- Copyright -->
 				<div class="pt-8 border-t border-gray-200">
 					<div
 						class="flex flex-col sm:flex-row justify-between items-center gap-4"
@@ -1603,70 +1430,26 @@
 			</div>
 		</footer>
 
+		<script src="script.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
-			// Mobile menu toggle
-			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-			const mobileMenu = document.getElementById("mobileMenu");
-			const closeMenuBtn = document.getElementById("closeMenuBtn");
-
-			if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
-				mobileMenuBtn.addEventListener("click", () => {
-					mobileMenu.classList.remove("translate-x-full");
-				});
-
-				closeMenuBtn.addEventListener("click", () => {
-					mobileMenu.classList.add("translate-x-full");
-				});
-
-				// Close menu when clicking outside
-				document.addEventListener("click", (e) => {
-					if (
-						!mobileMenu.contains(e.target) &&
-						!mobileMenuBtn.contains(e.target) &&
-						!mobileMenu.classList.contains("translate-x-full")
-					) {
-						mobileMenu.classList.add("translate-x-full");
-					}
-				});
-
-				// Close menu when clicking a link
-				mobileMenu.querySelectorAll("a").forEach((link) => {
-					link.addEventListener("click", () => {
-						mobileMenu.classList.add("translate-x-full");
-					});
-				});
-			}
-
-			window.addEventListener("scroll", () => {
-				const winScroll =
-					document.body.scrollTop || document.documentElement.scrollTop;
-				const height =
-					document.documentElement.scrollHeight -
-					document.documentElement.clientHeight;
-				document.getElementById("progress-bar").style.width =
-					(winScroll / height) * 100 + "%";
+			AOS.init({
+				duration: 800,
+				once: true,
 			});
 
 			function toggle(id) {
 				const content = document.getElementById(id + "-content");
 				const icon = document.getElementById(id + "-icon");
+
 				if (content.classList.contains("hidden")) {
 					content.classList.remove("hidden");
-					icon.style.transform = "rotate(180deg)";
+					icon.classList.add("rotate-180");
 				} else {
 					content.classList.add("hidden");
-					icon.style.transform = "rotate(0deg)";
+					icon.classList.remove("rotate-180");
 				}
 			}
-
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute("href"));
-					if (target)
-						target.scrollIntoView({ behavior: "smooth", block: "start" });
-				});
-			});
 		</script>
 	</body>
 </html>

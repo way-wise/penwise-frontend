@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Penwise - Frequently Asked Questions</title>
+		<title>Penwise - Sign Up</title>
 		<meta
 			name="description"
-			content="Find answers to common questions about Penwise and how it can help you write better."
+			content="Sign up for Penwise to start writing smarter, faster, and better."
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,9 +14,9 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 		<script>
 			tailwind.config = {
 				theme: {
@@ -29,7 +29,10 @@
 			};
 		</script>
 	</head>
-	<body class="font-sans antialiased overflow-x-hidden">
+
+	<body
+		class="font-sans antialiased overflow-x-hidden flex flex-col min-h-screen"
+	>
 		<!-- Navigation -->
 		<nav class="fixed top-0 left-0 right-0 bg-white z-50">
 			<div class="lg:px-[60px] px-5 py-[24px] mx-auto">
@@ -113,13 +116,13 @@
 						class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
 					>
 						<span
-							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"
 						></span>
 						<span
-							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"
 						></span>
 						<span
-							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"
+							class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"
 						></span>
 					</button>
 				</div>
@@ -212,196 +215,35 @@
 			</div>
 		</div>
 
-		<!-- Hero Section -->
-		<section
-			class="lg:mx-[60px] mx-5 lg:mt-[100px] mt-[90px] rounded-3xl relative lg:p-28 p-5 py-10 bg-black text-white overflow-hidden"
-			style="
-				background-image: url('./assets/image/hero/hero2.png');
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-			"
+		<!-- Main Content -->
+		<main
+			class="flex-grow flex items-center justify-center py-24 px-4 sm:px-6 lg:px-8 bg-[#F8FAFC] mt-[80px]"
 		>
-			<!-- Container for content with profile badges -->
-			<div class="flex flex-col lg:flex-row items-center justify-center gap-10">
-				<!-- Center Content -->
-				<div class="z-20 space-y-6" data-aos="fade-up">
-					<h1
-						class="text-3xl text-center t lg:text-[56px] font-semibold leading-tight tracking-tight"
-					>
-						Contact Us
-					</h1>
-
-					<p
-						class="text-base lg:text-[16px] text-gray-300 text-center max-w-3xl lg:max-w-full leading-relaxed"
-					>
-						We'd love to hear from you! Whether you have questions, feedback, or
-						simply want to connect, our team is always here to help.
+			<div
+				class="max-w-md w-full space-y-8 bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+				data-aos="fade-up"
+			>
+				<div class="text-center">
+					<h2 class="text-3xl font-bold text-[#0F172A]">Create Account</h2>
+					<p class="mt-2 text-sm text-[#64748B]">
+						Start your writing journey with Penwise
 					</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- How Can We Help You Section -->
-		<section class="py-16 md:py-24 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12" data-aos="fade-up">
-					<h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-						How Can We Help You?
-					</h2>
-					<p class="text-[#64748B] text-sm md:text-base">
-						Choose the best way to reach us based on your needs
-					</p>
-				</div>
-
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-					<!-- Card 1: General Inquiries -->
-					<div
-						class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-						data-aos="fade-right"
-					>
-						<h3 class="text-xl font-bold text-[#0F172A] mb-4">
-							General Inquiries
-						</h3>
-						<p class="text-[#64748B] text-sm leading-relaxed mb-8 min-h-[48px]">
-							Have a question about Penwise or just want to say hello? We're
-							always excited to hear from our community.
-						</p>
-						<a
-							href="mailto:info@penwise.ai"
-							class="block w-full py-3 px-4 text-center text-sm font-semibold text-[#0F172A] bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
-						>
-							info@penwise.ai
-						</a>
-					</div>
-
-					<!-- Card 2: Customer Support -->
-					<div
-						class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-						data-aos="fade-up"
-					>
-						<h3 class="text-xl font-bold text-[#0F172A] mb-4">
-							Customer Support
-						</h3>
-						<p class="text-[#64748B] text-sm leading-relaxed mb-8 min-h-[48px]">
-							Need help with your account, your projects, or anything else? Our
-							support team is ready to assist you.
-						</p>
-						<a
-							href="mailto:support@penwise.ai"
-							class="block w-full py-3 px-4 text-center text-sm font-semibold text-[#0F172A] bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
-						>
-							support@penwise.ai
-						</a>
-					</div>
-
-					<!-- Card 3: Partnerships & Affiliates -->
-					<div
-						class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300"
-						data-aos="fade-left"
-					>
-						<h3 class="text-xl font-bold text-[#0F172A] mb-4">
-							Partnerships & Affiliates
-						</h3>
-						<p class="text-[#64748B] text-sm leading-relaxed mb-8 min-h-[48px]">
-							Interested in joining our ambassador program or collaborating with
-							us? Let's explore opportunities together.
-						</p>
-						<a
-							href="mailto:ambassadors@penwise.ai"
-							class="block w-full py-3 px-4 text-center text-sm font-semibold text-[#0F172A] bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-colors"
-						>
-							ambassadors@penwise.ai
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Get In Touch Directly Section -->
-		<section class="py-16 md:py-24 bg-[#F8FAFC]">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6">
-				<div class="text-center mb-12" data-aos="fade-up">
-					<h2 class="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
-						Get In Touch Directly
-					</h2>
-					<p class="text-[#64748B] text-sm md:text-base">
-						Fill out the form below and we'll get back to you as soon as
-						possible
-					</p>
-				</div>
-
-				<div
-					class="bg-white rounded-3xl shadow-sm p-8 md:p-12"
-					data-aos="fade-up"
-				>
-					<form class="space-y-6">
-						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-							<!-- Name Input -->
-							<div class="relative">
-								<input
-									type="text"
-									placeholder="Your Name*"
-									class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
-								/>
-								<div
-									class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
-								>
-									<svg
-										class="w-5 h-5"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.5"
-											d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-										></path>
-									</svg>
-								</div>
-							</div>
-
-							<!-- Email Input -->
-							<div class="relative">
-								<input
-									type="email"
-									placeholder="Your Email*"
-									class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
-								/>
-								<div
-									class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
-								>
-									<svg
-										class="w-5 h-5"
-										fill="none"
-										stroke="currentColor"
-										viewBox="0 0 24 24"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="1.5"
-											d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-										></path>
-									</svg>
-								</div>
-							</div>
-						</div>
-
-						<!-- Subject Select -->
+				<form class="mt-8 space-y-6" action="#" method="POST">
+					<div class="space-y-4">
 						<div class="relative">
-							<select
-								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all appearance-none cursor-pointer"
-							>
-								<option value="" disabled selected>Subject</option>
-								<option value="general">General Inquiry</option>
-								<option value="support">Support</option>
-								<option value="partnership">Partnership</option>
-							</select>
+							<label for="name" class="sr-only">Full Name</label>
+							<input
+								id="name"
+								name="name"
+								type="text"
+								autocomplete="name"
+								required
+								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+								placeholder="Full Name"
+							/>
 							<div
-								class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8] pointer-events-none"
+								class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
 							>
 								<svg
 									class="w-5 h-5"
@@ -413,20 +255,25 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="1.5"
-										d="M19 9l-7 7-7-7"
-									></path>
+										d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+									/>
 								</svg>
 							</div>
 						</div>
-
-						<!-- Message Textarea -->
 						<div class="relative">
-							<textarea
-								rows="6"
-								placeholder="Message"
-								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-none"
-							></textarea>
-							<div class="absolute right-3 top-4 text-[#94A3B8]">
+							<label for="email" class="sr-only">Email address</label>
+							<input
+								id="email"
+								name="email"
+								type="email"
+								autocomplete="email"
+								required
+								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+								placeholder="Email address"
+							/>
+							<div
+								class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
+							>
 								<svg
 									class="w-5 h-5"
 									fill="none"
@@ -437,18 +284,79 @@
 										stroke-linecap="round"
 										stroke-linejoin="round"
 										stroke-width="1.5"
-										d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-									></path>
+										d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+									/>
 								</svg>
 							</div>
 						</div>
+						<div class="relative">
+							<label for="password" class="sr-only">Password</label>
+							<input
+								id="password"
+								name="password"
+								type="password"
+								autocomplete="new-password"
+								required
+								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+								placeholder="Password"
+							/>
+							<div
+								class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
+							>
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.5"
+										d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="relative">
+							<label for="confirm-password" class="sr-only"
+								>Confirm Password</label
+							>
+							<input
+								id="confirm-password"
+								name="confirm-password"
+								type="password"
+								autocomplete="new-password"
+								required
+								class="w-full pl-4 pr-10 py-3.5 bg-white border border-gray-200 rounded-lg text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all"
+								placeholder="Confirm Password"
+							/>
+							<div
+								class="absolute right-3 top-1/2 -translate-y-1/2 text-[#94A3B8]"
+							>
+								<svg
+									class="w-5 h-5"
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="1.5"
+										d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+									/>
+								</svg>
+							</div>
+						</div>
+					</div>
 
-						<!-- Submit Button -->
+					<div>
 						<button
 							type="submit"
-							class="w-full py-4 bg-[#1E1E1E] text-white font-medium rounded-lg hover:bg-black transition-colors flex items-center justify-center gap-2 group"
+							class="w-full py-3.5 bg-[#1E1E1E] text-white font-medium rounded-lg hover:bg-black transition-colors flex items-center justify-center gap-2 group shadow-lg hover:shadow-xl"
 						>
-							Send a Message
+							Sign Up
 							<svg
 								class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
 								fill="none"
@@ -460,60 +368,70 @@
 									stroke-linejoin="round"
 									stroke-width="2"
 									d="M14 5l7 7m0 0l-7 7m7-7H3"
-								></path>
+								/>
 							</svg>
 						</button>
-					</form>
+					</div>
+				</form>
+
+				<div class="mt-6">
+					<div class="relative">
+						<div class="absolute inset-0 flex items-center">
+							<div class="w-full border-t border-gray-200"></div>
+						</div>
+						<div class="relative flex justify-center text-sm">
+							<span class="px-2 bg-white text-[#64748B]">Or continue with</span>
+						</div>
+					</div>
+
+					<div class="mt-6 grid grid-cols-2 gap-3">
+						<a
+							href="#"
+							class="w-full flex items-center justify-center px-4 py-2.5 border border-gray-200 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+						>
+							<svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+								<path
+									d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"
+								/>
+							</svg>
+							Google
+						</a>
+						<a
+							href="#"
+							class="w-full flex items-center justify-center px-4 py-2.5 border border-gray-200 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+						>
+							<svg
+								fill="#000000"
+								width="24px"
+								height="24px"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g
+									id="SVGRepo_tracerCarrier"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></g>
+								<g id="SVGRepo_iconCarrier">
+									<path
+										d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"
+									></path>
+								</g>
+							</svg>
+							Apple
+						</a>
+					</div>
 				</div>
-			</div>
-		</section>
 
-		<section
-			class="mt-[80px] max-w-7xl mx-auto px-4 sm:px-6 rounded-t-2xl relative py-16 md:py-20 lg:py-24 w-full h-full bg-cover bg-center bg-no-repeat overflow-hidden"
-			style="background-image: url('./assets/image/footer/bg.png')"
-		>
-			<!-- Dark Overlay -->
-			<div class="absolute inset-0 bg-black bg-opacity-60"></div>
-
-			<div
-				class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center"
-				data-aos="fade-up"
-			>
-				<!-- Heading -->
-				<h2
-					class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight"
-				>
-					Bring your Novel to Life - Let<br />Penwise Be Your Writing Partner
-				</h2>
-
-				<!-- Subtext -->
-				<p
-					class="text-sm sm:text-base md:text-lg text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
-				>
-					Start writing your novel today with Penwise — get Penwise-powered
-					assistance for plotting, drafting, and refining every chapter
-					effortlessly.
-				</p>
-
-				<!-- CTA Button -->
-				<button
-					class="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-				>
-					Start Writing Free
-					<svg
-						class="w-4 h-4 sm:w-5 sm:h-5"
-						viewBox="0 0 20 20"
-						fill="currentColor"
+				<p class="mt-4 text-center text-sm text-[#64748B]">
+					Already have an account?
+					<a href="./login.html" class="font-medium text-black hover:underline"
+						>Log in</a
 					>
-						<path
-							fill-rule="evenodd"
-							d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-							clip-rule="evenodd"
-						/>
-					</svg>
-				</button>
+				</p>
 			</div>
-		</section>
+		</main>
 
 		<!-- Footer Section -->
 		<footer class="rounded-b-2xl py-12 md:py-16">
@@ -798,68 +716,66 @@
 									>Quality & Professional Use</a
 								>
 							</li>
-							<li>
-								<a
-									href="./end-writers-block.html"
-									class="hover:text-black transition-colors"
-									>End Writer's Block</a
-								>
-							</li>
-							<li>
-								<a
-									href="./trust-and-safety.html"
-									class="hover:text-black transition-colors"
-									>Trust & Safety</a
-								>
-							</li>
-							<li>
-								<a
-									href="./speed-and-efficiency.html"
-									class="hover:text-black transition-colors"
-									>Speed & Efficiency</a
-								>
-							</li>
-							<li>
-								<a
-									href="./performance-analytics.html"
-									class="hover:text-black transition-colors"
-									>Performance Analytics</a
-								>
-							</li>
 						</ul>
 					</div>
 				</div>
-
 				<!-- Copyright -->
-				<div class="pt-8 border-t border-gray-200">
-					<div
-						class="flex flex-col sm:flex-row justify-between items-center gap-4"
-					>
-						<p class="text-[14px] text-[#7B8189]">
-							© 2025 Penwise. All rights reserved.
-						</p>
-						<div class="flex gap-6">
-							<a
-								href="./privacy-policy.html"
-								class="text-[14px] text-[#7B8189] hover:text-black"
-								>Privacy</a
-							>
-							<a
-								href="./terms-and-conditions.html"
-								class="text-[14px] text-[#7B8189] hover:text-black"
-								>Terms</a
-							>
-						</div>
+				<div
+					class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+				>
+					<p class="text-sm text-[#7B8189]">
+						© 2024 Penwise. All rights reserved.
+					</p>
+					<div class="flex gap-6">
+						<a
+							href="#"
+							class="text-sm text-[#7B8189] hover:text-black transition-colors"
+							>Privacy Policy</a
+						>
+						<a
+							href="#"
+							class="text-sm text-[#7B8189] hover:text-black transition-colors"
+							>Terms of Service</a
+						>
+						<a
+							href="#"
+							class="text-sm text-[#7B8189] hover:text-black transition-colors"
+							>Cookie Policy</a
+						>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<script src="script.js"></script>
+
+		<!-- Scripts -->
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 		<script>
 			AOS.init({
 				duration: 800,
 				once: true,
+			});
+
+			// Mobile Menu Logic
+			const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+			const closeMenuBtn = document.getElementById("closeMenuBtn");
+			const mobileMenu = document.getElementById("mobileMenu");
+
+			mobileMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.remove("translate-x-full");
+			});
+
+			closeMenuBtn.addEventListener("click", () => {
+				mobileMenu.classList.add("translate-x-full");
+			});
+
+			// Close menu when clicking outside
+			document.addEventListener("click", (e) => {
+				if (
+					!mobileMenu.contains(e.target) &&
+					!mobileMenuBtn.contains(e.target)
+				) {
+					mobileMenu.classList.add("translate-x-full");
+				}
 			});
 		</script>
 	</body>

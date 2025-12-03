@@ -84,9 +84,9 @@
 
 				<button id="mobileMenuBtn"
 					class="lg:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
-					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
-					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
-					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full"></span>
+					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"></span>
+					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"></span>
+					<span class="w-6 h-0.5 bg-gray-900 transition-all duration-300 rounded-full pointer-events-none"></span>
 				</button>
 			</div>
 		</div>
@@ -1173,7 +1173,9 @@
 		</div>
 	</footer>
 
-	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js">
+		
+	</script>
 	<script>
 		AOS.init({
 			duration: 800,
@@ -1181,45 +1183,7 @@
 		});
 
 		// Counter Animation Function
-		function animateCounter(element) {
-			const target = parseInt(element.getAttribute('data-count'));
-			const suffix = element.getAttribute('data-suffix') || '';
-			const duration = 2000; // 2 seconds
-			const increment = target / (duration / 16); // 60 fps
-			let current = 0;
-
-			const updateCounter = () => {
-				current += increment;
-				if (current < target) {
-					element.textContent = Math.floor(current) + suffix;
-					requestAnimationFrame(updateCounter);
-				} else {
-					element.textContent = target + suffix;
-				}
-			};
-
-			updateCounter();
-		}
-
-		// Intersection Observer for Counter Animation
-		const counters = document.querySelectorAll('.counter-value');
-		const observerOptions = {
-			threshold: 0.5,
-			rootMargin: '0px'
-		};
-
-		const counterObserver = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-					entry.target.classList.add('counted');
-					animateCounter(entry.target);
-				}
-			});
-		}, observerOptions);
-
-		counters.forEach(counter => {
-			counterObserver.observe(counter);
-		});
+		
 	</script>
 	<script src="script.js"></script>
 </body>

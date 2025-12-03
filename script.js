@@ -1,25 +1,87 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const closeMenuBtn = document.getElementById("closeMenuBtn");
-const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+// Wait for DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+	// Mobile Menu Toggle
+	const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+	const mobileMenu = document.getElementById("mobileMenu");
+	const mobileMenuOverlay = document.getElementById("mobileMenuOverlay");
+	const closeMenuBtn = document.getElementById("closeMenuBtn");
+	const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-function openMobileMenu() {
-	mobileMenu.classList.remove("translate-x-full");
-	document.body.style.overflow = "hidden";
-}
+	// Check if elements exist
+	if (!mobileMenuBtn || !mobileMenu || !closeMenuBtn) {
+		console.error("Mobile menu elements not found!");
+		return;
+	}
 
-function closeMobileMenu() {
-	mobileMenu.classList.add("translate-x-full");
-	document.body.style.overflow = "";
-}
+	function openMobileMenu() {
+		mobileMenu.classList.remove("translate-x-full");
+		if (mobileMenuOverlay) {
+			mobileMenuOverlay.classList.remove("hidden");
+		}
+		document.body.style.overflow = "hidden";
+	}
 
-mobileMenuBtn.addEventListener("click", openMobileMenu);
-closeMenuBtn.addEventListener("click", closeMobileMenu);
+	function closeMobileMenu() {
+		mobileMenu.classList.add("translate-x-full");
+		if (mobileMenuOverlay) {
+			mobileMenuOverlay.classList.add("hidden");
+		}
+		document.body.style.overflow = "";
+	}
 
-// Close mobile menu when clicking on links
-mobileNavLinks.forEach((link) => {
-	link.addEventListener("click", closeMobileMenu);
+	mobileMenuBtn.addEventListener("click", openMobileMenu);
+	closeMenuBtn.addEventListener("click", closeMobileMenu);
+
+	// Close mobile menu when clicking on links
+	mobileNavLinks.forEach((link) => {
+		link.addEventListener("click", closeMobileMenu);
+	});
+
+	// Close mobile menu when clicking on overlay
+	if (mobileMenuOverlay) {
+		mobileMenuOverlay.addEventListener("click", closeMobileMenu);
+	}
+
+	// Counter Animation Function
+	function animateCounter(element) {
+		const target = parseInt(element.getAttribute("data-count"));
+		const suffix = element.getAttribute("data-suffix") || "";
+		const duration = 2000; // 2 seconds
+		const increment = target / (duration / 16); // 60 fps
+		let current = 0;
+
+		const updateCounter = () => {
+			current += increment;
+			if (current < target) {
+				element.textContent = Math.floor(current) + suffix;
+				requestAnimationFrame(updateCounter);
+			} else {
+				element.textContent = target + suffix;
+			}
+		};
+
+		updateCounter();
+	}
+
+	// Intersection Observer for Counter Animation
+	const counters = document.querySelectorAll(".counter-value");
+	const counterObserverOptions = {
+		threshold: 0.5,
+		rootMargin: "0px",
+	};
+
+	const counterObserver = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting && !entry.target.classList.contains("counted")) {
+				entry.target.classList.add("counted");
+				animateCounter(entry.target);
+			}
+		});
+	}, counterObserverOptions);
+
+	counters.forEach((counter) => {
+		counterObserver.observe(counter);
+	});
 });
 
 // Navbar scroll effect with shadow
